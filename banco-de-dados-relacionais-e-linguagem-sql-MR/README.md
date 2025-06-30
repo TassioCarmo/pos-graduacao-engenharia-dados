@@ -1,8 +1,6 @@
 
 # Bancos de Dados Relacionais e Linguagem SQL | Relational Databases and SQL Language
 
-![image](https://github.com/user-attachments/assets/4a078a7f-dbd6-4de5-8df8-0c668aedb82c)
-
 
 
 ## Ementa | Course Description
