@@ -1,153 +1,129 @@
-# Arquitetura de Dados, Data Lake e Data Warehouse
+# Arquiteturas e Serviços de Data Lakes e Data Warehousing
+
+## Informações Gerais
+
+- **Disciplina:** Arquiteturas e Serviços de Data Lakes e Data Warehousing
+- **Curso:** Engenharia de Dados
+- **Professor:** Ricardo Brito Alves
+- **Instituição:** Pontifícia Universidade Católica de Minas Gerais (PUC Minas)
+- **Carga Horária:** 40 horas (21h aulas + 19h trabalhos orientados)
+
+## Objetivos
+
+Esta disciplina tem como objetivo capacitar o aluno a compreender e implementar arquiteturas modernas de dados, abordando conceitos fundamentais de Data Lakes e Data Warehouses, suas diferenças, aplicações e melhores práticas de implementação.
 
 ## Ementa
 
-Esta disciplina apresenta os principais conceitos e tecnologias associados às arquiteturas modernas de dados, com ênfase em Data Lakes e Data Warehouses. O curso explora fundamentos essenciais para o desenvolvimento e implementação de soluções de dados escaláveis em ambientes corporativos modernos.
+A disciplina aborda conceitos essenciais de Data Lake e Data Warehouse, explorando a diferença entre dados estruturados e não estruturados, Logical Data Lake, Data ponds, blocos funcionais em arquiteturas de dados, Schema on-write vs Schema on-read, sincronização de fluxos, arquiteturas corporativas, construção de alta disponibilidade, dimensões em DW, engines de Data Warehousing e orquestração de transformações.
 
-### Principais Tópicos
+## Conteúdo Programático
 
-#### Fundamentos de Arquitetura de Dados
-* **Conceitos de Data Lake e Data Warehouse**
-  * Definições, diferenças e casos de uso
-  * Evolução histórica das arquiteturas de dados
-  * Benefícios e desafios de implementação
+### Unidade 1: Produtores e Consumidores
+**Objetivo:** Contextualizar questões sobre dados e como trabalhar de forma eficiente
 
-* **Natureza dos Dados**
-  * Dados estruturados vs. semi-estruturados vs. não estruturados
-  * Formatos de armazenamento (Parquet, ORC, Avro, JSON, CSV)
-  * Metadados e catálogos de dados
+**Temas:**
+- Trabalhando e Gerenciando Dados
+- Conceitos fundamentais de Dados
+- Gestão de Dados e Big Data
+- IoT e Produtores/Consumidores de Dados
+- Data Domains e Data Products
+- Inteligência Empresarial
+- Dados Estruturados vs Não Estruturados
+- Data Analytics e papel do Cientista de Dados
+- BI vs BA
 
-* **Ecossistema de Dados**
-  * Produtores e consumidores de dados
-  * Fluxos de ingestão e consumo
-  * Governança e qualidade de dados
+### Unidade 2: Data Warehouse
+**Objetivo:** Compreender sistemas de BI e estratégias de dados
 
-#### Arquiteturas Avançadas
-* **Data Lake**
-  * Logical Data Lake e conceito de Data Ponds
-  * Arquitetura Lambda vs. Arquitetura Kappa
-  * Data Lakehouse e abordagens híbridas
+**Temas:**
+- Sistemas de BI e Data Warehouse
+- Vantagens do Data Warehouse
+- ETL e OLAP
+- Modelagem Multi-Dimensional
+- Dimensões e Surrogate Keys
+- Tabelas Fato
+- Engines de Data Warehousing
+- Orquestração de Transformações
 
-* **Blocos Funcionais**
-  * Componentes essenciais em uma arquitetura moderna de dados
-  * Interfaces entre sistemas
-  * Integração com fontes externas e internas
+### Unidade 3: Data Lake
+**Objetivo:** Conhecer Data Lakes desde a concepção até operacionalização
 
-* **Abordagens de Schema**
-  * Schema on-write vs. schema on-read
-  * Evolução de schemas e compatibilidade
-  * Técnicas de validação e conformidade
+**Temas:**
+- Arquiteturas Corporativas (Enterprise Data Hub, Data Mesh)
+- Arquiteturas com Alta Disponibilidade
+- Data Ponds e Blocos Funcionais
+- Schema On-Write vs Schema On-Read
+- Sincronização de Fluxos
 
-#### Arquiteturas Corporativas
-* **Enterprise Data Hub**
-  * Centralização e descentralização de dados
-  * Modelos de acesso e compartilhamento
-  * Plataformas unificadas de dados
+### Unidade 4: Arquitetura de Dados
+**Objetivo:** Compreender arquiteturas modernas de dados e seus componentes
 
-* **Data Mesh**
-  * Domínios e produtos de dados
-  * Arquitetura federada e descentralizada
-  * Implementação e desafios organizacionais
+**Temas:**
+- Arquiteturas Corporativas avançadas
+- Componentes e inter-relações
+- Princípios e padrões de projeto
+- Evolução arquitetural
 
-* **Sincronização de Fluxos**
-  * Fluxos independentes e dependentes
-  * Estratégias de processamento batch e streaming
-  * Consistência e integridade em fluxos complexos
+## Trabalhos Práticos
 
-#### Implementação e Infraestrutura
-* **Alta Disponibilidade (HA)**
-  * Princípios de resiliência em arquiteturas de dados
-  * Redundância e recuperação de desastres
-  * Balanceamento de carga e escalonamento
+### Trabalhos Obrigatórios (para todos os alunos)
+1. **Pipeline de Dados** - 20 pontos
+2. **Data Wrangler com OpenRefine** - 20 pontos
+3. **Data Wrangler com R** - 20 pontos
 
-* **Data Warehousing**
-  * Modelagem multidimensional (Star Schema, Snowflake)
-  * Construção e gerenciamento de dimensões
-  * Tabelas de fatos e métricas
+### Trilhas Especializadas (escolher A ou B)
 
-* **Engines e Plataformas**
-  * Engines modernas de Data Warehousing (Snowflake, Redshift, BigQuery, Synapse)
-  * Tecnologias de processamento distribuído (Spark, Presto, Trino)
-  * Integrações com ferramentas de BI e Analytics
+#### Trilha A - Pentaho
+4. **Transformação de Dados** - 20 pontos
+5. **Pipeline de Dados com Orquestração** - 20 pontos
 
-#### Orquestração e Organização
-* **Transformações em Data Warehouse**
-  * ETL vs. ELT
-  * Orquestração de pipelines de dados
-  * Ferramentas de transformação e processamento
+#### Trilha B - Apache NiFi
+4. **Transformação de Dados** - 20 pontos
+5. **Pipeline de Dados com Orquestração** - 20 pontos
 
-* **Estruturação de Data Lakes**
-  * Organização em camadas (Raw, Trusted, Refined)
-  * Zonas funcionais e níveis de processamento
-  * Delta Lake e implementações de transações ACID
+## Avaliação
 
-* **Implementações On-premise vs. Cloud**
-  * Comparativo de arquiteturas locais e em nuvem
-  * Modelos híbridos e multi-cloud
-  * Considerações de custo, performance e segurança
-
-## Objetivos da Disciplina
-
-### Objetivo Geral
-
-Esta disciplina visa capacitar os alunos a dominarem os conceitos fundamentais e avançados relacionados às arquiteturas modernas de dados, permitindo:
-
-* Compreender profundamente os fundamentos teóricos e práticos de arquiteturas de dados
-* Diferenciar e aplicar corretamente os conceitos de Data Lake e Data Warehouse conforme necessidades organizacionais específicas
-* Analisar criticamente a organização dos dados corporativos e propor soluções baseadas em arquiteturas escaláveis e resilientes
-* Projetar ambientes de dados robustos que respondam adequadamente aos desafios de volume, variedade e velocidade (3Vs do Big Data)
-* Avaliar tecnologias emergentes, técnicas de modelagem e estratégias de orquestração para ambientes analíticos modernos
-
-### Objetivos Específicos
-
-Ao concluir esta disciplina, o aluno será capaz de:
-
-* **Compreender o Ecossistema de Dados**
-  * Identificar produtores e consumidores de dados e suas funções nos processos decisórios
-  * Mapear fluxos de informação dentro de uma organização
-  * Distinguir diferentes tipos e estruturas de dados
-
-* **Dominar Conceitos Arquiteturais**
-  * Compreender os conceitos de dados estruturados, semi-estruturados e não estruturados
-  * Conhecer os principais elementos arquiteturais de Data Lake e Data Warehouse
-  * Aplicar princípios de arquitetura de dados para resolver problemas organizacionais
-
-* **Implementar Processos de Dados**
-  * Utilizar conceitos de ETL/ELT, modelagem dimensional e orquestração de processos
-  * Avaliar criteriosamente cenários para aplicação de schema on-read e schema on-write
-  * Implementar pipelines de dados eficientes e escaláveis
-
-* **Projetar Soluções Robustas**
-  * Desenhar soluções baseadas em arquiteturas com alta disponibilidade
-  * Comparar abordagens de armazenamento on-premise e em nuvem
-  * Selecionar tecnologias apropriadas para requisitos específicos de negócio
-
-## Metodologia
-
-O curso utiliza uma abordagem teórico-prática, combinando:
-
-* Aulas expositivas sobre conceitos fundamentais e avançados
-* Estudos de caso de implementações reais em diferentes setores
-* Laboratórios práticos com ferramentas e tecnologias de mercado
-* Projetos em grupo para design e implementação de arquiteturas de dados
-* Discussões sobre tendências e desafios da indústria
+- **Pontuação Total:** 100 pontos
+- **Nota Mínima para Aprovação:** 70 pontos
+- **Critério:** Entrega de todos os trabalhos práticos
 
 ## Bibliografia
 
 ### Bibliografia Básica
+- PROVOST, Foster; FAWCETT, Tom. **Data Science for Business**. O'Reilly Media, 2014
+- KENETT, R. S.; REDMAN, T. C. **The Real Work of Data Science**. Wiley, 2019
+- ANDERSON, C. **Creating a Data-Driven Organization**. Wiley, 2015
+- KAZIL, J; JARMUL K. **Data Wrangling with Python**, 2017
+- KIMBALL, Ralph. **The Data Warehouse Toolkit: The Complete Guide to Dimensional Modeling**. USA, 2002
+- PANIZ, David. **NoSQL: Como armazenar os dados de uma aplicação moderna**. Casa do Código, 2016
 
-1. INMON, W. H. **Building the Data Warehouse**. 4ª Ed. Indianapolis: Wiley, 2005.
-2. KIMBALL, R.; ROSS, M. **The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling**. 3ª Ed. Indianapolis: Wiley, 2013.
-3. SAWADOGO, P.; DARMONT, J. **On Data Lake Architectures and Metadata Management**. Journal of Intelligent Information Systems, v. 56, p. 97-120, 2021.
+### Recursos Online
+- [MongoDB Documentation](https://docs.mongodb.com/)
+- [Kimball Group](http://www.kimballgroup.com/)
+- [Apache Cassandra](https://cassandra.apache.org/doc/latest/)
+- [Neo4j Documentation](https://neo4j.com/docs/)
 
 ### Bibliografia Complementar
+- MORETTIN, P A.; SINGER J.M. **Estatística e Ciência de Dados**. LTC, 2022
+- MACHADO, F. N. R; ABREU, M. P. D. **Projeto de Banco de Dados/Uma Visão Prática**. Editora Érica, 2011
+- VERAS, MANOEL. **Computação em Nuvem – Nova Arquitetura de TI**. BRASPORT, 2015
 
-1. DEHGHANI, Z. **Data Mesh: Delivering Data-Driven Value at Scale**. O'Reilly Media, 2022.
-2. SHARMA, T.; GANDHI, G. **Data Lakes: Purposes, Practices, Patterns, and Platforms**. O'Reilly Media, 2020. 
-3. PATHAK, P. **Modern Data Architecture with Delta Lake: Lakehouse Fundamentals with Databricks**. Packt Publishing, 2022.
-4. KLEPPMANN, M. **Designing Data-Intensive Applications**. O'Reilly Media, 2017.
-5. DREMIO. **Definitive Guide to Data Lakehouse**. Disponível em: [https://www.dremio.com/resources/guides/definitive-guide-to-data-lakehouse/](https://www.dremio.com/resources/guides/definitive-guide-to-data-lakehouse/)
+##  Ferramentas e Tecnologias
 
+- **OpenRefine** - Para limpeza e transformação de dados
+- **R** - Para análise e manipulação de dados
+- **Pentaho** - Plataforma de integração de dados (Trilha A)
+- **Apache NiFi** - Automação de fluxo de dados (Trilha B)
+- **MongoDB** - Banco de dados NoSQL
+- **Cassandra** - Banco de dados distribuído
+- **Neo4j** - Banco de dados em grafo
 
----
+## Metodologia
+
+A disciplina combina aulas síncronas com atividades práticas hands-on. Os alunos devem:
+- Assistir às aulas síncronas
+- Realizar leituras complementares
+- Executar trabalhos práticos
+- Participar de fóruns de discussão
+- Escolher uma trilha de especialização
 
