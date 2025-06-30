@@ -1,201 +1,101 @@
-# Preparação, Orquestração e Fluxos de Dados | Data Preparation, Orchestration and Data Flows
+# Preparação, Orquestração e Fluxos de Dados
 
-##  Visão Geral | Overview
+## Informações da Disciplina
 
-Esta disciplina aborda os fundamentos e práticas avançadas para preparação, orquestração e gerenciamento de fluxos de dados em ambientes corporativos. Com foco em aplicações práticas, os alunos desenvolverão habilidades essenciais para manipular dados em grande escala, implementar pipelines eficientes e garantir a qualidade dos dados em ambientes de produção.
+- **Curso:** Engenharia de Dados
+- **Instituição:** PUC Minas
+- **Carga Horária:** 24 horas
+- **Modalidade:** Ensino a Distância (EAD)
 
-*This course covers the fundamentals and advanced practices for data preparation, orchestration, and management of data flows in corporate environments. With a focus on practical applications, students will develop essential skills to manipulate large-scale data, implement efficient pipelines, and ensure data quality in production environments.*
+## Objetivos
 
-##  O que iremos estudar? | What will we study?
+Esta disciplina visa capacitar os estudantes para:
 
-### 1. Montagem do conjunto de dados | Dataset Assembly
-- Identificação de fontes de dados
-- Estratégias de coleta e amostragem
-- Validação inicial de dados
-- Desafios comuns na montagem de datasets
+- **Montagem e Preparação de Dados:** Dominar técnicas de montagem de conjuntos de dados, incluindo eliminação de dados irrelevantes, tratamento de duplicações e garantia de integridade
+- **Feature Engineering:** Aplicar técnicas avançadas de engenharia de características para otimizar dados para análise e machine learning
+- **Orquestração de Fluxos:** Implementar e gerenciar fluxos de dados complexos utilizando ferramentas de orquestração modernas
+- **Integração Multi-fonte:** Combinar dados de múltiplas fontes de forma eficiente e consistente
+- **Arquiteturas ELT/ETL:** Compreender e implementar diferentes abordagens de processamento de dados
+- **Resiliência e Correção:** Desenvolver soluções robustas para reprocessamento e correção de dados
 
-### 2. Tipos de dados | Data Types
-- Dados estruturados, semi-estruturados e não-estruturados
-- Formatos de armazenamento (CSV, JSON, Parquet, Avro, ORC)
-- Esquemas e evolução de esquemas
-- Tipagem e conversões seguras
+## Metodologia
 
-### 3. Melhoramento e enriquecimento | Enhancement and Enrichment
-- Técnicas de data augmentation
-- Fontes de dados complementares
-- Enriquecimento semântico e contextual
-- Geração de metadados
+O aprendizado é estruturado através de:
 
-### 4. Preparação | Preparation
+- **Material Didático Completo:** Disponibilizado na plataforma AVA da PUCMINAS
+- **Videoaulas Explicativas:** Cobertura teórica e prática dos conceitos de orquestração
+- **Ferramentas Modernas:** Acesso a orquestradores open-source e baseados em cloud
+- **Projetos Práticos:** Implementação de pipelines de dados reais
+- **Demonstrações Técnicas:** Aplicações práticas de Feature Engineering e preparação de dados
 
-#### 4.1 Eliminação de dados irrelevantes | Irrelevant Data Elimination
-- Identificação de outliers e anomalias
-- Filtragem baseada em regras de negócio
-- Tratamento de valores nulos e inconsistentes
+## Ementa
 
-#### 4.2 Granulação e agregação | Granulation and Aggregation
-- Níveis de granularidade e hierarquias
-- Funções de agregação e sumarização
-- Técnicas de roll-up e drill-down
-- Agregações temporais e espaciais
+A disciplina abrange os seguintes tópicos fundamentais:
 
-#### 4.3 Consistência e concordância | Consistency and Concordance
-- Padronização de formatos e unidades
-- Normalização de valores e escalas
-- Harmonização entre diferentes fontes
-- Verificação de regras de integridade
+- Montagem e Tipos de Conjuntos de Dados
+- Técnicas de Preparação e Melhoramento de Dados
+- Feature Engineering Avançada
+- Integração de Dados Multi-fonte
+- Arquiteturas ELT vs ETL
+- Ferramentas de Orquestração (Open-source e Cloud)
+- Processamento Baseado em Eventos
+- Resiliência e Recuperação de Dados
 
-#### 4.4 Duplicação e redundância | Duplication and Redundancy
-- Algoritmos de detecção de duplicatas
-- Estratégias de deduplicação
-- Merge de registros similares
-- Redundância controlada vs. não-controlada
+## Conteúdo Programático
 
-#### 4.5 Análise de domínios de atributos | Attribute Domain Analysis
-- Validação de ranges e valores permitidos
-- Distribuição estatística de atributos
-- Detecção de valores atípicos
-- Domínios dinâmicos e estáticos
+### Aula 1 - Introdução à Orquestração de Dados
 
-#### 4.6 Integridade dos dados | Data Integrity
-- Regras de validação estrutural
-- Integridade referencial
-- Completude e acurácia
-- Auditoria de qualidade de dados
+**Fundamentos da Orquestração**
+- **1.1** Montagem do conjunto de dados e tipos de dados
+- **1.2** Melhoramento e enriquecimento de dados
+- **1.3** Preparação: eliminação de dados irrelevantes
+- **1.4** Granulação, agregação e consistência
+- **1.5** Controle de duplicação e redundância
+- **1.6** Análise de domínios e integridade dos dados
 
-### 5. Feature Engineering | Feature Engineering
-- Transformação de variáveis brutas em features
-- Técnicas de encoding para variáveis categóricas
-- Normalização e padronização
-- Derivação de atributos
-- Redução de dimensionalidade
-- Seleção de features relevantes
+### Aula 2 - Feature Engineering
 
-### 6. Combinando dados de múltiplas fontes | Combining Data from Multiple Sources
-- Operações de join e merge
-- Reconciliação de identidades
-- Resolução de conflitos
-- Integração temporal de dados
-- Desafios em dados heterogêneos
+**Engenharia de Características Avançada**
+- **2.1** Fundamentos de Feature Engineering
+- **2.2** Técnicas de transformação de variáveis
+- **2.3** Criação de features derivadas
+- **2.4** Seleção e redução de dimensionalidade
+- **2.5** Validação e teste de features
 
-### 7. ELT x ETL | ELT vs ETL
-- Paradigmas de processamento de dados
-- Trade-offs de performance vs. flexibilidade
-- Aplicações ideais para cada abordagem
-- Arquiteturas híbridas
+### Aula 3 - Ferramentas para Preparação de Dados
 
-#### 7.1 Ferramentas para preparação de dados | Data Preparation Tools
-- Apache Spark
-- Pandas e Dask
-- PySpark
-- Databricks
-- dbt (data build tool)
-- Google DataPrep
-- Talend Open Studio
+**Tecnologias e Implementação**
+- **3.1** Combinando dados de múltiplas fontes
+- **3.2** ELT vs ETL: conceitos e aplicações
+- **3.3** Ferramentas de orquestração open-source
+- **3.4** Orquestradores baseados em Cloud
+- **3.5** Ferramentas para transformação e transferência
+- **3.6** Escalonamento de jobs baseados em eventos
+- **3.7** Reprocessamento em serviços de migração
+- **3.8** Resiliência em migração
+- **3.9** Implementação de fluxos de correção e expurgo
 
-#### 7.2 Ferramentas de orquestração | Orchestration Tools
+## Ferramentas e Tecnologias
 
-##### 7.2.1 Orquestradores open-source | Open-source Orchestrators
-- Apache Airflow
-- Luigi
-- Prefect
-- Dagster
-- Argo Workflows
+Durante o curso, você trabalhará com:
 
-##### 7.2.2 Orquestradores baseados em Cloud | Cloud-based Orchestrators
-- AWS Step Functions
-- Google Cloud Composer
-- Azure Data Factory
-- Databricks Workflows
-- Google Cloud Dataflow
+- **Orquestradores Open-source:** Apache Airflow, Prefect, Luigi
+- **Plataformas Cloud:** AWS Step Functions, Azure Data Factory, Google Cloud Composer
+- **Ferramentas ETL/ELT:** Apache Spark, Pandas, dbt
+- **Processamento de Eventos:** Apache Kafka, RabbitMQ
+- **Monitoramento:** Grafana, Prometheus
+- **Controle de Qualidade:** Great Expectations, Deequ
 
-#### 7.3 Ferramentas para transformação e transferência de dados | Data Transformation and Transfer Tools
-- Apache NiFi
-- Kafka Connect
-- Spark Streaming
-- Fivetran
-- Stitch
-- AWS Glue
-- Informatica
+## Competências Desenvolvidas
 
-#### 7.4 Escalonamento de jobs baseados em eventos | Event-based Job Scaling
-- Arquiteturas orientadas a eventos
-- Sistemas de mensageria (Kafka, RabbitMQ)
-- Auto-scaling baseado em carga
-- Triggers e listeners
-- Padrões de notificação e fanout
+Ao concluir esta disciplina, você será capaz de:
 
-### 8. Reprocessamento em serviços de migração | Reprocessing in Migration Services
-- Estratégias de backfill
-- Janelas de processamento
-- Versionamento de pipelines
-- Rastreabilidade de execuções
-- Reparo de dados históricos
-
-### 9. Resiliência em migração | Resilience in Migration
-- Tolerância a falhas
-- Retry policies
-- Circuit breakers
-- Checkpoints e snapshots
-- Rollback e recovery
-- Monitoramento e alertas
-
-### 10. Implementação de fluxos de correção de dados em expurgo | Implementation of Data Correction Flows in Purging
-- Políticas de retenção de dados
-- Expurgo seletivo
-- Anonimização e pseudonimização
-- Compliance com regulações de dados
-- Auditoria de limpeza
-
-##  Laboratórios Práticos | Practical Labs
-
-Durante o curso, serão realizados laboratórios práticos abordando:
-
-1. **Setup de ambiente de desenvolvimento**
-   - Configuração de ambientes locais e cloud
-   - Ferramentas necessárias
-
-2. **Implementação de pipelines ETL/ELT**
-   - Desenvolvimento de fluxos completos
-   - Integração com diferentes fontes de dados
-
-3. **Orquestração com Apache Airflow**
-   - Criação de DAGs
-   - Monitoramento e troubleshooting
-
-4. **Feature Engineering avançado**
-   - Técnicas para diferentes tipos de dados
-   - Otimização de features para ML
-
-5. **Resiliência e teste de falhas**
-   - Implementação de mecanismos de recuperação
-   - Simulação de cenários de erro
-
-
-
-## ⚠️ Observações Importantes | Important Notes
-
-- **Desenvolvimento em aula**: TODOS os exercícios são desenvolvidos durante a aula e a entrega é garantida se ficarem até o final da aula. As gravações ficam disponíveis no Canvas e podem ajudá-los com dúvidas.
-
-- **Integridade acadêmica**: Cópias de trabalhos não serão aceitas. Caso tenha dúvidas, não hesite em procurar o professor.
-
-- **Plataforma de entrega**: TODAS as atividades devem ser entregues EXCLUSIVAMENTE através do CANVAS. Atividades entregues por e-mail NÃO SERÃO CONSIDERADAS.
-
-- **Prazos**: Caso não possa entregar a atividade no prazo, entre em contato com o professor com antecedência. O professor entende a rotina de trabalho dos alunos e é compreensível, mas pede que respeitem os prazos de entrega. O adiamento do prazo de entrega impactará diretamente no lançamento das notas.
-
-- **Canal de comunicação**: O contato com o professor para dúvidas deve ser feito pelo CANVAS (as notificações são enviadas diretamente para o celular do professor). O professor utiliza o Microsoft Teams durante o dia no trabalho, então não fica com ele aberto e não vê mensagens fora das aulas.
-
-##  Bibliografia Recomendada | Recommended Bibliography
-
-### Bibliografia Básica | Basic Bibliography
-- KLEPPMANN, Martin. **Designing Data-Intensive Applications**. O'Reilly Media, 2017.
-- HOFFMAN, Ted; JOHNSON, Tim. **Teaching an Elephant to Dance: Intentional Evolution Across Teams, Process, and Applications**. O'Reilly Media, 2018.
-- NORONHA, Rafael; FERREIRA, Fabiano. **Engenharia de Dados: Princípios e práticas para dados confiáveis**. Casa do Código, 2022.
-
-### Bibliografia Complementar | Complementary Bibliography
-- MARZ, Nathan; WARREN, James. **Big Data: Principles and best practices of scalable realtime data systems**. Manning Publications, 2015.
-- DAMA International. **DMBOK: Data Management Body of Knowledge** (2ª edição). Technics Publications, 2017.
-- WHITE, Tom. **Hadoop: The Definitive Guide** (4ª edição). O'Reilly Media, 2015.
-- REIS, Eduardo. **Data Science do zero à produção: Como colocar projetos de dados para rodar no mundo real**. Casa do Código, 2023.
-- RAMALHO, Luciano. **Fluent Python: Clear, Concise, and Effective Programming**. O'Reilly Media, 2015.
-
+- Projetar e implementar pipelines de dados robustos e escaláveis
+- Aplicar técnicas avançadas de Feature Engineering
+- Utilizar ferramentas modernas de orquestração de dados
+- Implementar soluções de integração multi-fonte
+- Desenvolver arquiteturas resilientes de processamento de dados
+- Monitorar e otimizar fluxos de dados em produção
+- Implementar estratégias de recuperação e correção de dados
+- Trabalhar com processamento baseado em eventos
+- Aplicar melhores práticas de qualidade e governança de dados
