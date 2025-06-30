@@ -1,6 +1,3 @@
-
-# Bancos de Dados Relacionais e Linguagem SQL | Relational Databases and SQL Language
-
 # Bancos de Dados Relacionais e Linguagem SQL
 
 ## Informações da Disciplina
