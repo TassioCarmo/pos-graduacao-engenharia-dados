@@ -1,33 +1,39 @@
+# Glossário de Termos em Gestão de Dados e Transformação Digital
 
-# Glossário de Termos em Gestão de Dados e Transformação Digital | Glossary of Data Management and Digital Transformation Terms
+Claro! Aqui está o sumário com todas as partes em inglês removidas:
+
+---
 
 ## Sumário
-- [Cloud Computing (Computação em Nuvem)](#cloud-computing-computação-em-nuvem)
-- [Transformação Digital (Digital Transformation)](#transformação-digital-digital-transformation)
-- [Data Driven (Orientado por Dados)](#data-driven-orientado-por-dados)
-- [LGPD (Lei Geral de Proteção aos Dados)](#lgpd-lei-geral-de-proteção-aos-dados--lgpd-general-data-protection-law)
-- [Dados (Data)](#dados-data)
-- [Pirâmide DIKW (DIKW Pyramid)](#pirâmide-dikw-dikw-pyramid)
-- [Big Data](#big-data)
-- [IoT (Internet of Things)](#iot-internet-of-things--iot-internet-das-coisas)
-- [Inteligência Empresarial (Business Intelligence)](#inteligência-empresarial-business-intelligence)
-- [Dados Estruturados x Não Estruturados](#dados-estruturados-x-não-estruturados-structured-vs-unstructured-data)
-- [Data Analytics (Análise de Dados)](#data-analytics-análise-de-dados)
-- [Data Warehouse (Armazém de Dados)](#data-warehouse-armazém-de-dados)
-- [Papel do Cientista de Dados](#papel-do-cientista-de-dados-data-scientist-role)
-- [Data Literacy (Alfabetização em Dados)](#data-literacy-alfabetização-em-dados)
-- [KPI (Key Performance Indicators)](#kpi-key-performance-indicators--indicadores-chave-de-desempenho)
-- [OKR (Objectives and Key Results)](#okr-objectives-and-key-results--objetivos-e-resultados-chave)
-- [NPS (Net Promoter Score)](#nps-net-promoter-score)
-- [Conceitos Adicionais](#conceitos-adicionais)
-- [Notas Importantes sobre Gestão de Dados](#notas-importantes-sobre-gestão-de-dados)
 
-## Cloud Computing (Computação em Nuvem)
+* [Computação em Nuvem](#computação-em-nuvem)
+* [Transformação Digital](#transformação-digital)
+* [Orientado por Dados](#data-driven)
+* [Lei Geral de Proteção aos Dados](#lgpd-lei-geral-de-proteção-aos-dados)
+* [Dados](#dados)
+* [Pirâmide DIKW](#pirâmide-dikw)
+* [Big Data](#big-data)
+* [Internet das Coisas](#iot-internet-das-coisas)
+* [Inteligência Empresarial](#inteligência-empresarial)
+* [Dados Estruturados x Não Estruturados](#dados-estruturados-x-não-estruturados)
+* [Análise de Dados](#data-analytics)
+* [Data Warehouse](#data-warehouse)
+* [Papel do Cientista de Dados](#papel-do-cientista-de-dados)
+* [Alfabetização em Dados](#data-literacy)
+* [Indicadores-chave de Desempenho (KPI)](#kpi)
+* [Objetivos e Resultados-chave (OKR)](#okr)
+* [Net Promoter Score (NPS)](#nps)
+* [Conceitos Adicionais](#conceitos-adicionais)
+* [Notas Importantes sobre Gestão de Dados](#notas-importantes-sobre-gestão-de-dados)
+
+---
+
+## Computação em Nuvem
 Disponibilização sob demanda de recursos computacionais, especialmente armazenamento de dados e capacidade de processamento, sem o gerenciamento ativo direto do usuário. Os serviços são acessados pela internet, permitindo escalabilidade e flexibilidade.
 
 **Exemplo:** Amazon Web Services (AWS), Microsoft Azure e Google Cloud Platform oferecem infraestrutura, plataformas e software como serviços.
 
-## Transformação Digital (Digital Transformation)
+## Transformação Digital
 Processo de adoção e integração de tecnologias digitais em todos os aspectos de uma organização, transformando fundamentalmente a forma como a empresa opera e entrega valor aos clientes. Envolve mudanças culturais, operacionais e de modelo de negócio.
 
 **Elementos principais:**
@@ -36,7 +42,8 @@ Processo de adoção e integração de tecnologias digitais em todos os aspectos
 3. **Substituição de tecnologias legadas** - Migração de sistemas monolíticos para tecnologias ágeis
 4. **Mudança no modelo de negócio** - Adaptação para competir no ambiente digital moderno
 
-## Data Driven (Orientado por Dados)
+## Orientado por Dados
+
 Abordagem que utiliza dados para identificar padrões, deduções e percepções que fundamentam o processo de tomada de decisões, reduzindo a interferência de vieses ou emoções pessoais.
 
 **Data Driven Decision Making (DDDM)** consiste no processo de coletar dados de acordo com os indicadores-chave de desempenho (KPIs) e transformá-los em percepções acionáveis.
@@ -61,7 +68,7 @@ Lei 13.709 de 14 de Agosto de 2018 que dispõe sobre o tratamento de dados pesso
 
 **Dados Sensíveis:** Dados sobre origem racial/étnica, convicção religiosa, opinião política, saúde, vida sexual, dados genéticos/biométricos.
 
-## Dados (Data)
+## Dados 
 Elementos que constituem a matéria-prima da informação. Podem ser definidos como conhecimento bruto, que ainda não foi devidamente tratado para prover insights para uma organização.
 
 **Tipos de dados:**
@@ -95,7 +102,7 @@ Capacidade de explorar, analisar e extrair conclusões de um grande volume de da
 
 **Exemplo prático:** E-commerces utilizam Big Data para ampliar oportunidades de vendas, direcionando produtos baseados no perfil de busca do consumidor, com recomendações como "o que outros também compraram".
 
-## IoT (Internet of Things) | IoT (Internet das Coisas)
+## IoT (Internet das Coisas)
 Conexão entre objetos físicos utilizando sensores, chips e softwares, permitindo que troquem informações entre si e com pessoas. Essa conexão pode ocorrer via radiofrequência (RFID), WiFi, Ethernet, Bluetooth, entre outras tecnologias.
 
 **Exemplo:** Dispositivos domésticos inteligentes como termostatos, sistemas de iluminação e eletrodomésticos que podem ser controlados remotamente e compartilham dados entre si.
@@ -112,12 +119,12 @@ Processo de coleta, organização, análise, compartilhamento e monitoramento de
 - Análise de rotas, crimes, doenças e desastres
 - Geomarketing
 
-## Dados Estruturados x Não Estruturados (Structured vs. Unstructured Data)
+## Dados Estruturados x Não Estruturados 
 **Dados Estruturados:** Seguem uma estrutura rígida de armazenamento, como registros em tabelas de um banco de dados SQL. São facilmente organizados e consultados.
 
 **Dados Não Estruturados:** Provenientes de fontes diversas como internet e redes sociais, em vários formatos (texto, imagem, som, vídeos). Precisam de processamento antes de serem cruzados com outros dados e analisados.
 
-## Data Analytics (Análise de Dados)
+## Análise de Dados
 Processo de examinar conjuntos de dados para descobrir padrões, extrair conclusões e apoiar a tomada de decisões. Pode ser aplicado em vários segmentos como bancos (prevenção de fraudes), educação (progresso dos alunos) e varejo (comportamento de clientes).
 
 **Etapas do processo:**
@@ -132,7 +139,7 @@ Processo de examinar conjuntos de dados para descobrir padrões, extrair conclus
 - **Data Driven:** Abordagem mais quantitativa, baseada em números e modelos preditivos
 - **Analytics Driven:** Considera também o aspecto qualitativo, estabelecendo padrões e correlações entre os dados, interpretando o contexto
 
-## Data Warehouse (Armazém de Dados)
+## Data Warehouse 
 Repositório centralizado de dados históricos e processados, usado para análises. Características:
 - Base analítica centralizada
 - Execução de pipelines geralmente fora do horário comercial
@@ -147,14 +154,14 @@ Profissionais que trabalham com dados em diferentes níveis:
 
 **Cientista de Dados:** Trabalha com massas de dados estruturados e não estruturados, utilizando habilidades em Matemática, Estatística, Ciência da Computação e Programação para limpar, tratar e organizar os dados.
 
-## Data Literacy (Alfabetização em Dados)
+## Data Literacy
 Capacidade de ler, entender, criar e comunicar dados como informação. Benefícios para empresas:
 - **Competitividade:** Conversão de dados em rentabilidade
 - **Inovação:** Melhor sensibilidade às mudanças no comportamento dos clientes
 - **Desempenho:** Avaliação de KPIs para otimização de processos
 - **Estratégia:** Alinhamento estratégico da organização com o mercado
 
-## KPI (Key Performance Indicators) | Indicadores-Chave de Desempenho
+## KPI (Key Performance Indicators)
 Métricas utilizadas para mensurar o desempenho de uma empresa e validar os objetivos definidos na estratégia. Características:
 - Devem ser objetivos
 - Mensuráveis
@@ -168,7 +175,7 @@ Métricas utilizadas para mensurar o desempenho de uma empresa e validar os obje
 
 **Exemplo:** Para um site, o tráfego pode ser um KPI primário, enquanto page views seria um KPI secundário ou prático.
 
-## OKR (Objectives and Key Results) | Objetivos e Resultados-Chave
+## OKR Objectives and Key Results
 Metodologia que estabelece uma direção clara para o negócio ou produto baseada na definição de objetivos (metas e intenções) e resultados (indicadores de progresso). Diferentemente dos KPIs, os OKRs são planejados para elevar o patamar do negócio, não apenas monitorar o comportamento esperado.
 
 **Características:**
