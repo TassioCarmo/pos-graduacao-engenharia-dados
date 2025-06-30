@@ -1,7 +1,6 @@
 # Arquitetura de Dados Moderna: Conceitos e Implementações
-# Modern Data Architecture: Concepts and Implementations
 
-## Sumário / Summary
+## Sumário
 - [Introdução ](#introdução)
 - [Repositórios de Dados](#repositórios-de-dados)
   - [Data Ponds](#data-ponds)
