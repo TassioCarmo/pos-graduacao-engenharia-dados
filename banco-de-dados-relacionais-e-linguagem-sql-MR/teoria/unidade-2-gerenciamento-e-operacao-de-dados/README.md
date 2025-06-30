@@ -4,10 +4,10 @@ Este repositório contém o material complementar da disciplina de Bancos de Dad
 
 ## Sumário 
 - [Ciclo de Vida do Desenvolvimento de Banco de Dados](#ciclo-de-vida-do-desenvolvimento-de-banco-de-dados)
-- [Modelos de Dados, Esquemas e Instâncias | Data Models, Schemas and Instances](#modelos-de-dados-esquemas-e-instâncias)
-- [Linguagem SQL: DDL, DML, DCL e TCL | SQL Language: DDL, DML, DCL and TCL](#linguagem-sql-ddl-dml-dcl-e-tcl)
-- [Álgebra e Cálculo Relacional | Relational Algebra and Calculus](#álgebra-e-cálculo-relacional)
-- [Glossário | Glossary](#glossário)
+- [Modelos de Dados, Esquemas e Instâncias](#modelos-de-dados-esquemas-e-instâncias)
+- [Linguagem SQL: DDL, DML, DCL e TCL](#linguagem-sql-ddl-dml-dcl-e-tcl)
+- [Álgebra e Cálculo Relacional](#álgebra-e-cálculo-relacional)
+- [Glossário](#glossário)
 
 ## Ciclo de Vida do Desenvolvimento de Banco de Dados
 
