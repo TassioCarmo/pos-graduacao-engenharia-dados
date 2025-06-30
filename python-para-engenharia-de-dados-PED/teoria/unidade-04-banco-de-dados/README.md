@@ -19,11 +19,11 @@
   - [SQLAlchemy e SQLite3](#sqlalchemy-e-sqlite3)
   - [OpenPyXL](#openpyxl)
 
-## Introdução / Introduction
+## Introdução
 
 Este documento serve como uma referência completa para operações de banco de dados em Python, abrangendo desde comandos SQL básicos até integrações com diversas bibliotecas de análise de dados. O material é destinado tanto para estudo acadêmico quanto para demonstração de competências técnicas em ambientes profissionais.
 
-## Operações SQL Básicas / Basic SQL Operations
+## Operações SQL Básicas
 
 ### INSERT / Inserção
 
@@ -104,7 +104,7 @@ cursor.close()
 conn.close()
 ```
 
-### UPDATE / Atualização
+### UPDATE
 
 O comando UPDATE é utilizado para modificar registros existentes em uma tabela.
 
