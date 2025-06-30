@@ -1,59 +1,104 @@
-# Python para Engenharia de Dados | Python for Data Engineering
+# Python para Engenharia de Dados
 
-Este repositório contém atividades, projetos e exercícios desenvolvidos na disciplina de **Python Aplicado à Engenharia de Dados**, parte da pós-graduação em Engenharia de Dados. O conteúdo aqui apresentado tem como objetivo consolidar o domínio da linguagem Python e de suas principais bibliotecas voltadas para a manipulação, transformação, análise e visualização de dados.
+## Informações da Disciplina
+- **Curso:** Engenharia de Dados
+- **Instituição:** PUC Minas
+- **Carga Horária:** 32 horas
+- **Modalidade:** Ensino a Distância (EAD)
 
-## Sobre a Disciplina | About the Course
+## Objetivos
+Esta disciplina visa capacitar os estudantes para:
+- **Fundamentos Sólidos:** Dominar os conceitos básicos da linguagem Python e suas aplicações específicas em engenharia de dados
+- **Programação Orientada a Objetos:** Aplicar paradigmas de orientação a objetos para criar soluções escaláveis e reutilizáveis em projetos de dados
+- **Manipulação de Arquivos:** Processar e transformar dados de diferentes formatos (CSV, JSON, XML, Parquet) utilizando Python
+- **Integração com Bancos de Dados:** Conectar, consultar e manipular dados em sistemas de gerenciamento de banco de dados relacionais e não-relacionais
+- **Automação de Pipelines:** Desenvolver scripts Python para automatização de processos de ETL (Extract, Transform, Load)
 
-Ao longo da disciplina, foram abordados conceitos fundamentais da linguagem, estruturas de dados, orientação a objetos, manipulação de arquivos, integração com APIs, automação de tarefas e, principalmente, uso de bibliotecas amplamente adotadas no ecossistema de dados, como:
+## Metodologia
+O aprendizado é estruturado através de:
+- **Material Didático Completo:** Disponibilizado na plataforma AVA da PUCMINAS
+- **Videoaulas Práticas:** Demonstrações hands-on com exemplos reais de engenharia de dados
+- **Ambiente de Desenvolvimento:** Configuração de ambiente Python com bibliotecas especializadas
+- **Projetos Aplicados:** Exercícios práticos simulando cenários reais de manipulação de dados
+- **Laboratórios Virtuais:** Ambiente interativo para execução de código Python
+- **Cases de Mercado:** Estudos de caso baseados em situações reais da indústria
 
-- `pandas`: análise e manipulação de dados estruturados
-- `numpy`: computação numérica e operações matemáticas avançadas
-- `matplotlib` e `seaborn`: visualização de dados e criação de gráficos interativos
-- `requests` e `json`: consumo de APIs e processamento de dados em formato JSON
-- `sqlalchemy` e `sqlite3`: integração com bancos de dados relacionais
-- `openpyxl`: manipulação de arquivos Excel
-- `pyspark`: processamento de dados em larga escala
-- `airflow`: orquestração de pipelines de dados
+## Ementa
+A disciplina abrange os seguintes tópicos fundamentais:
+- Sintaxe e Estruturas de Dados Python
+- Programação Orientada a Objetos para Dados
+- Bibliotecas Especializadas (Pandas, NumPy, SQLAlchemy)
+- Processamento de Arquivos de Dados
+- Conectividade com Sistemas de Banco de Dados
+- Tratamento de Exceções e Validação de Dados
+- Boas Práticas em Desenvolvimento Python
+- Automação de Processos de Dados
 
-Este portfólio serve como uma vitrine prática das competências desenvolvidas com Python na área de dados, com foco em problemas reais, clareza de código, boas práticas e documentação.
+## Conteúdo Programático
 
-## Objetivos da Disciplina | Course Objectives
+### Unidade 1 - Conceitos Básicos
+**Fundamentos da Linguagem Python**
+- **1.1** Introdução ao Python e configuração do ambiente de desenvolvimento
+- **1.2** Sintaxe básica, variáveis e tipos de dados primitivos
+- **1.3** Estruturas de controle: condicionais e loops
+- **1.4** Estruturas de dados: listas, tuplas, dicionários e conjuntos
+- **1.5** Funções e módulos: organização e reutilização de código
+- **1.6** Tratamento de exceções e debugging básico
+- **1.7** Bibliotecas padrão relevantes para engenharia de dados
 
-- Aprender os fundamentos da linguagem Python com foco em aplicações para dados
-- Automatizar tarefas rotineiras de processamento de dados
-- Realizar limpeza, transformação e análise exploratória de dados
-- Gerar relatórios e visualizações para apoiar a tomada de decisão
-- Integrar Python a fontes de dados externas (APIs, arquivos, bancos de dados)
-- Implementar pipelines de dados escaláveis e robustos
+### Unidade 2 - Orientação a Objetos
+**Paradigma Orientado a Objetos para Dados**
+- **2.1** Conceitos fundamentais: classes, objetos, atributos e métodos
+- **2.2** Encapsulamento e modificadores de acesso
+- **2.3** Herança e polimorfismo em contextos de dados
+- **2.4** Métodos especiais e sobrecarga de operadores
+- **2.5** Padrões de design aplicados à engenharia de dados
+- **2.6** Criação de classes para modelagem de dados
+- **2.7** Abstração e interfaces para sistemas de dados
+
+### Unidade 3 - Manipulação de Arquivos
+**Processamento e Transformação de Dados**
+- **3.1** Operações básicas com arquivos: leitura, escrita e manipulação
+- **3.2** Processamento de arquivos CSV com Pandas
+- **3.3** Manipulação de dados JSON e XML
+- **3.4** Trabalho com arquivos Parquet e formatos colunares
+- **3.5** Compressão e descompressão de dados
+- **3.6** Validação e limpeza de dados
+- **3.7** Transformações de dados e agregações
+- **3.8** Processamento de arquivos grandes e otimização de performance
+
+### Unidade 4 - Banco de Dados
+**Integração e Manipulação de Dados Persistentes**
+- **4.1** Conectividade com bancos relacionais usando SQLAlchemy
+- **4.2** Operações CRUD (Create, Read, Update, Delete) com Python
+- **4.3** ORM (Object-Relational Mapping) e mapeamento objeto-relacional
+- **4.4** Integração com bancos NoSQL (MongoDB, Redis)
+- **4.5** Transações e controle de concorrência
+- **4.6** Conexão com APIs e web services
+- **4.7** Migração de dados entre diferentes sistemas
+- **4.8** Monitoramento e logging de operações de banco
+
+## Ferramentas e Tecnologias
+Durante o curso, você trabalhará com:
+- **Python 3.8+:** Linguagem principal de desenvolvimento
+- **Pandas:** Manipulação e análise de dados estruturados
+- **NumPy:** Computação numérica e arrays multidimensionais
+- **SQLAlchemy:** ORM e toolkit SQL para Python
+- **PyMongo:** Driver MongoDB para Python
+- **Jupyter Notebooks:** Ambiente interativo de desenvolvimento
+- **Git:** Controle de versão e colaboração
+- **Docker:** Containerização de aplicações Python
+- **Plataforma AVA PUCMINAS:** Ambiente virtual de aprendizagem
+
+## Competências Desenvolvidas
+Ao concluir esta disciplina, você será capaz de:
+- Desenvolver aplicações Python robustas para processamento de dados
+- Implementar soluções orientadas a objetos para problemas complexos de dados
+- Processar e transformar grandes volumes de dados de diferentes formatos
+- Integrar sistemas Python com bancos de dados relacionais e NoSQL
+- Criar pipelines automatizados de ETL usando Python
 - Aplicar boas práticas de desenvolvimento e documentação de código
-
-## Público-alvo | Target Audience
-
-Profissionais e estudantes da área de tecnologia que desejam atuar em cargos como:
-
-- Engenheiro de Dados
-- Cientista de Dados
-- Analista de Dados
-- Desenvolvedor Python
-- Arquiteto de Soluções de Dados
-- Especialista em ETL/ELT
-
-## Aplicabilidade no Mercado | Market Relevance
-
-O domínio da linguagem Python é hoje uma das competências mais requisitadas no mercado de dados. Esta disciplina prepara o profissional para atuar em ambientes onde é necessário construir pipelines de dados, realizar análises automatizadas, comunicar resultados de forma visual e integrar sistemas diversos, sempre utilizando a linguagem mais popular do ecossistema de Data Science e Big Data.
-
-Segundo pesquisas recentes, Python continua sendo a linguagem preferida para projetos de dados, com mais de 70% dos profissionais da área utilizando-a como principal ferramenta.
-
-
-## Resultados de Aprendizagem | Learning Outcomes
-
-Ao final desta disciplina, os estudantes serão capazes de:
-
-- Desenvolver pipelines de ETL robustos utilizando Python
-- Aplicar técnicas de análise exploratória de dados com pandas
-- Criar visualizações informativas com matplotlib e seaborn
-- Integrar Python com diferentes tipos de bancos de dados
-- Consumir e processar dados de APIs externas
-- Automatizar tarefas de processamento de dados
-- Implementar soluções escaláveis para problemas de engenharia de dados
-
+- Otimizar performance de aplicações que manipulam grandes datasets
+- Implementar tratamento adequado de erros e validação de dados
+- Trabalhar com APIs e serviços web para integração de dados
+- Utilizar ferramentas modernas do ecossistema Python para engenharia de dados
