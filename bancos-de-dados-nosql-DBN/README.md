@@ -79,16 +79,6 @@ Durante o curso, você trabalhará com:
 - **Web Crawlers:** Tecnologias de coleta de dados da web
 - **Ambiente Livre:** Implementação em plataformas open source
 
-## Sistema de Avaliação
-
-| Descrição | Valor Individual | Valor Total |
-|-----------|------------------|-------------|
-| Questionários ao final de cada unidade | 2,0 pontos | 30,0 pontos |
-| Trabalhos de finalização das Unidades 1, 2 e 3 | 10,0 pontos | 30,0 pontos |
-| Trabalho Final - Implantação de banco NoSQL (MongoDB) | 40,0 pontos | 40,0 pontos |
-
-**Total:** 100,0 pontos
-
 ## Competências Desenvolvidas
 
 Ao concluir esta disciplina, você será capaz de:
