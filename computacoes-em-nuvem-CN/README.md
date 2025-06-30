@@ -1,124 +1,117 @@
-# Computação em Nuvem | Cloud Computing
-*Disciplina de Pós-Graduação*
+# Computação em Nuvem
 
+## Informações da Disciplina
 
-##  Sobre a Disciplina | About the Course
+- **Curso:** Pós-graduação
+- **Instituição:** PUC Minas
+- **Carga Horária:** 24 horas
+- **Modalidade:** Ensino a Distância (EAD)
 
-Esta disciplina oferece uma visão abrangente da computação em nuvem, explorando desde conceitos fundamentais até implementações práticas em ambientes corporativos. Você irá aprender sobre os principais provedores de serviços, modelos de implementação e aspectos de segurança essenciais para a gestão eficiente de ativos de TI nas empresas.
+## Objetivos
 
-*This course provides a comprehensive overview of cloud computing, exploring from fundamental concepts to practical implementations in corporate environments. You will learn about the main service providers, deployment models, and essential security aspects for efficient IT asset management in companies.*
+Esta disciplina visa capacitar os estudantes para:
 
-##  Objetivos | Objectives
+- **Compreensão da Plataforma:** Entender a Computação em Nuvem como uma plataforma estratégica para expansão da TI empresarial
+- **Planejamento Estratégico:** Identificar, planejar e implementar os principais recursos de computação em nuvem
+- **Conhecimento do Mercado:** Conhecer os principais provedores de serviços de nuvem e suas características
+- **Gestão de Ativos:** Avaliar o impacto socioeconômico na gestão de ativos de TI nas empresas
+- **Aplicação Prática:** Implementar soluções de computação em nuvem em ambientes corporativos
 
-- Compreender os sistemas de computação em nuvem e sua aplicação no ambiente empresarial
-- Identificar, planejar e implantar os principais recursos de computação em nuvem
-- Conhecer os principais provedores de serviços de nuvem (AWS, Azure, Google Cloud)
-- Analisar o impacto socioeconômico da nuvem na gestão de ativos de TI corporativos
-- Desenvolver projetos práticos utilizando serviços de nuvem
+## Metodologia
 
-##  Métodos de Ensino | Teaching Methods
+O aprendizado é estruturado através de:
 
--  **Videoaulas** - Conteúdo dinâmico e atualizado sobre tecnologias em nuvem
--  **Slides de conteúdo** - Material didático para acompanhamento e revisão
--  **Discussão em fórum** - Compartilhamento de experiências e dúvidas
--  **Leituras complementares** - Aprofundamento em tópicos específicos
+- **Videoaulas Explicativas:** Cobertura teórica e prática dos conceitos fundamentais
+- **Slides de Conteúdo:** Material didático visual para apoio ao aprendizado
+- **Discussão em Fórum:** Interação colaborativa entre estudantes e professores
+- **Leituras Complementares:** Materiais adicionais para aprofundamento dos temas
+- **Abordagem Prática:** Exploração hands-on dos principais provedores de nuvem
 
-## Ementa | Syllabus
+## Ementa
 
-A disciplina aborda os seguintes tópicos:
-- Aspectos da Computação em Nuvem (conceitos, tipos, utilização)
-- Fornecedores e utilização corporativa
-- Soluções corporativas de SaaS, PaaS e IaaS
-- Exploração de serviços oferecidos pelos principais players do mercado
-- Aspectos de segurança da informação
-- Plataformas de Colaboração e Comunicação
+A disciplina abrange os seguintes tópicos fundamentais:
 
-## Conteúdo Programático | Program Content
+- Aspectos conceituais da Computação em Nuvem
+- Tipos e modelos de serviços em nuvem
+- Principais fornecedores e suas características
+- Utilização corporativa de serviços em nuvem
+- Soluções empresariais: SaaS, PaaS e IaaS
+- Exploração de serviços dos principais players do mercado
+- Aspectos críticos de segurança da informação
+- Plataformas de colaboração e comunicação
 
-### Unidade I - Introdução | Introduction
-- **Introdução à Computação em Nuvem**
-  - Histórico e evolução
-  - Benefícios e desafios
-- **Conceitos da Computação em Nuvem**
-  - Definições e características essenciais
-  - Elasticidade e escalabilidade
-- **Tipos de Computação em Nuvem**
-  - Nuvem pública, privada e híbrida
-  - Modelos de implantação
-- **Principais fornecedores**
-  - Amazon Web Services (AWS)
-  - Microsoft Azure
-  - Google Cloud Platform (GCP)
-  - IBM Cloud e outros players
+## Conteúdo Programático
 
-### Unidade II - Soluções Corporativas de Computação em Nuvem | Corporate Cloud Computing Solutions
-- **Aplicações em Nuvem**
-  - Software como Serviço (SaaS)
-  - Plataforma como Serviço (PaaS)
-  - Infraestrutura como Serviço (IaaS)
-- **Virtualização de Servidores**
-  - Conceitos e tecnologias
-  - Gerenciamento de máquinas virtuais
-- **Aplicações de Banco de Dados**
-  - Bancos de dados relacionais e NoSQL na nuvem
-  - Serviços gerenciados vs. auto-hospedados
-- **Aplicações Serverless**
-  - Arquitetura e casos de uso
-  - Vantagens e limitações
-- **Infraestrutura de Rede e de Armazenamento**
-  - Redes virtuais e VPNs
-  - Sistemas de armazenamento em nuvem
+### Unidade 1 - Introdução
 
-### Unidade III - Desenvolvimento de Aplicações em Nuvem | Cloud Application Development
-- **Cultura DevOps**
-  - Princípios e práticas
-  - Automação e colaboração
-- **Implementação e CI/CD**
-  - Integração contínua
-  - Entrega contínua
-  - Ferramentas e pipelines
-- **Desenvolvimento de Aplicações Front End e Back End**
-  - Arquiteturas modernas
-  - Microserviços e containers
-- **Aplicações Práticas**
-  - Google Cloud e Firebase
-  - Amazon AWS
-  - Microsoft Azure
+**Fundamentos da Computação em Nuvem**
+- **1.1** Introdução à Computação em Nuvem
+- **1.2** Conceitos fundamentais da Computação em Nuvem
+- **1.3** Tipos e modelos de Computação em Nuvem
+- **1.4** Principais fornecedores e suas características
+- **1.5** Panorama do mercado de computação em nuvem
 
-### Unidade IV - Gestão e Segurança | Management and Security
-- **Administração de Servidores e Monitoramento de Infraestrutura**
-  - Ferramentas de monitoramento
-  - Gestão de logs e métricas
-- **Gestão de Usuários**
-  - IAM (Identity and Access Management)
-  - Controle de acesso e privilégios
-- **Segurança da Informação**
-  - Melhores práticas de segurança na nuvem
-  - Compliance e regulamentações
-- **Faturamento**
-  - Modelos de precificação
-  - Otimização de custos
+### Unidade 2 - Soluções Corporativas de Computação em Nuvem
 
-##  Avaliações e Distribuição de Pontos | Assessments and Grading
+**Modelos de Serviços e Infraestrutura**
+- **2.1** Software como Serviço (SaaS): conceitos e aplicações
+- **2.2** Plataforma como Serviço (PaaS): desenvolvimento e deployment
+- **2.3** Infraestrutura como Serviço (IaaS): recursos computacionais
+- **2.4** Virtualização de Servidores e suas vantagens
+- **2.5** Aplicações de Banco de Dados em nuvem
+- **2.6** Aplicações Serverless e arquiteturas modernas
+- **2.7** Infraestrutura de Rede e Armazenamento em nuvem
 
-A avaliação será distribuída da seguinte forma:
+### Unidade 3 - Desenvolvimento de Aplicações em Nuvem
 
-| Avaliação | Pontuação | Descrição |
-|-----------|-----------|-----------|
-| **Atividades Online** | 60 pontos | Distribuídos por unidade (disponíveis durante todo o período do curso, prevalecendo a maior nota) |
-| **Prova Online** | 40 pontos | 10 questões objetivas abrangendo todo o conteúdo da disciplina |
-| **Total** | 100 pontos | |
+**Práticas Modernas de Desenvolvimento**
+- **3.1** Cultura DevOps e integração contínua
+- **3.2** Implementação e CI/CD em ambientes de nuvem
+- **3.3** Desenvolvimento de Aplicações Front End em nuvem
+- **3.4** Desenvolvimento de Aplicações Back End em nuvem
+- **3.5** Aplicações práticas com Google Cloud e Firebase
+- **3.6** Implementação de soluções Amazon AWS
+- **3.7** Desenvolvimento de projetos Microsoft Azure
 
-##  Bibliografia Recomendada | Recommended Bibliography
+### Unidade 4 - Gestão e Segurança
 
-### Básica | Basic
-- VELTE, T.; VELTE, A.; ELSENPETER, R. **Cloud Computing: Computação em Nuvem - Uma abordagem prática**. Rio de Janeiro: Alta Books, 2018.
-- MICROSOFT. **Azure Cloud Computing**. São Paulo: Novatec, 2019.
-- MATHER, T.; KUMARASWAMY, S.; LATIF, S. **Cloud Security and Privacy: An Enterprise Perspective on Risks and Compliance**. O'Reilly Media, 2019.
+**Administração e Proteção de Recursos**
+- **4.1** Administração de Servidores em nuvem
+- **4.2** Monitoramento de Infraestrutura e performance
+- **4.3** Gestão de Usuários e controle de acesso
+- **4.4** Segurança da Informação em ambientes de nuvem
+- **4.5** Faturamento e otimização de custos
 
-### Complementar | Supplementary
-- ERL, T.; MAHMOOD, Z.; PUTTINI, R. **Cloud Computing: Concepts, Technology & Architecture**. Prentice Hall, 2018.
-- AMAZON WEB SERVICES. **AWS Certified Solutions Architect Study Guide**. Sybex, 2020.
-- KUMAR, V. **Cloud Computing Implementation, Management, and Security**. CRC Press, 2020.
-- LEWIS, G. **Cloud Computing for Business: The Open Group Guide**. Van Haren Publishing, 2019.
-- HURWITZ, J.; BLOOR, R.; KAUFMAN, M.; HALPER, F. **Cloud Computing For Dummies**. Wiley, 2019.
+## Plataformas e Tecnologias
+
+Durante o curso, você trabalhará com:
+
+- **Google Cloud Platform:** Serviços e Firebase para desenvolvimento
+- **Amazon Web Services (AWS):** Infraestrutura e serviços corporativos
+- **Microsoft Azure:** Plataforma de nuvem empresarial
+- **Ferramentas DevOps:** Implementação de pipelines CI/CD
+- **Monitoramento:** Ferramentas de observabilidade e métricas
+- **Segurança:** Soluções de proteção e compliance
+
+## Competências Desenvolvidas
+
+Ao concluir esta disciplina, você será capaz de:
+
+- Avaliar e selecionar soluções de computação em nuvem adequadas para diferentes cenários
+- Implementar arquiteturas de aplicações utilizando os principais provedores de nuvem
+- Gerenciar recursos de infraestrutura e plataforma em ambientes de nuvem
+- Aplicar práticas de segurança e governança em projetos de nuvem
+- Otimizar custos e performance de soluções em nuvem
+- Desenvolver aplicações modernas utilizando arquiteturas serverless
+- Implementar práticas DevOps para entrega contínua
+- Monitorar e administrar infraestruturas de nuvem complexas
+
+## Impacto Profissional
+
+Esta disciplina prepara profissionais para:
+
+- **Transformação Digital:** Liderar iniciativas de migração para nuvem
+- **Arquitetura de Soluções:** Projetar sistemas escaláveis e resilientes
+- **Gestão de Custos:** Otimizar investimentos em infraestrutura de TI
+- **Segurança Corporativa:** Implementar controles adequados em ambientes de nuvem
+- **Inovação Tecnológica:** Utilizar tecnologias emergentes para vantagem competitiva
