@@ -1,6 +1,6 @@
-# Arquitetura de Dados, Data Lake e Data Warehouse | Data Architecture, Data Lake and Data Warehouse
+# Arquitetura de Dados, Data Lake e Data Warehouse
 
-## Ementa | Course Description
+## Ementa
 
 Esta disciplina apresenta os principais conceitos e tecnologias associados às arquiteturas modernas de dados, com ênfase em Data Lakes e Data Warehouses. O curso explora fundamentos essenciais para o desenvolvimento e implementação de soluções de dados escaláveis em ambientes corporativos modernos.
 
@@ -86,9 +86,9 @@ Esta disciplina apresenta os principais conceitos e tecnologias associados às a
   * Modelos híbridos e multi-cloud
   * Considerações de custo, performance e segurança
 
-## Objetivos da Disciplina | Course Objectives
+## Objetivos da Disciplina
 
-### Objetivo Geral | General Objective
+### Objetivo Geral
 
 Esta disciplina visa capacitar os alunos a dominarem os conceitos fundamentais e avançados relacionados às arquiteturas modernas de dados, permitindo:
 
@@ -98,7 +98,7 @@ Esta disciplina visa capacitar os alunos a dominarem os conceitos fundamentais e
 * Projetar ambientes de dados robustos que respondam adequadamente aos desafios de volume, variedade e velocidade (3Vs do Big Data)
 * Avaliar tecnologias emergentes, técnicas de modelagem e estratégias de orquestração para ambientes analíticos modernos
 
-### Objetivos Específicos | Specific Objectives
+### Objetivos Específicos
 
 Ao concluir esta disciplina, o aluno será capaz de:
 
@@ -122,7 +122,7 @@ Ao concluir esta disciplina, o aluno será capaz de:
   * Comparar abordagens de armazenamento on-premise e em nuvem
   * Selecionar tecnologias apropriadas para requisitos específicos de negócio
 
-## Metodologia | Methodology
+## Metodologia
 
 O curso utiliza uma abordagem teórico-prática, combinando:
 
@@ -132,15 +132,15 @@ O curso utiliza uma abordagem teórico-prática, combinando:
 * Projetos em grupo para design e implementação de arquiteturas de dados
 * Discussões sobre tendências e desafios da indústria
 
-## Bibliografia | Bibliography
+## Bibliografia
 
-### Bibliografia Básica | Essential Reading
+### Bibliografia Básica
 
 1. INMON, W. H. **Building the Data Warehouse**. 4ª Ed. Indianapolis: Wiley, 2005.
 2. KIMBALL, R.; ROSS, M. **The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling**. 3ª Ed. Indianapolis: Wiley, 2013.
 3. SAWADOGO, P.; DARMONT, J. **On Data Lake Architectures and Metadata Management**. Journal of Intelligent Information Systems, v. 56, p. 97-120, 2021.
 
-### Bibliografia Complementar | Supplementary Reading
+### Bibliografia Complementar
 
 1. DEHGHANI, Z. **Data Mesh: Delivering Data-Driven Value at Scale**. O'Reilly Media, 2022.
 2. SHARMA, T.; GANDHI, G. **Data Lakes: Purposes, Practices, Patterns, and Platforms**. O'Reilly Media, 2020. 
