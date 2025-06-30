@@ -1,6 +1,6 @@
-# Data Lakes e Arquiteturas Modernas de Dados (Data Lakes and Modern Data Architectures)
+# Data Lakes e Arquiteturas Modernas de Dados
 
-## Sumário (Summary)
+## Sumário
 
 - [Introdução](#introdução-introduction)
 - [Data Warehouse](#data-warehouse)
@@ -26,7 +26,7 @@
   - [Data Mesh](#data-mesh)
     - [Princípios do Data Mesh](#princípios-do-data-mesh-data-mesh-principles)
 
-## Introdução (Introduction)
+## Introdução 
 
 No ecossistema moderno de dados, as organizações buscam maneiras eficientes de armazenar, processar e analisar quantidades cada vez maiores de dados de diversos formatos. Neste contexto, surgem arquiteturas como Data Warehouses e Data Lakes, cada uma com propósitos específicos e características próprias. Este documento explora em detalhes estas arquiteturas, suas diferenças, implementações e tendências emergentes como o Data Mesh.
 
@@ -46,7 +46,7 @@ Um **Data Warehouse** (Armazém de Dados) é um repositório central de informa�
 
 Uma empresa de varejo consolida diariamente dados de vendas de todas as suas lojas físicas e plataforma de e-commerce em um Data Warehouse. Estes dados são então utilizados para gerar relatórios de desempenho de vendas, análise de estoque e previsões de demanda através de ferramentas de BI como Power BI ou Tableau.
 
-## Data Lake (Lago de Dados)
+## Data Lake
 
 O conceito de **Data Lake** foi apresentado por James Dixon, CTO do Pentaho, em 2010 durante o Hadoop World em Nova York, como resposta às limitações dos Data Warehouses tradicionais para lidar com dados não estruturados e semiestruturados.
 
@@ -55,7 +55,7 @@ Um Data Lake é um repositório centralizado que permite armazenar todos os tipo
 - A seleção antecipada de apenas um subconjunto de atributos considerados relevantes
 - A agregação prematura de dados, perdendo-se detalhes em níveis mais granulares
 
-### Características de um Data Lake (Data Lake Characteristics)
+### Características de um Data Lake
 
 Um Data Lake eficaz apresenta as seguintes características fundamentais:
 
@@ -66,7 +66,7 @@ Um Data Lake eficaz apresenta as seguintes características fundamentais:
 - **Segurança incorporada**: Suporta regras de segurança e proteção de dados
 - **Arquitetura ELT**: Desacopla o armazenamento do processamento, seguindo o modelo Extract-Load-Transform
 
-### Recursos de um Data Lake (Data Lake Resources)
+### Recursos de um Data Lake
 
 Os recursos essenciais de um Data Lake incluem:
 
@@ -75,7 +75,7 @@ Os recursos essenciais de um Data Lake incluem:
 - **Descoberta de dados**: Ferramentas para pesquisa e localização eficiente de dados relevantes
 - **Schema-on-read**: Permite consultar os dados definindo a estrutura apenas no momento do uso, não no momento da ingestão
 
-### Tipos de Armazenamento em um Data Lake (Storage Types in a Data Lake)
+### Tipos de Armazenamento em um Data Lake
 
 Um Data Lake pode armazenar diversos tipos de dados:
 
@@ -92,7 +92,7 @@ Um Data Lake pode armazenar diversos tipos de dados:
 
 Uma arquitetura comum de Data Lake divide o armazenamento em quatro zonas distintas, cada uma com propósito específico:
 
-#### Transient Zone (Zona Transitória)
+#### Zona Transitória
 
 - **Função**: Área temporária para ingestão inicial de dados
 - **Características**:
@@ -130,7 +130,7 @@ Uma arquitetura comum de Data Lake divide o armazenamento em quatro zonas distin
   - Otimizada para performance de consulta
   - Pode incluir dados agregados e métricas pré-calculadas
 
-### Logical Data Lake (Data Lake Lógico)
+### Data Lake Lógico
 
 Embora o conceito original de Data Lake envolva a centralização física dos dados, existem desafios práticos que podem dificultar essa abordagem:
 
@@ -164,7 +164,7 @@ Para superar esses desafios, surge o conceito de **Data Lake Lógico**, baseado 
 
 No contexto das arquiteturas de dados, duas abordagens principais são utilizadas para movimentação e transformação de dados:
 
-### ETL (Extract, Transform, Load / Extrair, Transformar, Carregar)
+### ETL (Extract, Transform, Load)
 
 - **Fluxo**: Extração → Transformação → Carregamento
 - **Características**:
@@ -174,7 +174,7 @@ No contexto das arquiteturas de dados, duas abordagens principais são utilizada
   - Útil quando processamento na origem é mais eficiente
   - Histórico de maturidade em ferramentas e processos
 
-### ELT (Extract, Load, Transform / Extrair, Carregar, Transformar)
+### ELT (Extract, Load, Transform)
 
 - **Fluxo**: Extração → Carregamento → Transformação
 - **Características**:
@@ -226,7 +226,7 @@ O Azure Data Lake é uma solução da Microsoft que oferece:
 - Possibilidade de estender aplicações de dados atuais
 - Ferramentas para processamento e análise como Azure Databricks e Azure Synapse
 
-## Arquiteturas Corporativas Modernas (Modern Enterprise Architectures)
+## Arquiteturas Corporativas Modernas
 
 À medida que as organizações enfrentam desafios de dados cada vez mais complexos, novas arquiteturas estão emergindo para complementar ou substituir os modelos tradicionais de Data Warehouse e Data Lake.
 
