@@ -1,7 +1,7 @@
 # Manipulação de Arquivos / File Manipulation
 
-## Sumário / Summary
-- [Introdução / Introduction](#introdução--introduction)
+## Sumário
+- [Introdução](#introdução--introduction)
 - [Abertura de Arquivos / Opening Files](#abertura-de-arquivos--opening-files)
 - [Leitura de Arquivos / Reading Files](#leitura-de-arquivos--reading-files)
   - [read()](#read)
@@ -17,11 +17,11 @@
 - [Tratamento de Exceções / Exception Handling](#tratamento-de-exceções--exception-handling)
 - [Exemplos Práticos / Practical Examples](#exemplos-práticos--practical-examples)
 
-## Introdução / Introduction
+## Introdução
 
 A manipulação de arquivos é uma habilidade fundamental na programação, permitindo o armazenamento persistente de dados, a comunicação entre programas e o processamento de informações externas. Em Python, esta manipulação é feita de forma intuitiva e poderosa através de diversas funções e métodos que permitem ler, escrever e modificar arquivos. Este documento explora em detalhes os conceitos e técnicas essenciais para manipulação eficiente de arquivos.
 
-## Abertura de Arquivos / Opening Files
+## Abertura de Arquivos
 
 A função `open()` é a porta de entrada para manipulação de arquivos em Python. Esta função cria um objeto de arquivo que serve como interface para operações subsequentes.
 
@@ -56,7 +56,7 @@ arquivo_saida = open('resultados.txt', 'w', encoding='utf-8')
 arquivo_binario = open('imagem.jpg', 'rb')
 ```
 
-## Leitura de Arquivos / Reading Files
+## Leitura de Arquivos
 
 ### read()
 
