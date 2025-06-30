@@ -1,44 +1,45 @@
 
-# Arquiteturas com Alta Disponibilidade (HA) / High Availability Architectures
+# Arquiteturas com Alta Disponibilidade (HA)
 
-## Sumário / Summary
-- [Introdução / Introduction](#introdução--introduction)
-- [Alta Disponibilidade / High Availability](#alta-disponibilidade--high-availability)
-- [Sistemas Distribuídos / Distributed Systems](#sistemas-distribuídos--distributed-systems)
-- [Fragmentação de Database / Database Fragmentation](#fragmentação-de-database--database-fragmentation)
-  - [Sharding / Sharding](#sharding--sharding)
-  - [Como Aplicar o Sharding / How to Apply Sharding](#como-aplicar-o-sharding-para-um-dbms--how-to-apply-sharding-for-a-dbms)
-  - [Sharding e Replicação / Sharding and Replication](#sharding-e-replicação--sharding-and-replication)
-- [Banco de Dados NoSQL / NoSQL Databases](#banco-de-dados-nosql--nosql-databases)
-  - [Teorema CAP / CAP Theorem](#teorema-cap--cap-theorem)
-  - [MongoDB e Alta Disponibilidade / MongoDB and High Availability](#arquiteturas-com-alta-disponibilidade-ha--exemplo-mongodb--high-availability-architectures--mongodb-example)
-- [Sistemas de Arquivos Distribuídos / Distributed File Systems](#sistemas-de-arquivos-distribuídos--distributed-file-systems)
-- [Blocos Funcionais em Arquitetura de Dados / Functional Blocks in Data Architecture](#blocos-funcionais-em-uma-arquitetura-de-dados--functional-blocks-in-data-architecture)
-  - [Tipos de SGDs / Types of Data Management Systems](#tipos-de-sistemas-gerenciadores-de-dados--types-of-data-management-systems)
-  - [Benefícios da Arquitetura de Dados / Benefits of Data Architecture](#benefícios-de-arquitetura-de-dados--benefits-of-data-architecture)
-  - [Características de Arquiteturas Modernas / Characteristics of Modern Architectures](#características-de-uma-arquitetura-moderna-de-dados--characteristics-of-modern-data-architecture)
+## Sumário
+- [Introdução](#introdução)
+- [Alta Disponibilidade](#alta-disponibilidade)
+- [Sistemas Distribuídos](#sistemas-distribuídos)
+- [Fragmentação de Database](#fragmentação-de-database)
+  - [Sharding](#sharding)
+  - [Como Aplicar o Sharding](#como-aplicar-o-sharding-para-um-dbms)
+  - [Sharding e Replicação](#sharding-e-replicação)
+- [Banco de Dados NoSQL](#banco-de-dados-nosql)
+  - [Teorema CAP](#teorema-cap)
+  - [MongoDB e Alta Disponibilidade](#arquiteturas-com-alta-disponibilidade-ha--exemplo-mongodb)
+- [Sistemas de Arquivos Distribuídos](#sistemas-de-arquivos-distribuídos)
+- [Blocos Funcionais em Arquitetura de Dados](#blocos-funcionais-em-uma-arquitetura-de-dados)
+  - [Tipos de SGDs](#tipos-de-sistemas-gerenciadores-de-dados)
+  - [Benefícios da Arquitetura de Dados](#benefícios-de-arquitetura-de-dados)
+  - [Características de Arquiteturas Modernas](#características-de-uma-arquitetura-moderna-de-dados)
 - [ETL vs ELT](#etl-vs-elt)
-- [DevOps e DataOps](#devops-e-dataops--devops-and-dataops)
-  - [Princípios de DevOps / DevOps Principles](#princípios-básicos-do-devops--basic-devops-principles)
-  - [DataOps / DataOps](#dataops--dataops)
-- [Engines para Data Warehousing / Data Warehousing Engines](#engine-para-data-warehousing--data-warehousing-engines)
+- [DevOps e DataOps](#devops-e-dataops)
+  - [Princípios de DevOps](#princípios-básicos-do-devops)
+  - [DataOps](#dataops)
+- [Engines para Data Warehousing](#engine-para-data-warehousing)
   - [C-Store](#c-store)
-  - [Soluções em Nuvem / Cloud Solutions](#warehouse-engine--warehouse-engines)
-- [Data Engineering com Apache Flink / Data Engineering with Apache Flink](#data-engineering--apache-flink--data-engineering--apache-flink)
-  - [Apache Flink vs Apache Spark](#considerações-ao-escolher-o-apache-flink--considerations-when-choosing-apache-flink)
-- [Projetos de Arquitetura de Dados / Data Architecture Projects](#o-que-é-uma-arquitetura-de-dados--what-is-a-data-architecture)
+  - [Soluções em Nuvem](#warehouse-engine)
+- [Data Engineering com Apache Flink](#data-engineering--apache-flink)
+  - [Apache Flink vs Apache Spark](#considerações-ao-escolher-o-apache-flink)
+- [Projetos de Arquitetura de Dados](#o-que-é-uma-arquitetura-de-dados)
 - [Business Intelligence vs Business Analytics](#business-intelligence-bi-vs-business-analytics-ba)
-- [Datasets / Datasets](#datasets--datasets)
-  - [Tipos e Propriedades / Types and Properties](#tipos-de-datasets--types-of-datasets)
-  - [Fontes de Dados / Data Sources](#onde-encontrar--where-to-find)
+- [Datasets](#datasets)
+  - [Tipos e Propriedades](#tipos-de-datasets)
+  - [Fontes de Dados](#onde-encontrar)
 
-## Introdução / Introduction
+
+## Introdução
 
 Este documento apresenta conceitos fundamentais sobre Arquiteturas com Alta Disponibilidade (HA) e os principais componentes envolvidos na construção de sistemas distribuídos robustos. É um material essencial para profissionais de TI que desejam aprofundar seus conhecimentos em arquiteturas modernas de dados, especialmente aquelas voltadas para ambiente de produção que exigem confiabilidade e resiliência.
 
 A alta disponibilidade é um requisito crítico para serviços digitais modernos, e entender as técnicas, padrões e tecnologias que permitem construir tais sistemas é fundamental para o sucesso de projetos de tecnologia em escala.
 
-## Alta Disponibilidade / High Availability
+## Alta Disponibilidade
 
 **Alta disponibilidade** (HA - High Availability) refere-se a um conjunto de tecnologias e práticas que minimizam as interrupções de TI, proporcionando continuidade dos negócios e serviços de TI através de componentes redundantes e tolerantes a falhas. Estes sistemas são projetados para permanecer operacionais mesmo quando componentes individuais falham.
 
@@ -51,7 +52,7 @@ Um sistema com alta disponibilidade tipicamente apresenta:
 
 O objetivo principal é minimizar o "downtime" (tempo de inatividade), tipicamente medido como uma porcentagem do tempo total de operação. Por exemplo, um sistema "cinco noves" (99,999%) teria apenas cerca de 5 minutos de inatividade não planejada por ano.
 
-## Sistemas Distribuídos / Distributed Systems
+## Sistemas Distribuídos
 
 Sistemas distribuídos são recursos computacionais compartilhados em uma rede que permitem:
 - Aumento no desempenho
@@ -73,11 +74,11 @@ A característica fundamental de um sistema distribuído é que, apesar de consi
 
 **Exemplo prático:** Um cluster Hadoop opera como um sistema distribuído onde o processamento de dados ocorre em paralelo em vários nós, mas o usuário interage com ele como se fosse um único sistema.
 
-## Fragmentação de Database / Database Fragmentation
+## Fragmentação de Database
 
 De acordo com o ranking da DB-Engines, existem mais de 390 sistemas de gerenciamento de banco de dados, cada um com suas particularidades e abordagens para escalabilidade e disponibilidade.
 
-### Sharding / Sharding
+### Sharding
 
 O **Sharding** (ou compartilhamento) é uma técnica que divide dados em linhas e colunas separadas, mantidas em instâncias separadas do servidor de banco de dados para distribuir a carga de tráfego.
 
@@ -89,7 +90,7 @@ O **Sharding** (ou compartilhamento) é uma técnica que divide dados em linhas 
 - Permite escalabilidade horizontal (adicionando mais servidores)
 - Distribui o risco, pois uma falha afeta apenas uma parte dos dados
 
-### Como Aplicar o Sharding para um DBMS / How to Apply Sharding for a DBMS
+### Como Aplicar o Sharding para um DBMS
 
 Uma das melhores técnicas para implementar sharding é dividir os dados em várias tabelas pequenas, também chamadas de **partições**. Esta abordagem pode ser implementada de diferentes formas:
 
@@ -115,7 +116,7 @@ Uma das melhores técnicas para implementar sharding é dividir os dados em vár
 3. **Sharding por Lista (List Sharding)**:
    Particiona baseado em listas discretas de valores (como países ou categorias).
 
-### Sharding e Replicação / Sharding and Replication
+### Sharding e Replicação
 
 A **replicação** cria nós de banco de dados duplicados que operam de forma independente. Os dados gravados em um nó são replicados em outros nós duplicados, garantindo redundância.
 
@@ -132,7 +133,7 @@ Arquitetura de Sharding + Replicação:
                            → [Shard 3 Primary] ↔ [Shard 3 Replicas]
 ```
 
-## Banco de Dados NoSQL / NoSQL Databases
+## Banco de Dados NoSQL
 
 Bancos de dados NoSQL são projetados para alta disponibilidade e escalabilidade horizontal, com características como:
 
@@ -148,7 +149,7 @@ Bancos de dados NoSQL são projetados para alta disponibilidade e escalabilidade
 3. **Chave-valor**: Redis, DynamoDB
 4. **Grafos**: Neo4j, JanusGraph
 
-### Teorema CAP / CAP Theorem
+### Teorema CAP
 
 O **Teorema CAP** (também conhecido como Teorema de Brewer) estabelece que um sistema distribuído de bancos de dados somente pode garantir dois dos três comportamentos seguintes simultaneamente:
 
@@ -162,7 +163,7 @@ Exemplos práticos:
 - **CP**: MongoDB, HBase (podem sacrificar disponibilidade em alguns cenários)
 - **AP**: Cassandra, DynamoDB (podem sacrificar consistência imediata)
 
-### Arquiteturas com Alta Disponibilidade (HA) – Exemplo MongoDB / High Availability Architectures – MongoDB Example
+### Arquiteturas com Alta Disponibilidade (HA) – Exemplo MongoDB
 
 À medida em que o volume de dados cresce, aumenta-se a necessidade de escalabilidade e melhoria do desempenho. Podemos:
 
@@ -193,7 +194,7 @@ rs.initiate({
 - Cada shard pode ser um replica set para alta disponibilidade
 - Um componente router (mongos) direciona as operações para os shards apropriados
 
-## Sistemas de Arquivos Distribuídos / Distributed File Systems
+## Sistemas de Arquivos Distribuídos
 
 Na busca de sistemas mais confiáveis, os sistemas de arquivos distribuídos são essenciais para garantir que os dados continuem acessíveis mesmo diante de falhas em servidores individuais.
 
@@ -224,9 +225,9 @@ Exemplo de arquitetura HDFS:
                 → [DataNode 3] - [Bloco A3, B3, C3]
 ```
 
-## Blocos Funcionais em uma Arquitetura de Dados / Functional Blocks in Data Architecture
+## Blocos Funcionais em uma Arquitetura de Dados
 
-### Tipos de Sistemas Gerenciadores de Dados / Types of Data Management Systems
+### Tipos de Sistemas Gerenciadores de Dados
 
 1. **Data Warehouses**:
    - Agregam dados de diferentes fontes relacionais em um repositório único, central e consistente
@@ -253,7 +254,7 @@ Exemplo de arquitetura HDFS:
    - Trata dados como produtos
    - Os produtores de dados atuam como proprietários de produtos
 
-### Benefícios de Arquitetura de Dados / Benefits of Data Architecture
+### Benefícios de Arquitetura de Dados
 
 1. **Redução da redundância**:
    - Padroniza como os dados são armazenados
@@ -275,7 +276,7 @@ Exemplo de arquitetura HDFS:
    - Estabelece políticas de retenção e arquivamento
    - Implementa regras para dados históricos vs. dados operacionais
 
-### Características de uma Arquitetura Moderna de Dados / Characteristics of Modern Data Architecture
+### Características de uma Arquitetura Moderna de Dados
 
 Uma arquitetura moderna de dados deve ser:
 
@@ -375,9 +376,9 @@ JOIN raw_data.orders o ON c.customer_id = o.customer_id
 GROUP BY 1, 2, 3;
 ```
 
-## DevOps e DataOps / DevOps and DataOps
+## DevOps e DataOps
 
-### Princípios Básicos do DevOps / Basic DevOps Principles
+### Princípios Básicos do DevOps
 
 Um ciclo de vida de DevOps padrão consiste em 7 fases:
 
@@ -444,7 +445,7 @@ jobs:
         # Deployment commands here
 ```
 
-### DataOps / DataOps
+### DataOps
 
 **DataOps** é uma prática que aplica as melhores formas de trabalho da engenharia ágil e DevOps ao campo de gerenciamento de dados. É uma colaboração entre equipes de DevOps, engenheiros de dados, cientistas de dados e equipes de análise.
 
@@ -505,7 +506,7 @@ tests:
   - accepted_values
 ```
 
-## Engine para Data Warehousing / Data Warehousing Engines
+## Engine para Data Warehousing
 
 ### C-Store
 
@@ -614,31 +615,31 @@ counts.print();
 env.execute("Streaming WordCount");
 ```
 
-### Considerações ao Escolher o Apache Flink / Considerations When Choosing Apache Flink
+### Considerações ao Escolher o Apache Flink
 
 Ao avaliar ferramentas de processamento de dados como Apache Flink e Apache Spark, é importante considerar os seguintes pontos:
 
-#### Modelo de processamento de dados distribuído / Distributed data processing model
+#### Modelo de processamento de dados distribuído
 
 Tanto Flink quanto Spark são projetados para processar grandes volumes de dados em um cluster de computadores, mas com abordagens diferentes:
 
 - **Flink**: Foco em processamento de stream verdadeiro e contínuo
 - **Spark**: Originalmente projetado para processamento em batch, com adaptação para microbatching
 
-#### High-level APIs / High-level APIs
+#### High-level APIs
 
 Ambos fornecem APIs de alto nível em várias linguagens:
 - Scala, Python, Java
 - Abstrações que simplificam a escrita de pipelines de dados
 
-#### Ecossistema de Big Data / Big Data Ecosystem
+#### Ecossistema de Big Data
 
 Excelente integração com o ecossistema maior:
 - Hadoop Distributed File System (HDFS)
 - Apache Kafka
 - Sistemas de armazenamento em nuvem (S3, Azure Blob, etc.)
 
-#### Performance Optimization / Performance Optimization
+#### Performance Optimization
 
 Ambos implementam otimizações de desempenho:
 - Spark: Utiliza o otimizador Catalyst
@@ -647,9 +648,9 @@ Ambos implementam otimizações de desempenho:
 #### Diferenças Principais: Spark
 
 
-#### Diferenças Principais: Spark vs. Flink / Key Differences: Spark vs. Flink
+#### Diferenças Principais: Spark vs. Flink
 
-##### Modelo de Processamento de Dados / Data Processing Model
+##### Modelo de Processamento de Dados
 - **Apache Flink**: Focado principalmente no processamento de dados em tempo real com streaming nativo. Trata cada evento individualmente, processando-os assim que chegam.
 - **Apache Spark**: Originalmente projetado para processamento em lote, sendo mais adequado para análise retrospectiva de grandes conjuntos de dados. Seu modelo de streaming (Structured Streaming) é baseado em micro-batches.
 
@@ -676,7 +677,7 @@ val transactions = spark
     .filter($"count" > 3)
 ```
 
-##### Maturidade do Ecossistema de Big Data / Big Data Ecosystem Maturity
+##### Maturidade do Ecossistema de Big Data
 - **Apache Spark**: Possui um ecossistema mais maduro e abrangente, incluindo bibliotecas como:
   - Spark SQL para processamento de dados estruturados
   - MLlib para machine learning
@@ -688,7 +689,7 @@ val transactions = spark
   - CEP (Complex Event Processing)
   - Gerenciamento de estado avançado
 
-##### Gerenciamento de Desempenho e Estado / Performance and State Management
+##### Gerenciamento de Desempenho e Estado
 - **Apache Flink**: Permite um gerenciamento de estado mais avançado, com:
   - Checkpoints distribuídos
   - Savepoints para upgrades de aplicação sem perda de estado
@@ -697,11 +698,11 @@ val transactions = spark
 
 - **Apache Spark**: Oferece funcionalidade básica de janelas, ideal para processamento em lote e microlote, mas com capacidades mais limitadas de gerenciamento de estado em comparação com o Flink.
 
-## O que é uma Arquitetura de Dados / What is a Data Architecture
+## O que é uma Arquitetura de Dados 
 
 Um projeto arquitetural de dados é um plano detalhado e abrangente que descreve como os dados serão organizados, armazenados, integrados, processados e gerenciados em um sistema ou organização. Esse projeto é essencial para criar uma arquitetura de dados eficiente e bem estruturada.
 
-### Etapas para um Projeto Arquitetural de Dados / Steps for a Data Architecture Project
+### Etapas para um Projeto Arquitetural de Dados
 
 1. **Requisitos e objetivos**:
    - Identificar as necessidades de negócio
@@ -738,7 +739,7 @@ Um projeto arquitetural de dados é um plano detalhado e abrangente que descreve
    - Definir propriedade e responsabilidades
    - Implementar controles de conformidade
 
-### Tipos de Arquitetura de Banco de Dados / Database Architecture Types
+### Tipos de Arquitetura de Banco de Dados
 
 Os bancos de dados podem ser caracterizados quanto à sua arquitetura:
 
@@ -767,7 +768,7 @@ Os bancos de dados podem ser caracterizados quanto à sua arquitetura:
    - Exemplo: Replica sets do MongoDB
 
 
-### Objetivo da Arquitetura de Banco de Dados / Database Architecture Objective
+### Objetivo da Arquitetura de Banco de Dados
 
 O objetivo principal é criar uma estrutura que atenda às necessidades de negócio enquanto otimiza desempenho, segurança, disponibilidade e escalabilidade.
 
@@ -853,17 +854,17 @@ O objetivo principal é criar uma estrutura que atenda às necessidades de negó
 1. **BI**: Dados → ETL → Data Warehouse → Visualização → Relatórios
 2. **BA**: Dados → Preparação → Modelagem → Algoritmos → Previsões → Recomendações
 
-## Datasets / Datasets
+## Datasets
 
 Um **Dataset** (conjunto de dados) é uma coleção de dados normalmente tabulados, onde cada coluna representa uma variável particular e cada linha corresponde a um determinado membro do conjunto. Cada valor individual é conhecido como um dado.
 
-### Diferenças entre Data, Datasets e Databases / Differences between Data, Datasets and Databases
+### Diferenças entre Data, Datasets e Databases
 
 - **Data (Dados)**: Observações ou medições (brutas ou processadas) representadas como texto, números ou multimídia.
 - **Dataset (Conjunto de dados)**: Coleção estruturada de dados geralmente associados a um único corpo de trabalho.
 - **Database (Banco de dados)**: Coleção organizada de dados armazenados como múltiplos conjuntos de dados, tipicamente em sistemas eletrônicos que permitem fácil acesso, manipulação e atualização.
 
-### Importância dos Datasets / Importance of Datasets
+### Importância dos Datasets
 
 Datasets são componentes fundamentais em projetos de ciência de dados e machine learning:
 - Base para o aprendizado dos algoritmos
@@ -875,7 +876,7 @@ Desafios comuns no trabalho com datasets incluem:
 - Segurança e privacidade
 - Determinação do nível de complexidade adequado para cada análise
 
-### Tipos de Datasets / Types of Datasets
+### Tipos de Datasets
 
 1. **Numerical Dataset (Conjunto de dados numéricos)**:
    - Dados expressos em forma de números
@@ -902,7 +903,7 @@ Desafios comuns no trabalho com datasets incluem:
    - Exemplo: consumo de sorvete x temperatura do dia
    - Aplicação: Análise de fatores que influenciam vendas sazonais
 
-### Propriedades dos Datasets / Dataset Properties
+### Propriedades dos Datasets
 
 Antes de realizar qualquer análise, é essencial entender a natureza dos dados:
 
@@ -937,7 +938,7 @@ plt.title('Distribuição das Vendas')
 plt.show()
 ```
 
-### Onde Encontrar / Where to Find
+### Onde Encontrar
 
 Existem diversas fontes para datasets:
 
@@ -952,7 +953,7 @@ Existem diversas fontes para datasets:
 
 Os datasets são frequentemente disponibilizados em formatos como CSV (Comma-Separated Values), JSON, Excel, ou formatos específicos para determinadas aplicações.
 
-### Dados Abertos na Ciência / Open Data in Science
+### Dados Abertos na Ciência
 
 O conceito de acesso aberto a dados científicos foi estabelecido institucionalmente com a formação do sistema World Data Center em 1957-1958. O Conselho Internacional para a Ciência supervisiona vários Centros de Dados Mundiais com o objetivo de:
 
@@ -962,7 +963,7 @@ O conceito de acesso aberto a dados científicos foi estabelecido institucionalm
 
 A internet transformou significativamente o contexto dos dados de ciência aberta, tornando a publicação e obtenção de dados muito mais rápida, econômica e acessível.
 
-#### Projeto Genoma Humano / Human Genome Project
+#### Projeto Genoma Humano
 
 O Projeto Genoma Humano foi uma iniciativa pioneira que exemplificou o poder dos dados abertos, baseando-se nos "Princípios das Bermudas":
 
@@ -970,7 +971,7 @@ O Projeto Genoma Humano foi uma iniciativa pioneira que exemplificou o poder dos
 
 Iniciativas mais recentes, como o Structural Genomics Consortium, demonstraram que a abordagem de dados abertos também pode ser aplicada produtivamente no contexto de P&D industrial.
 
-### Plataformas de Datasets / Dataset Platforms
+### Plataformas de Datasets
 
 #### Kaggle
 [Kaggle](https://www.kaggle.com/) é uma das mais conhecidas plataformas para competições de Data Science:
@@ -990,7 +991,7 @@ Iniciativas mais recentes, como o Structural Genomics Consortium, demonstraram q
 - Recurso valioso para pesquisadores e estudantes
 - Datasets bem documentados e categorizados
 
-### Dados Abertos Governamentais / Open Government Data
+### Dados Abertos Governamentais
 
 Uma das formas mais importantes de dados abertos são os dados governamentais (OGD - Open Government Data):
 
