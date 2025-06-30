@@ -2,37 +2,37 @@
 # Modern Data Architecture: Concepts and Implementations
 
 ## Sumário / Summary
-- [Introdução / Introduction](#introdução--introduction)
-- [Repositórios de Dados / Data Repositories](#repositórios-de-dados--data-repositories)
-  - [Data Ponds / Data Ponds](#data-ponds--data-ponds)
-  - [Data Puddles / Data Puddles](#data-puddles--data-puddles)
-  - [Data Swamp / Data Swamp](#data-swamp--data-swamp)
-- [Framework Apache Hadoop / Apache Hadoop Framework](#framework-apache-hadoop--apache-hadoop-framework)
-  - [Módulos do Framework / Framework Modules](#módulos-do-framework--framework-modules)
-- [Blocos Funcionais em Arquitetura de Dados / Functional Blocks in Data Architecture](#blocos-funcionais-em-arquitetura-de-dados--functional-blocks-in-data-architecture)
-  - [Tipos de Sistemas Gerenciadores de Dados / Types of Data Management Systems](#tipos-de-sistemas-gerenciadores-de-dados--types-of-data-management-systems)
-  - [Tipos de Arquitetura de Dados / Types of Data Architecture](#tipos-de-arquitetura-de-dados--types-of-data-architecture)
-  - [Benefícios de Arquitetura de Dados / Benefits of Data Architecture](#benefícios-de-arquitetura-de-dados--benefits-of-data-architecture)
-  - [Características de uma Arquitetura Moderna de Dados / Characteristics of a Modern Data Architecture](#características-de-uma-arquitetura-moderna-de-dados--characteristics-of-a-modern-data-architecture)
-- [Schema On-Write vs Schema On-Read / Schema On-Write vs Schema On-Read](#schema-on-write-vs-schema-on-read--schema-on-write-vs-schema-on-read)
-  - [Schema-on-Write / Schema-on-Write](#schema-on-write--schema-on-write)
-  - [Schema-on-Read / Schema-on-Read](#schema-on-read--schema-on-read)
-  - [Comparação entre Abordagens / Comparison Between Approaches](#comparação-entre-abordagens--comparison-between-approaches)
-- [Orquestração de Dados / Data Orchestration](#orquestração-de-dados--data-orchestration)
-  - [Passos para Orquestração de Dados / Steps for Data Orchestration](#passos-para-orquestração-de-dados--steps-for-data-orchestration)
-  - [Dependência de Dados / Data Dependency](#dependência-de-dados--data-dependency)
-- [Conclusão / Conclusion](#conclusão--conclusion)
-- [Referências / References](#referências--references)
+- [Introdução ](#introdução)
+- [Repositórios de Dados](#repositórios-de-dados)
+  - [Data Ponds](#data-ponds)
+  - [Data Puddles](#data-puddles)
+  - [Data Swamp](#data-swamp)
+- [pache Hadoop Framework](#apache-hadoop-framework)
+  - [Módulos do Framework](#módulos-do-framework)
+- [Blocos Funcionais em Arquitetura de Dados](#blocos-funcionais-em-arquitetura-de-dados)
+  - [Tipos de Sistemas Gerenciadores de Dados](#tipos-de-sistemas-gerenciadores-de-dados)
+  - [Tipos de Arquitetura de Dados](#tipos-de-arquitetura-de-dados)
+  - [Benefícios de Arquitetura de Dados](#benefícios-de-arquitetura-de-dados)
+  - [Características de uma Arquitetura Moderna de Dados](#características-de-uma-arquitetura-moderna-de-dados)
+- [Schema On-Write vs Schema On-Read](#schema-on-write-vs-schema-on-read)
+  - [Schema-on-Write](#schema-on-write)
+  - [Schema-on-Read](#schema-on-read)
+  - [Comparação entre Abordagens](#comparação-entre-abordagens)
+- [Orquestração de Dados](#orquestração-de-dados)
+  - [Passos para Orquestração de Dados](#passos-para-orquestração-de-dados)
+  - [Dependência de Dados](#dependência-de-dados)
+- [Conclusão](#conclusão)
+- [Referências](#referências)
 
-## Introdução / Introduction
+## Introdução
 
 A arquitetura de dados moderna representa um conjunto de práticas, tecnologias e filosofias desenvolvidas para enfrentar os desafios atuais do gerenciamento de dados em grande escala. Com o crescimento exponencial dos volumes de dados, tanto estruturados quanto não estruturados, tornou-se fundamental adotar abordagens que permitam às organizações armazenar, processar e extrair valor desses dados de maneira eficiente.
 
 Este documento explora conceitos fundamentais em arquitetura de dados, desde diferentes tipos de repositórios de dados até técnicas modernas de processamento e orquestração, fornecendo uma visão abrangente dos componentes que constituem uma arquitetura de dados eficaz no contexto atual.
 
-## Repositórios de Dados / Data Repositories
+## Repositórios de Dados
 
-### Data Puddles / Data Puddles
+### Data Puddles
 
 Um "data puddle" (poça de dados) é um termo que descreve pequenos conjuntos de dados, frequentemente gerados e armazenados localmente ou em sistemas de armazenamento limitados, como dispositivos pessoais ou pequenos servidores. Esses conjuntos de dados geralmente são criados por departamentos ou equipes específicas dentro de uma organização e não estão integrados em um repositório centralizado.
 
@@ -44,8 +44,7 @@ Um "data puddle" (poça de dados) é um termo que descreve pequenos conjuntos de
 
 **Exemplo prático:** Uma planilha Excel mantida pelo departamento de marketing para rastrear métricas de campanhas específicas, sem integração com sistemas centrais da empresa.
 
-### Data Ponds / Data Ponds
-
+### Data Ponds
 Um "data pond" (lagoa de dados) representa um conceito intermediário entre "data puddles" e "data lakes". São conjuntos de dados maiores e mais estruturados do que os data puddles, mas não tão extensos ou complexos quanto os data lakes.
 
 **Características principais:**
@@ -56,8 +55,7 @@ Um "data pond" (lagoa de dados) representa um conceito intermediário entre "dat
 
 **Exemplo prático:** Um banco de dados departamental que armazena informações de vendas regionais, com alguns processos de ETL estabelecidos, mas ainda não totalmente integrado à infraestrutura central de dados da organização.
 
-### Data Swamp / Data Swamp
-
+### Data Swamp
 Um "data swamp" (pântano de dados) descreve um repositório onde os dados são armazenados de forma desorganizada, sem governança adequada, tornando-se difíceis de acessar, gerenciar e utilizar para análises úteis. Este conceito geralmente está associado a data lakes que foram mal gerenciados ou cresceram descontroladamente sem uma estratégia clara de organização.
 
 **Características principais:**
@@ -69,7 +67,7 @@ Um "data swamp" (pântano de dados) descreve um repositório onde os dados são 
 
 **Exemplo prático:** Um data lake onde diversas equipes depositam dados sem seguir convenções de nomenclatura, sem documentação adequada e sem garantias de qualidade, resultando em um repositório onde encontrar informações relevantes se torna uma tarefa extremamente complexa.
 
-## Framework Apache Hadoop / Apache Hadoop Framework
+## Framework Apache Hadoop
 
 O Apache Hadoop é uma plataforma de software em Java voltada para computação distribuída em clusters, especialmente projetada para processar grandes volumes de dados com tolerância a falhas.
 
@@ -81,7 +79,7 @@ O Apache Hadoop é uma plataforma de software em Java voltada para computação 
 - Disponibilizado por provedores como Amazon e IBM em suas plataformas de nuvem
 - Também pode ser implementado em infraestrutura local (on-premises)
 
-### Módulos do Framework / Framework Modules
+### Módulos do Framework
 
 O ecossistema Hadoop é composto por vários módulos que trabalham em conjunto:
 
@@ -119,11 +117,11 @@ Implementação com Hadoop:
 4. Os resultados são armazenados novamente no HDFS para futuras análises
 ```
 
-## Blocos Funcionais em Arquitetura de Dados / Functional Blocks in Data Architecture
+## Blocos Funcionais em Arquitetura de Dados
 
-### Tipos de Sistemas Gerenciadores de Dados / Types of Data Management Systems
+### Tipos de Sistemas Gerenciadores de Dados
 
-#### Data Warehouses / Data Warehouses
+#### Data Warehouses
 
 Um Data Warehouse agrega dados de diferentes fontes relacionais em um repositório único, central e consistente, otimizado para análises e consultas.
 
@@ -140,7 +138,7 @@ Data Warehouse de Vendas:
 - Dimensões: Tempo, Produto, Cliente, Localização, Vendedor
 ```
 
-#### Data Marts / Data Marts
+#### Data Marts
 
 Um Data Mart é uma versão focada de um Data Warehouse que contém um subconjunto de dados importante para uma única equipe ou um grupo específico de usuários dentro da organização.
 
@@ -158,7 +156,7 @@ Data Mart de RH:
 - Utilizado exclusivamente pelo departamento de Recursos Humanos
 ```
 
-#### Data Lakes / Data Lakes
+#### Data Lakes
 
 Enquanto os Data Warehouses armazenam dados processados, um Data Lake armazena dados brutos, normalmente em volumes muito grandes (petabytes). Um Data Lake pode armazenar dados estruturados e não estruturados.
 
@@ -180,9 +178,9 @@ Data Lake corporativo:
 - Dados de transações de vários sistemas
 ```
 
-### Tipos de Arquitetura de Dados / Types of Data Architecture
+### Tipos de Arquitetura de Dados
 
-#### Data Fabrics / Data Fabrics
+#### Data Fabrics
 
 Data Fabric é uma arquitetura que se concentra na automação da integração de dados, engenharia e governança em uma cadeia de valor entre provedores e consumidores de dados.
 
@@ -207,7 +205,7 @@ Data Fabric em uma empresa multinacional:
    - Entrega os dados no formato adequado
 ```
 
-#### Data Meshes / Data Meshes
+#### Data Meshes
 
 Data Mesh é uma arquitetura de dados descentralizada que organiza os dados por domínios de negócios, tratando os dados como produtos em si mesmos.
 
@@ -234,9 +232,9 @@ Cada domínio:
 4. Estabelece SLAs para consumidores
 ```
 
-### Benefícios de Arquitetura de Dados / Benefits of Data Architecture
+### Benefícios de Arquitetura de Dados
 
-#### Reduzindo a redundância / Reducing redundancy
+#### Reduzindo a redundância
 
 Uma boa arquitetura de dados padroniza como os dados são armazenados e potencialmente reduz a duplicação, permitindo análises holísticas e de melhor qualidade.
 
@@ -248,7 +246,7 @@ Uma boa arquitetura de dados padroniza como os dados são armazenados e potencia
 
 **Exemplo:** Uma empresa que implementa um modelo de dados empresarial pode reduzir a duplicação de tabelas de clientes em diferentes sistemas, mantendo apenas uma fonte confiável e criando interfaces para os sistemas que precisam desses dados.
 
-#### Melhorando a qualidade dos dados / Improving data quality
+#### Melhorando a qualidade dos dados
 
 Arquiteturas de dados bem projetadas resolvem muitos dos desafios de Data Lakes mal gerenciados (Data Swamps) através da implementação de práticas adequadas de qualidade e governança.
 
@@ -261,7 +259,7 @@ Arquiteturas de dados bem projetadas resolvem muitos dos desafios de Data Lakes 
 
 **Exemplo:** Um pipeline de dados que inclui validação automática de formatos, verificação de valores fora do intervalo esperado, e identificação de registros duplicados antes que os dados sejam disponibilizados para análise.
 
-#### Habilitando a integração / Enabling integration
+#### Habilitando a integração
 
 As arquiteturas de dados modernas facilitam a integração de dados entre diferentes domínios, para que diferentes geografias e funções de negócios tenham acesso aos dados uns dos outros.
 
@@ -273,7 +271,7 @@ As arquiteturas de dados modernas facilitam a integração de dados entre difere
 
 **Exemplo:** Uma empresa global implementa uma arquitetura de API que permite que os sistemas regionais compartilhem dados em tempo real, permitindo uma visão consolidada das operações globais mesmo quando os sistemas subjacentes são diferentes.
 
-#### Gerenciamento do ciclo de vida dos dados / Data lifecycle management
+#### Gerenciamento do ciclo de vida dos dados
 
 Uma arquitetura de dados moderna aborda como os dados são gerenciados ao longo do tempo, desde sua criação até seu eventual arquivamento ou exclusão.
 
@@ -287,7 +285,7 @@ Uma arquitetura de dados moderna aborda como os dados são gerenciados ao longo 
 
 **Exemplo:** Um sistema que automaticamente move dados pouco acessados para armazenamento mais econômico, aplica políticas de retenção baseadas em requisitos regulatórios, e gerencia a exclusão segura de dados conforme necessário.
 
-### Características de uma Arquitetura Moderna de Dados / Characteristics of a Modern Data Architecture
+### Características de uma Arquitetura Moderna de Dados
 
 1. **Cloud-native e cloud-enabled**
    - Beneficia-se do dimensionamento elástico da nuvem
@@ -342,9 +340,9 @@ Arquitetura moderna de dados para uma empresa de comércio eletrônico:
    - Modelos de ML para recomendações
 ```
 
-## Schema On-Write vs Schema On-Read / Schema On-Write vs Schema On-Read
+## Schema On-Write vs Schema On-Read
 
-### Schema-on-Write / Schema-on-Write
+### Schema-on-Write
 
 O Schema-on-Write é uma abordagem tradicional fortemente vinculada ao gerenciamento de Bancos de Dados Relacionais, onde o esquema e a estrutura de tabelas são definidos antes da ingestão de dados.
 
@@ -375,7 +373,7 @@ CREATE TABLE clientes (
 INSERT INTO clientes VALUES (1, 'João Silva', 'joao@exemplo.com', '1985-03-15', 'Premium');
 ```
 
-### Schema-on-Read / Schema-on-Read
+### Schema-on-Read
 
 No Schema-on-Read, o esquema do banco de dados é criado ou aplicado apenas quando os dados são lidos, não no momento da ingestão.
 
@@ -414,7 +412,7 @@ def read_customer_name_and_email(customer_data):
     }
 ```
 
-### Comparação entre Abordagens / Comparison Between Approaches
+### Comparação entre Abordagens
 
 | Aspecto | Schema-on-Write | Schema-on-Read |
 |---------|----------------|---------------|
@@ -432,7 +430,7 @@ def read_customer_name_and_email(customer_data):
 
 - **Schema-on-Read:** Ideal para exploração de dados, análises ad-hoc, e quando os dados são heterogêneos ou sua estrutura evolui rapidamente.
 
-## Orquestração de Dados / Data Orchestration
+## Orquestração de Dados
 
 A orquestração de dados é o processo de obter dados isolados de vários locais de armazenamento, combiná-los, organizá-los e disponibilizá-los para ferramentas de análise. Ela permite que as empresas automatizem e simplifiquem a tomada de decisões baseada em dados.
 
@@ -445,7 +443,7 @@ A orquestração de dados é o processo de obter dados isolados de vários locai
 
 ### Passos para Orquestração de Dados / Steps for Data Orchestration
 
-#### 1. Organizar / Organize
+#### 1. Organizar
 
 O primeiro passo na orquestração envolve entender e organizar os dados existentes e os novos dados que estão sendo recebidos.
 
@@ -487,7 +485,7 @@ def standardize_sales_data(sales_record, source_system):
     return standardized_record
 ```
 
-#### 3. Ativar / Activate
+#### 3. Ativar
 
 A fase de ativação torna os dados disponíveis para as ferramentas que precisam deles. Isso elimina a necessidade de carregamento manual de dados, pois eles já estão disponíveis quando necessários.
 
@@ -499,7 +497,7 @@ A fase de ativação torna os dados disponíveis para as ferramentas que precisa
 
 **Exemplo de ativação:** Um sistema que, após processar os dados de vendas diárias, automaticamente atualiza dashboards de BI, envia relatórios por e-mail para executivos e disponibiliza os dados processados via API para outros sistemas consumirem.
 
-### Dependência de Dados / Data Dependency
+### Dependência de Dados
 
 A dependência de dados está diretamente conectada às etapas de orquestração e determina quando e como um fluxo de processamento pode ser iniciado.
 
@@ -553,7 +551,7 @@ job:
       date: "${yesterday}"
 ```
 
-## Conclusão / Conclusion
+## Conclusão
 
 A arquitetura moderna de dados evoluiu significativamente para enfrentar os desafios do volume, variedade e velocidade dos dados contemporâneos. Desde os conceitos básicos de repositórios de dados como Data Puddles, Data Ponds e Data Lakes, até abordagens mais sofisticadas como Data Fabrics e Data Meshes, observamos uma tendência clara em direção a arquiteturas mais flexíveis, escaláveis e orientadas a valor de negócio.
 
@@ -561,7 +559,7 @@ A escolha entre Schema-on-Write e Schema-on-Read representa uma decisão fundame
 
 Uma implementação bem-sucedida de arquitetura de dados moderna deve considerar não apenas aspectos técnicos, mas também as necessidades específicas da organização, sua cultura de dados, e os objetivos estratégicos que se busca alcançar com as iniciativas de dados.
 
-## Referências / References
+## Referências
 
 1. Hadoop Apache Foundation. "Apache Hadoop." [https://hadoop.apache.org/](https://hadoop.apache.org/)
 2. Kimball, Ralph and Margy Ross. "The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling."
