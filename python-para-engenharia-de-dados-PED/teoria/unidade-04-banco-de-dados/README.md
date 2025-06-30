@@ -1,8 +1,8 @@
-# Operações de Banco de Dados em Python / Database Operations in Python
+# Operações de Banco de Dados em Python 
 
-## Sumário / Summary
-- [Introdução / Introduction](#introdução--introduction)
-- [Operações SQL Básicas / Basic SQL Operations](#operações-sql-básicas--basic-sql-operations)
+## Sumário 
+- [Introdução](#introdução--introduction)
+- [Operações SQL Básicas ](#operações-sql-básicas--basic-sql-operations)
   - [INSERT / Inserção](#insert--inserção)
   - [DELETE / Remoção](#delete--remoção)
   - [UPDATE / Atualização](#update--atualização)
