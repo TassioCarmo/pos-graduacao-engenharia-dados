@@ -1,151 +1,160 @@
-# Arquitetura e Consumo de Dados | Data Architecture and Consumption
+# Camada e Serviços de Consumo de Dados
 
+## Informações da Disciplina
 
-## Sobre a Disciplina | About the Course
+- **Curso:** Engenharia de Dados
+- **Instituição:** PUC Minas
+- **Carga Horária:** 24 horas/aula + 6 horas de Trabalhos Orientados
+- **Modalidade:** Ensino a Distância (EAD)
 
-Esta disciplina aborda os principais conceitos e práticas relacionados à arquitetura, gestão e consumo de dados em ambientes corporativos modernos. O foco está na compreensão dos fluxos de dados, desde a produção até o consumo, passando pelas diferentes camadas de uma arquitetura corporativa eficiente.
+## Objetivos
 
-## Ementa | Course Description
+Esta disciplina visa capacitar os estudantes para:
 
-A disciplina explora os seguintes tópicos:
+- **Arquitetura de Dados:** Compreender os conceitos fundamentais de produtores e consumidores de dados em arquiteturas modernas
+- **Gestão de Camadas:** Dominar os critérios para determinação e implementação de camadas de dados eficientes
+- **Tecnologias Avançadas:** Implementar barramentos de mensageria, técnicas de cache e particionamento para alta performance
+- **Segurança e Controle:** Aplicar autenticação e controle de acessos em ambientes de dados distribuídos
+- **Design Moderno:** Desenvolver soluções convergentes com foco em plataformas self-service
 
-* **Produtores e consumidores de dados**
-* **Dados de domínio como produto**
-* **Camadas de dados**
-* **Critérios para determinar a camada de dados**
-* **Barramentos de mensageria de dados**
-* **Particionamento e técnicas de cache para acessos de alta frequência**
-* **Planos de execução**
-* **Consumo de alta volumetria de dados**
-* **Camadas de consumo por serviços**
-* **Autenticação e controle de acessos**
-* **Design convergente para dados e plataforma self-service**
+## Metodologia
 
-## Objetivos e Metodologia | Objectives and Methodology
+O aprendizado é estruturado através de:
 
-Nesta disciplina, o tempo de aprendizagem inclui:
-- Realização de atividades objetivas e abertas
-- Leitura de textos
-- Participação em fóruns
-- Visualização de videoaulas
-- Preparação para avaliações
+- **Aulas Síncronas:** Participação obrigatória em sessões ao vivo
+- **Material Didático:** Textos especializados e recursos complementares
+- **Atividades Práticas:** Exercícios objetivos e projetos abertos
+- **Fóruns de Discussão:** Interação colaborativa entre estudantes
+- **Videoaulas:** Conteúdo teórico e demonstrações práticas
+- **Avaliação Contínua:** Necessário obter 70 pontos para aprovação
 
-Durante o curso, os alunos deverão:
-- Assistir às aulas síncronas
-- Realizar a leitura dos textos indicados
-- Completar as atividades propostas
+## Ementa
 
-**Para aprovação:** é necessário obter no mínimo 70 pontos.
+A disciplina abrange os seguintes tópicos fundamentais:
 
-## Conteúdo Programático | Program Content
+- Produtores e consumidores de dados
+- Dados de domínio como produto (Data Products)
+- Arquitetura e implementação de camadas de dados
+- Critérios técnicos para determinação de camadas
+- Barramentos de mensageria de dados
+- Técnicas de particionamento e cache para alta frequência
+- Otimização de planos de execução
+- Processamento de alta volumetria de dados
+- Camadas de consumo baseadas em serviços
+- Sistemas de autenticação e controle de acessos
+- Design convergente para plataformas self-service
 
-### Unidade 1 – Produtores e Consumidores | Unit 1 - Producers and Consumers
+## Conteúdo Programático
 
-**Objetivo:** Contextualizar conceitos sobre dados e como trabalhar com eles de forma eficiente, identificando cenários para obter vantagens estratégicas através de dados, além de compreender quem são os produtores e consumidores de dados e suas diferenças.
+### Unidade 1 - Produtores e Consumidores
 
-**Temas:**
-- Trabalhando com Dados
-- Gerenciando Dados
-- O que são os Dados
-- Gestão de Dados
-- Big Data
-- Internet of Things (IoT)
-- Produtores de Dados
-- Consumidores de Dados
-- Data Domains e Data Products
+**Fundamentos dos Dados Organizacionais**
 
-### Unidade 2 – Camada de Persistência de Dados | Unit 2 - Data Persistence Layer
+Compreensão dos conceitos fundamentais sobre dados, seus produtores, consumidores e o valor estratégico da informação em ambientes corporativos.
 
-**Objetivo:** Fornecer conhecimentos sobre os principais modelos de Bancos de Dados, incluindo Bancos de Dados Distribuídos, o Teorema CAP e estratégias de escalabilidade em ambientes de dados distribuídos.
+**Objetivos:** Contextualizar questões sobre dados e trabalho eficiente, cenários para obtenção de vantagens competitivas, identificação de produtores e consumidores e suas diferenças operacionais.
 
-**Temas:**
-- Tipos de bancos de dados
-- Bancos de dados Relacionais
-- Bancos de dados NoSQL
-- Modelos de bancos NoSQL
-- Bancos de dados NoSQL Schema
-- Bancos de dados NewSQL
-- Teorema CAP
-- Escalabilidade
+**Temáticas da unidade:**
+- **1.1** Trabalhando com Dados de forma estratégica
+- **1.2** Gerenciamento eficiente de Dados
+- **1.3** Conceitos fundamentais: O que são os Dados
+- **1.4** Gestão moderna de Dados
+- **1.5** Big Data e suas implicações
+- **1.6** Internet of Things (IoT) como fonte de dados
+- **1.7** Identificação e classificação de Produtores de Dados
+- **1.8** Perfis e necessidades dos Consumidores de Dados
+- **1.9** Data Domains e Data Products: conceitos e aplicações
 
-### Unidade 3 – Dados Distribuídos | Unit 3 - Distributed Data
+### Unidade 2 - Camada de Persistência de Dados
 
-**Objetivo:** Apresentar as características fundamentais de sistemas de dados distribuídos, incluindo computação em nuvem, containers e arquiteturas de alta disponibilidade.
+**Arquiteturas de Armazenamento e Escalabilidade**
 
-**Temas:**
-- Sistemas de Arquivos Distribuídos
-- Análise do Apache Hadoop
-- Computação em Nuvem
-- Containers
-- Arquiteturas com Alta Disponibilidade (HA)
-- Implementação de Alta Disponibilidade (Exemplo: MongoDB)
+Exploração das diferentes arquiteturas de banco de dados, modelos de persistência e estratégias de escalabilidade para ambientes distribuídos.
 
-### Unidade 4 – Camadas em uma Arquitetura de Dados Corporativa | Unit 4 - Layers in Enterprise Data Architecture
+**Objetivos:** Capacitar o aluno no conhecimento dos principais modelos de Banco de Dados, incluindo sistemas distribuídos, teorema CAP e técnicas de escalabilidade.
 
-**Objetivo:** Explorar os aspectos mais relevantes em arquiteturas modernas de dados corporativos, com foco nas diferentes camadas e suas interações.
+**Temáticas da unidade:**
+- **2.1** Classificação e tipos de bancos de dados
+- **2.2** Bancos de dados Relacionais: características e aplicações
+- **2.3** Ecossistema NoSQL: vantagens e casos de uso
+- **2.4** Modelos específicos de bancos NoSQL
+- **2.5** Gerenciamento de Schema em bancos NoSQL
+- **2.6** Bancos de dados NewSQL: híbridos modernos
+- **2.7** Teorema CAP: Consistência, Disponibilidade e Tolerância a Partições
+- **2.8** Estratégias de Escalabilidade horizontal e vertical
 
-**Temas:**
-- Arquitetura Corporativa – Enterprise Data Hub
-- Arquitetura Corporativa – Data Mesh
-- Arquitetura com Alta Disponibilidade (HA)
-- Arquitetura com Alta Disponibilidade (Exemplo: MongoDB)
-- Data Ponds
-- Blocos Funcionais em uma Arquitetura de Dados
-- Schema On-Write vs. Schema On-Read
-- Sincronização de Fluxos Independentes e Dependentes
+### Unidade 3 - Dados Distribuídos
 
+**Sistemas Distribuídos e Alta Disponibilidade**
 
-## Competências Desenvolvidas | Skills Developed
+Características dos dados distribuídos, computação em nuvem, containerização e arquiteturas de alta disponibilidade para sistemas críticos.
 
-Ao final desta disciplina, o aluno será capaz de:
+**Objetivos:** Dominar os conceitos essenciais sobre dados distribuídos, suas arquiteturas e implementações em ambientes modernos.
 
-- **Analisar e compreender** os diferentes papéis em um ecossistema de dados
-- **Projetar e implementar** camadas eficientes de persistência de dados
-- **Configurar e gerenciar** sistemas de dados distribuídos
-- **Construir e otimizar** arquiteturas de dados escaláveis
-- **Aplicar técnicas** para consumo de dados de alta volumetria
-- **Implementar soluções práticas** utilizando MongoDB, Knime, Apache Flink e GraphQL
+**Temáticas da unidade:**
+- **3.1** Sistemas de Arquivos Distribuídos: conceitos e implementações
+- **3.2** Análise detalhada do Apache Hadoop
+- **3.3** Computação em Nuvem: modelos e serviços
+- **3.4** Tecnologia de Containers: Docker e Kubernetes
+- **3.5** Arquiteturas com Alta Disponibilidade (HA): princípios
+- **3.6** Implementação prática de HA com MongoDB
 
-## Recursos e Ferramentas | Resources and Tools
+### Unidade 4 - Camadas em Arquitetura de Dados Corporativa
 
-A disciplina trabalha com as seguintes tecnologias:
+**Design Empresarial e Arquiteturas Modernas**
 
-- **MongoDB**: banco de dados NoSQL orientado a documentos
-- **Knime**: plataforma de análise de dados com interface visual
-- **Apache Flink**: framework de processamento de dados distribuídos
-- **GraphQL**: linguagem de consulta e manipulação de dados para APIs
+Estruturação de camadas em arquiteturas corporativas, conceitos de barramentos, estratégias de armazenamento e gerenciamento de alta volumetria.
 
-## Bibliografia Recomendada | Recommended Bibliography
+**Objetivos:** Compreender os aspectos críticos de uma arquitetura moderna de dados do ponto de vista de suas camadas funcionais e operacionais.
 
-### Bibliografia Básica | Core Bibliography
+**Temáticas da unidade:**
+- **4.1** Arquitetura Corporativa: Enterprise Data Hub
+- **4.2** Arquitetura Corporativa: Data Mesh e descentralização
+- **4.3** Implementação de Alta Disponibilidade (HA) em ambiente corporativo
+- **4.4** Caso prático: HA com MongoDB em produção
+- **4.5** Data Ponds: conceitos e aplicações
+- **4.6** Blocos Funcionais em Arquitetura de Dados
+- **4.7** Schema On-Write vs Schema On-Read: estratégias e trade-offs
+- **4.8** Sincronização de Fluxos Independentes e Dependentes
 
-1. KLEPPMANN, Martin. **Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems**. O'Reilly Media, 2017.
+## Tecnologias e Ferramentas
 
-2. KIMBALL, Ralph; ROSS, Margy. **The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling**. 3rd Edition. Wiley, 2013.
+Durante o curso, você trabalhará com:
 
-3. DEHGHANI, Zhamak. **Data Mesh: Delivering Data-Driven Value at Scale**. O'Reilly Media, 2022.
+- **Sistemas de Mensageria:** Apache Kafka, RabbitMQ
+- **Bancos Distribuídos:** MongoDB, Cassandra, Redis
+- **Plataformas Big Data:** Apache Hadoop, Spark
+- **Computação em Nuvem:** AWS, Azure, Google Cloud
+- **Containerização:** Docker, Kubernetes
+- **Ferramentas de Cache:** Redis, Memcached
+- **Monitoramento:** Prometheus, Grafana
 
-### Bibliografia Complementar | Supplementary Bibliography
+## Competências Desenvolvidas
 
-1. DUNNING, Ted; FRIEDMAN, Ellen. **Streaming Architecture: New Designs Using Apache Kafka and MapR Streams**. O'Reilly Media, 2016.
+Ao concluir esta disciplina, você será capaz de:
 
-2. SADALAGE, Pramod J.; FOWLER, Martin. **NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot Persistence**. Addison-Wesley Professional, 2012.
+- Projetar e implementar arquiteturas de dados escaláveis e resilientes
+- Configurar e gerenciar barramentos de mensageria para alta performance
+- Implementar estratégias de cache e particionamento eficientes
+- Desenvolver camadas de consumo baseadas em serviços
+- Aplicar controles de segurança e autenticação em ambientes distribuídos
+- Trabalhar com tecnologias de ponta em engenharia de dados
+- Criar soluções self-service para democratização dos dados
+- Otimizar planos de execução para processamento de alta volumetria
 
-3. DADIA, Tanmay; JOSHI, Yogesh. **Apache Flink: Real-time Stream Processing**. Packt Publishing, 2021.
+## Critérios de Avaliação
 
-4. BANKS, Alex; PORCELLO, Eve. **Learning GraphQL: Declarative Data Fetching for Modern Web Apps**. O'Reilly Media, 2018.
+- **Atividades Objetivas:** Exercícios práticos e teóricos
+- **Projetos Abertos:** Desenvolvimento de soluções completas
+- **Participação:** Engajamento em fóruns e aulas síncronas
+- **Trabalhos Orientados:** 6 horas de projetos supervisionados
+- **Nota Mínima:** 70 pontos para aprovação
 
-5. WHITE, Tom. **Hadoop: The Definitive Guide**. 4th Edition. O'Reilly Media, 2015.
+## Recursos de Aprendizagem
 
-## Conexão com o Mercado | Industry Relevance
-
-As competências desenvolvidas nesta disciplina estão diretamente alinhadas com as necessidades atuais do mercado de trabalho em:
-
-- **Arquitetura de Dados** para ambientes corporativos
-- **Engenharia de Dados** para processamento de grandes volumes
-- **Analytics Engineering** para transformação e disponibilização de dados
-- **DevOps para Dados** na implementação de soluções resilientes
-- **Governança de Dados** para controle de acesso e segurança
-
----
+- **Plataforma AVA PUC Minas:** Ambiente virtual completo
+- **Bibliografia Especializada:** Textos técnicos atualizados
+- **Laboratórios Virtuais:** Ambiente de prática controlado
+- **Comunidade de Aprendizagem:** Fóruns e grupos de estudo
+- **Suporte Técnico:** Orientação especializada disponível
 
