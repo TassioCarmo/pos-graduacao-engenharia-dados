@@ -1,0 +1,178 @@
+[
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "moeda_origem": "USD",
+        "moeda_destino": "EUR",
+        "taxa_cambio": 0.926,
+        "timestamp": 1742947202
+    },
+    {
+        "id": 1,
+        "valor": 100.5,
+        "moeda": "EUR"
+    },
+    {
+        "id": 2,
+        "valor": 250.0,
+        "moeda": "USD"
+    },
+    {
+        "id": 3,
+        "valor": 75.3,
+        "moeda": "BRL"
+    },
+    {
+        "id": 4,
+        "valor": 120.75,
+        "moeda": "GBP"
+    },
+    {
+        "id": 5,
+        "valor": 330.4,
+        "moeda": "JPY"
+    },
+    {
+        "id": 6,
+        "valor": 50.0,
+        "moeda": "CAD"
+    },
+    {
+        "id": 7,
+        "valor": 220.1,
+        "moeda": "AUD"
+    },
+    {
+        "id": 8,
+        "valor": 15.8,
+        "moeda": "CHF"
+    },
+    {
+        "id": 9,
+        "valor": 600.0,
+        "moeda": "INR"
+    },
+    {
+        "id": 10,
+        "valor": 400.25,
+        "moeda": "CNY"
+    }
+]

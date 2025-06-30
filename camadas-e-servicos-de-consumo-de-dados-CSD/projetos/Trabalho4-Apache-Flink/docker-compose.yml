@@ -1,0 +1,74 @@
+# Specifies the version of Docker Compose being used
+version: "2.2"
+
+# Defines the services (containers) that will be created
+services:
+
+  # Defines a service named "sql-client"
+  sql-client:
+    # Assigns a custom name to the container
+    container_name: 'sql-client'
+
+    # Specifies that the container should be built from a Dockerfile
+    build:
+      # Sets the build context to the current directory
+      context: .
+      # Specifies the Dockerfile to use for building the image
+      dockerfile: sql-client/Dockerfile
+
+    # Ensures that this service starts only after "jobmanager" is running
+    depends_on:
+      - jobmanager
+
+    # Defines environment variables for the container
+    environment:
+      # Sets the Flink JobManager host to "jobmanager"
+      FLINK_JOBMANAGER_HOST: jobmanager
+
+    # Mounts local directories into the container
+    volumes:
+      # Maps the local "./settings/" directory to "/settings" inside the container
+      - ./settings/:/settings
+
+  # Defines a service named "jobmanager"
+  jobmanager:
+    # Uses an official Flink Docker image (version 1.17.1, Scala 2.12, Java 11)
+    image: flink:1.17.1-scala_2.12-java11
+
+    # Maps port 8081 from the container to port 8081 on the host
+    ports:
+      - "8081:8081"
+
+    # Specifies the command to run inside the container
+    command: jobmanager
+
+    # Defines environment variables for Flink
+    environment:
+      - |
+        # Sets Flink properties (multiline)
+        FLINK_PROPERTIES=
+        # Configures the RPC address for the JobManager
+        jobmanager.rpc.address: jobmanager
+
+    # Mounts local directories into the container
+    volumes:
+      # Maps the local "./settings/" directory to "/settings" inside the container
+      - ./settings/:/settings
+      # Maps the local "./data/" directory to "/data" inside the container
+      - ./data/:/data
+
+
+  taskmanager:
+    image: flink:1.17.1-scala_2.12-java11
+    depends_on:
+      - jobmanager
+    command: taskmanager
+    scale: 1
+    environment:
+      - |
+        FLINK_PROPERTIES=
+        jobmanager.rpc.address: jobmanager
+        taskmanager.numberOfTaskSlots: 10
+    volumes:
+      - ./settings/:/settings
+      - ./data/:/data
