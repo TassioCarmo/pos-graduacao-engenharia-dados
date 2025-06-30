@@ -1,5 +1,5 @@
 
-# Arquitetura de Dados / Data Architecture
+# Arquitetura de Dados
 
 ## Sumário
 - [Introdução à Arquitetura de Dados](#introdução-à-arquitetura-de-dados)
