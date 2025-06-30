@@ -1,41 +1,41 @@
 # Documentação Python para Pós-Graduação
-# Python Documentation for Post-Graduation
 
-## Sumário / Summary
-- [Introdução / Introduction](#introdução--introduction)
-  - [O que é Python? / What is Python?](#o-que-é-python--what-is-python)
-  - [Por que usar Python? / Why use Python?](#por-que-usar-python--why-use-python)
-- [Variáveis / Variables](#variáveis--variables)
-  - [Variáveis String / String Variables](#variáveis-string--string-variables)
-  - [Variáveis Numéricas / Numeric Variables](#variáveis-numéricas--numeric-variables)
-    - [Inteiros (int) / Integers (int)](#inteiros-int--integers-int)
-    - [Ponto Flutuante (float) / Floating Point (float)](#ponto-flutuante-float--floating-point-float)
-    - [Booleanos (bool) / Booleans (bool)](#booleanos-bool--booleans-bool)
-    - [Números Complexos (complex) / Complex Numbers (complex)](#números-complexos-complex--complex-numbers-complex)
-- [Estruturas de Dados / Data Structures](#estruturas-de-dados--data-structures)
-  - [Dicionários / Dictionaries](#dicionários--dictionaries)
-    - [Método get / get Method](#método-get--get-method)
-    - [Método del / del Method](#método-del--del-method)
-    - [Método clear / clear Method](#método-clear--clear-method)
-    - [Método copy / copy Method](#método-copy--copy-method)
-  - [Tuplas / Tuples](#tuplas--tuples)
-  - [Listas / Lists](#listas--lists)
-- [Operadores / Operators](#operadores--operators)
-  - [Operadores Aritméticos / Arithmetic Operators](#operadores-aritméticos--arithmetic-operators)
-  - [Operadores Lógicos / Logical Operators](#operadores-lógicos--logical-operators)
-- [Estruturas de Controle / Control Structures](#estruturas-de-controle--control-structures)
-  - [Controle de Fluxo if/elif/else / Flow Control if/elif/else](#controle-de-fluxo-ifelifelse--flow-control-ifelifelse)
-  - [Repetição (loop) for / For Loop](#repetição-loop-for--for-loop)
-  - [Repetição (loop) while / While Loop](#repetição-loop-while--while-loop)
-- [Funções / Functions](#funções--functions)
-  - [Função range / range Function](#função-range--range-function)
-  - [Números Aleatórios / Random Numbers](#números-aleatórios--random-numbers)
-- [Manipulação de Arquivos / File Handling](#manipulação-de-arquivos--file-handling)
-- [Conexões com Bancos de Dados e Arquivos / Database and File Connections](#conexões-com-bancos-de-dados-e-arquivos--database-and-file-connections)
+## Sumário 
+- [Introdução](#introdução)
+  - [O que é Python?](#o-que-é-python)
+  - [Por que usar Python?](#por-que-usar-python)
+- [Variáveis](#variáveis)
+  - [Variáveis String](#variáveis-string)
+  - [Variáveis Numéricas](#variáveis-numéricas)
+    - [Inteiros (int)](#inteiros-int)
+    - [Ponto Flutuante (float)](#ponto-flutuante-float)
+    - [Booleanos (bool)](#booleanos-bool)
+    - [Números Complexos (complex)](#números-complexos-complex)
+- [Estruturas de Dados](#estruturas-de-dados)
+  - [Dicionários](#dicionários)
+    - [Método get](#método-get)
+    - [Método del](#método-del)
+    - [Método clear](#método-clear)
+    - [Método copy](#método-copy)
+  - [Tuplas](#tuplas)
+  - [Listas](#listas)
+- [Operadores](#operadores)
+  - [Operadores Aritméticos](#operadores-aritméticos)
+  - [Operadores Lógicos](#operadores-lógicos)
+- [Estruturas de Controle](#estruturas-de-controle)
+  - [Controle de Fluxo if/elif/else](#controle-de-fluxo-ifelifelse)
+  - [Repetição (loop) for](#repetição-loop-for)
+  - [Repetição (loop) while](#repetição-loop-while)
+- [Funções](#funções)
+  - [Função range](#função-range)
+  - [Números Aleatórios](#números-aleatórios)
+- [Manipulação de Arquivos](#manipulação-de-arquivos)
+- [Conexões com Bancos de Dados e Arquivos](#conexões-com-bancos-de-dados-e-arquivos)
 
-## Introdução / Introduction
 
-### O que é Python? / What is Python?
+## Introdução
+
+### O que é Python?
 
 Python é uma linguagem de programação relativamente simples que foi criada por Guido van Rossum em 1991. É uma linguagem de alto nível, interpretada e conhecida por sua alta produtividade.
 
@@ -61,7 +61,7 @@ Características principais do Python:
 - **Executa em diversos sistemas**: Windows, Linux, macOS, entre outros
 - **Portabilidade**: O mesmo código funciona em diferentes plataformas
 
-### Por que usar Python? / Why use Python?
+### Por que usar Python?
 
 Python se tornou uma das linguagens mais populares do mundo por diversas razões:
 
@@ -96,7 +96,7 @@ mensagem = saudacao("Estudante")
 print(mensagem)
 ```
 
-## Variáveis / Variables
+## Variáveis
 
 Em Python, as variáveis são utilizadas para armazenar dados na memória do computador. Uma das características mais notáveis do Python é que as variáveis são dinamicamente tipadas, o que significa que você não precisa declarar o tipo de uma variável antes de usá-la. O tipo é determinado automaticamente quando você atribui um valor à variável.
 
@@ -114,7 +114,7 @@ altura = 1.65            # Float
 is_estudante = True      # Boolean
 ```
 
-### Variáveis String / String Variables
+### Variáveis String
 
 Strings são sequências de caracteres e são usadas para representar texto em Python. Podem ser definidas usando aspas simples (`'`) ou duplas (`"`).
 
@@ -162,7 +162,7 @@ preco = 49.99
 mensagem3 = f"O preço do curso é R$ {preco:.2f}"  # R$ 49.99
 ```
 
-### Variáveis Numéricas / Numeric Variables
+### Variáveis Numéricas
 
 Python oferece diversos tipos numéricos para diferentes necessidades.
 
@@ -536,7 +536,7 @@ nao_existe = 6 in lista  # False
 
 ## Estruturas de Controle / Control Structures
 
-### Controle de Fluxo if/elif/else / Flow Control if/elif/else
+### Controle de Fluxo if/elif/else
 
 As estruturas condicionais permitem executar diferentes blocos de código dependendo de condições específicas.
 
@@ -574,7 +574,7 @@ idade = 20
 status = "Maior de idade" if idade >= 18 else "Menor de idade"
 ```
 
-### Repetição (loop) for / For Loop
+### Repetição (loop) for
 
 O loop `for` é usado para iterar sobre uma sequência (lista, tupla, dicionário, string, etc.) ou outros objetos iteráveis.
 
@@ -630,7 +630,7 @@ else:
     print("Loop concluído com sucesso!")
 ```
 
-### Repetição (loop) while / While Loop
+### Repetição (loop) while
 
 O loop `while` executa um bloco de código enquanto uma condição for verdadeira.
 
