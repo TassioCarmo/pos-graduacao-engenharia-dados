@@ -2,34 +2,34 @@
 
 Este repositório contém o material complementar da disciplina de Bancos de Dados Relacionais e Linguagem SQL (Parte II), integrante do programa de pós-graduação.
 
-## Sumário | Summary
-- [Ciclo de Vida do Desenvolvimento de Banco de Dados | Database Development Lifecycle](#ciclo-de-vida-do-desenvolvimento-de-banco-de-dados--database-development-lifecycle)
-- [Modelos de Dados, Esquemas e Instâncias | Data Models, Schemas and Instances](#modelos-de-dados-esquemas-e-instâncias--data-models-schemas-and-instances)
-- [Linguagem SQL: DDL, DML, DCL e TCL | SQL Language: DDL, DML, DCL and TCL](#linguagem-sql-ddl-dml-dcl-e-tcl--sql-language-ddl-dml-dcl-and-tcl)
-- [Álgebra e Cálculo Relacional | Relational Algebra and Calculus](#álgebra-e-cálculo-relacional--relational-algebra-and-calculus)
-- [Glossário | Glossary](#glossário--glossary)
+## Sumário 
+- [Ciclo de Vida do Desenvolvimento de Banco de Dados](#ciclo-de-vida-do-desenvolvimento-de-banco-de-dados)
+- [Modelos de Dados, Esquemas e Instâncias | Data Models, Schemas and Instances](#modelos-de-dados-esquemas-e-instâncias)
+- [Linguagem SQL: DDL, DML, DCL e TCL | SQL Language: DDL, DML, DCL and TCL](#linguagem-sql-ddl-dml-dcl-e-tcl)
+- [Álgebra e Cálculo Relacional | Relational Algebra and Calculus](#álgebra-e-cálculo-relacional)
+- [Glossário | Glossary](#glossário)
 
-## Ciclo de Vida do Desenvolvimento de Banco de Dados | Database Development Lifecycle
+## Ciclo de Vida do Desenvolvimento de Banco de Dados
 
 O desenvolvimento de banco de dados segue uma abordagem sistemática top-down que transforma requisitos de informações de negócio em um banco de dados operacional. Conhecer cada estágio deste ciclo ajuda a planejar melhor um projeto e a ser mais produtivo na construção dos modelos.
 
-### Estratégia e Análise | Strategy and Analysis
+### Estratégia e Análise
 - Estudar e analisar os requisitos de negócio utilizando entrevistas com usuários
 - Identificar os requisitos de dados
 - Prever possíveis necessidades futuras do sistema
 - Criar e revisar os modelos conceituais do sistema
 - Criar a representação gráfica do modelo
 
-### Design | Design
+### Design
 - Transformar o modelo desenvolvido na fase de estratégia e análise
 - Mapear entidades para tabelas, atributos para colunas, relacionamentos para chaves estrangeiras e regras de negócios para restrições
 
-### Criação | Creation
+### Criação
 - Gravar e executar os comandos para criar as tabelas e os objetos de apoio do banco de dados
 - Preencher as tabelas com dados
 - Desenvolver a documentação do usuário, o texto da ajuda e os manuais de operação
 
-### Transição | Transition
+### Transição
 - Conduzir o teste de aceitação do usuário
 - Verificar se o desenvolvimento atende aos requisitos de negócio
 - Operar de forma paralela e converter dados existentes quando necessário
@@ -38,9 +38,9 @@ O desenvolvimento de banco de dados segue uma abordagem sistemática top-down qu
 - Operar o sistema de produção
 - Monitorar o desempenho e refinar a operação do sistema
 
-## Modelos de Dados, Esquemas e Instâncias | Data Models, Schemas and Instances
+## Modelos de Dados, Esquemas e Instâncias
 
-### Revisão de Conceitos Básicos | Basic Concepts Review
+### Revisão de Conceitos Básicos 
 - **Tabela**: estrutura de armazenamento básica
 - **Coluna**: um tipo de dados em uma tabela
 - **Linha**: dado para uma instância de tabela
@@ -48,7 +48,7 @@ O desenvolvimento de banco de dados segue uma abordagem sistemática top-down qu
 - **Chave Primária**: identificador exclusivo de cada linha
 - **Chave Estrangeira**: coluna que se refere a uma coluna de chave primária em outra tabela
 
-### Propriedades Fundamentais | Fundamental Properties
+### Propriedades Fundamentais
 - P1: As entradas nas colunas têm um valor único
 - P2: As entradas nas colunas são do mesmo tipo
 - P3: Cada linha é única
@@ -56,7 +56,7 @@ O desenvolvimento de banco de dados segue uma abordagem sistemática top-down qu
 - P5: A sequência das linhas não é significativa
 - P6: Cada coluna tem um nome exclusivo
 
-### Schema | Schema
+### Schema
 Quando nosso diagrama entidade-relacionamento é implantado no SGBD (estrutura), ele ainda não possui dados armazenados. Neste momento, ele é apenas o projeto e, portanto, é chamado de esquema de banco de dados, que é modificado com pouca frequência.
 
 **Exemplo de criação de schema:**
@@ -75,7 +75,7 @@ CREATE TABLE vendas.produtos (
 );
 ```
 
-### Instância | Instance
+### Instância
 Informações começam a ser inseridas, atualizadas ou apagadas, sendo gerenciadas pelos mecanismos disponíveis no SGBD. A partir deste momento, com o banco de dados implantado, todo este conjunto passa a se chamar instância de banco de dados.
 
 Na prática, quando formos nos conectar a uma instância de banco de dados, teremos que fornecer:
@@ -92,16 +92,16 @@ String senha = "senha";
 Connection conn = DriverManager.getConnection(url, usuario, senha);
 ```
 
-### Instância em Nuvem | Cloud Instance
+### Instância em Nuvem
 No contexto da computação em nuvem, quando tivermos que contratar uma instância para nossos BDs, o conceito envolverá também recursos computacionais como:
 - CPU
 - Memória
 - Largura de banda
 - Performance de rede disponível
 
-## Linguagem SQL: DDL, DML, DCL e TCL | SQL Language: DDL, DML, DCL and TCL
+## Linguagem SQL: DDL, DML, DCL e TCL
 
-### DML (Data Manipulation Language) | Linguagem de Manipulação de Dados
+### DML (Data Manipulation Language)
 
 Instruções utilizadas para modificar os dados da tabela por meio da inclusão de novas linhas e alteração ou remoção de linhas existentes:
 - INSERT
@@ -110,7 +110,7 @@ Instruções utilizadas para modificar os dados da tabela por meio da inclusão 
 - MERGE
 - SELECT (limitada à consulta)
 
-#### SELECT | Selecionar
+#### SELECT
 A instrução SELECT acessa os dados no banco de dados. Apesar de não manipular os dados (não faz alterações permanentes), pode operar nos dados acessados retornando valores calculados ou organizados de forma diferente dos originais.
 
 **Exemplo básico:**
@@ -126,12 +126,12 @@ FROM clientes
 WHERE cidade = 'São Paulo';
 ```
 
-#### Conceitos Importantes | Important Concepts
+#### Conceitos Importantes
 - **Palavra-chave**: comando individual (SELECT, FROM)
 - **Cláusula**: parte da instrução (SELECT last_name)
 - **Instrução**: combinação de duas ou mais cláusulas (SELECT name FROM actor)
 
-#### Operadores Aritméticos | Arithmetic Operators
+#### Operadores Aritméticos
 - Ordem MDAS (Multiplicação, Divisão, Adição, Subtração)
 - Se operadores aparecerem juntos, multiplicação e divisão são avaliadas primeiro
 - Se operadores tiverem mesma prioridade, avaliação é feita da esquerda para direita
@@ -151,7 +151,7 @@ FROM produtos
 WHERE (preco * quantidade) > 1000;
 ```
 
-#### NULL | Valor Nulo
+#### NULL
 - NULL representa valor indisponível, inaplicável, desconhecido ou não atribuído
 - Não é zero, espaço, traço ou qualquer outra representação de ausência de valor
 - Qualquer operação aritmética com NULL resulta em NULL (exceto divisão por 0, que gera erro)
@@ -173,7 +173,7 @@ FROM funcionarios
 WHERE salario IS NULL;
 ```
 
-#### Aliases | Apelidos
+#### Aliases
 - Renomeia a coluna de saída para leitura mais amigável
 - Útil para cálculos
 - Deve vir imediatamente após o nome da coluna, usando a palavra AS
@@ -189,7 +189,7 @@ SELECT
 FROM funcionarios;
 ```
 
-#### DESCRIBE/DESC | Descrever
+#### DESCRIBE/DESC
 Retorna informações sobre a estrutura da tabela:
 - Nome da tabela
 - Tipos de dados
@@ -211,7 +211,7 @@ DESC clientes;
 EXEC sp_columns 'clientes';
 ```
 
-#### Função de Concatenação | Concatenation Function
+#### Função de Concatenação
 - Vincula colunas a outras
 - Deixa a saída mais amigável
 - Economiza código
@@ -237,7 +237,7 @@ SELECT
 FROM produtos;
 ```
 
-#### DISTINCT | Distinto
+#### DISTINCT
 Elimina linhas duplicadas, útil para saber quantas instâncias únicas existem em uma tabela.
 
 **Exemplo:**
@@ -253,7 +253,7 @@ FROM clientes
 ORDER BY cidade, estado;
 ```
 
-#### Operadores de Comparação | Comparison Operators
+#### Operadores de Comparação
 - = (igual)
 - > (maior que)
 - < (menor que)
@@ -261,7 +261,7 @@ ORDER BY cidade, estado;
 - <= (menor ou igual)
 - <> ou != (diferente)
 
-#### BETWEEN AND | Entre
+#### BETWEEN AND
 Seleciona e exibe linhas com base em uma faixa de valores (inclusive).
 
 **Exemplo:**
@@ -277,7 +277,7 @@ FROM produtos
 WHERE preco >= 100 AND preco <= 500;
 ```
 
-#### IN | Conjunto
+#### IN
 Testa se um valor está dentro de um conjunto específico de valores.
 
 **Exemplo:**
@@ -293,7 +293,7 @@ FROM produtos
 WHERE categoria = 'Eletrônicos' OR categoria = 'Informática' OR categoria = 'Acessórios';
 ```
 
-#### LIKE | Padrão
+#### LIKE
 Seleciona linhas correspondentes a caracteres, datas ou padrões de números usando caracteres curinga:
 - % representa qualquer sequência de zero ou mais caracteres
 - _ representa um único caractere
@@ -316,7 +316,7 @@ FROM clientes
 WHERE primeiro_nome LIKE '____';
 ```
 
-#### IS NULL / IS NOT NULL | É Nulo / Não é Nulo
+#### IS NULL / IS NOT NULL
 Verifica se um valor é NULL ou não.
 
 **Exemplo:**
@@ -332,7 +332,7 @@ FROM funcionarios
 WHERE data_demissao IS NOT NULL;
 ```
 
-#### INSERT | Inserir
+#### INSERT
 Insere novos registros em uma tabela.
 
 **Exemplo:**
@@ -358,7 +358,7 @@ FROM clientes
 WHERE total_compras > 10000;
 ```
 
-#### UPDATE | Atualizar
+#### UPDATE
 Modifica linhas existentes em uma tabela.
 
 **Exemplo:**
@@ -426,7 +426,7 @@ WHERE cliente_id IN (
 
 > **IMPORTANTE**: Todas as linhas na tabela serão excluídas se você não usar a cláusula WHERE!
 
-#### MERGE | Mesclar
+#### MERGE
 Faz inserção e atualização simultaneamente.
 
 **Exemplo:**
@@ -460,7 +460,7 @@ SET nome = EXCLUDED.nome,
     ultima_atualizacao = CURRENT_TIMESTAMP;
 ```
 
-### Data Warehouse | Armazém de Dados
+### Data Warehouse
 Uma coleção de dados feita para auxiliar no processo de tomada de decisão do gerenciamento de negócios. Contém uma grande variedade de dados (pessoais, vendas, clientes, folhas de pagamento, contabilidade) que apresentam uma imagem coerente das condições dos negócios em um ponto único no tempo.
 
 **Exemplo de carga de dados para DW:**
@@ -494,7 +494,7 @@ SET ultima_carga = CURRENT_TIMESTAMP
 WHERE tabela = 'fatos_vendas';
 ```
 
-## Álgebra e Cálculo Relacional | Relational Algebra and Calculus
+## Álgebra e Cálculo Relacional
 
 ### Terminologia | Terminology
 - **Linha = Tupla | Row = Tuple**
@@ -502,23 +502,23 @@ WHERE tabela = 'fatos_vendas';
 - **Tabela = Relação | Table = Relation**
 - **Tipos de Dados = Domínio | Data Types = Domain**
 
-### Operações | Operations
+### Operações
 
-#### Operações Unárias | Unary Operations
+#### Operações Unárias
 - Seleção (σ)
 - Projeção (π)
 
-#### Operações com Base na Teoria dos Conjuntos | Set Theory Operations
+#### Operações com Base na Teoria dos Conjuntos
 - União (∪)
 - Interseção (∩)
 - Diferença (-)
 - Produto Cartesiano (×)
 
-#### Operações Binárias | Binary Operations
+#### Operações Binárias
 - Junção (⋈)
 - Divisão (÷)
 
-#### Seleção (σ) | Selection
+#### Seleção (σ)
 Escolhe um subconjunto de tuplas de uma relação que satisfaça uma condição de seleção. Funciona como um filtro que mantém apenas as tuplas que satisfazem uma condição qualificadora.
 
 **Notação:**
@@ -542,7 +542,7 @@ FROM Funcionarios
 WHERE idade > 30;
 ```
 
-#### Projeção (π) | Projection
+#### Projeção (π)
 Seleciona certos atributos enquanto descarta outros. É uma partição vertical da relação.
 
 **Notação:**
@@ -564,7 +564,7 @@ SELECT nome, salario
 FROM Funcionarios;
 ```
 
-#### Operações de Conjunto | Set Operations
+#### Operações de Conjunto
 
 ##### União (∪) | Union
 Inclui todas as tuplas que estão na relação R ou S ou em ambas, desconsiderando duplicatas.
@@ -596,7 +596,7 @@ FROM Clientes
 WHERE estado = 'RJ';
 ```
 
-##### Interseção (∩) | Intersection
+##### Interseção (∩)
 Inclui todas as tuplas que estão tanto na relação R quanto em S.
 
 **Notação:**
@@ -626,7 +626,7 @@ FROM Produtos
 WHERE em_promocao = true;
 ```
 
-##### Diferença (-) | Difference
+##### Diferença (-)
 Contém as tuplas que estão na relação R, mas não em S.
 
 **Notação:**
@@ -655,7 +655,7 @@ FROM Funcionarios
 WHERE cargo = 'Gerente';
 ```
 
-#### Produto Cartesiano (×) | Cartesian Product
+#### Produto Cartesiano (×)
 Combina informações de duas relações quaisquer, resultando em todas as combinações possíveis entre os elementos das relações originais.
 
 **Notação:**
@@ -679,7 +679,7 @@ FROM Produtos
 CROSS JOIN Fornecedores;
 ```
 
-## Glossário | Glossary
+## Glossário
 
 | Termo | Definição |
 |------|-----------|
