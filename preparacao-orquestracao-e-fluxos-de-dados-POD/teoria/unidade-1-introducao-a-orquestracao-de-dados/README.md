@@ -1,6 +1,5 @@
 
 # Orquestração de Dados: Preparação, Fluxo e Automação
-# Data Orchestration: Preparation, Flow and Automation
 
 ## Sumário
 - [Introdução](#introdução)
