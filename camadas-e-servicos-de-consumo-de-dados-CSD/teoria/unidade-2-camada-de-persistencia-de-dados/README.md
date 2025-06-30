@@ -1,46 +1,47 @@
 # Arquitetura de Dados: Conceitos Fundamentais e Tecnologias Modernas
 # Data Architecture: Fundamental Concepts and Modern Technologies
 
-## Sumário / Summary
-- [Introdução / Introduction](#introdução--introduction)
-- [Camadas em Dados / Data Layers](#camadas-em-dados--data-layers)
-  - [Camadas de Armazenamento / Storage Layers](#camadas-de-armazenamento--storage-layers)
+## Sumário
+- [Introdução](#introdução)
+- [Camadas em Dados](#camadas-em-dados)
+  - [Camadas de Armazenamento](#camadas-de-armazenamento)
 - [ORMs (Object-Relational Mappers)](#orms-object-relational-mappers)
   - [ORMs vs ODMs](#orms-x-odmx)
-  - [Integração com Outras Camadas / Integration with Other Layers](#integração-camada-de-armazenamento-com-outras-camadas)
-- [Tipos de Bancos de Dados / Database Types](#tipos-de-bancos-de-dados--database-types)
-  - [Bancos de Dados Relacionais / Relational Databases](#banco-de-dados-relacional--relational-database)
-  - [Normalização / Normalization](#normalização--normalization)
-  - [Modelos de Dados / Data Models](#modelos-de-dados--data-models)
-- [Bancos de Dados NoSQL / NoSQL Databases](#bancos-de-dados-nosql--nosql-databases)
-  - [Características / Characteristics](#nosql---características--characteristics)
-  - [Modelos de Bancos NoSQL / NoSQL Database Models](#modelos-de-bancos-nosql--nosql-database-models)
-  - [Ausência de Esquema / Schema-less Design](#bancos-de-dados-nosql---schema--nosql-databases---schema)
-- [Bancos de Dados NewSQL / NewSQL Databases](#bancos-de-dados-newsql--newsql-databases)
+  - [Integração com Outras Camadas](#integração-camada-de-armazenamento-com-outras-camadas)
+- [Tipos de Bancos de Dados](#tipos-de-bancos-de-dados)
+  - [Bancos de Dados Relacionais](#banco-de-dados-relacional)
+  - [Normalização](#normalização)
+  - [Modelos de Dados](#modelos-de-dados)
+- [Bancos de Dados NoSQL](#bancos-de-dados-nosql)
+  - [Características](#nosql---características)
+  - [Modelos de Bancos NoSQL](#modelos-de-bancos-nosql)
+  - [Ausência de Esquema](#bancos-de-dados-nosql---schema)
+- [Bancos de Dados NewSQL](#bancos-de-dados-newsql)
   - [Comparativo: SQL x NoSQL x NewSQL](#sql-x-nosql-x-newsql)
-- [Teorema CAP / CAP Theorem](#teorema-cap--cap-theorem)
-  - [Consistência Eventual / Eventual Consistency](#consistência-eventual--eventual-consistency)
-- [Escalabilidade / Scalability](#escalabilidade--scalability)
-- [Sistemas de Arquivos Distribuídos / Distributed File Systems](#sistemas-de-arquivos-distribuídos--distributed-file-systems)
-  - [Requisitos / Requirements](#requisitos-de-um-sistemas-de-arquivos--file-system-requirements)
-  - [Arquitetura / Architecture](#arquitetura-do-sad--dfs-architecture)
+- [Teorema CAP](#teorema-cap)
+  - [Consistência Eventual](#consistência-eventual)
+- [Escalabilidade](#escalabilidade)
+- [Sistemas de Arquivos Distribuídos](#sistemas-de-arquivos-distribuídos)
+  - [Requisitos](#requisitos-de-um-sistemas-de-arquivos)
+  - [Arquitetura](#arquitetura-do-sad)
 - [Apache Hadoop](#apache-hadoop)
   - [HDFS (Hadoop Distributed File System)](#hdfs)
-  - [Módulos do Framework / Framework Modules](#módulos-do-framework-do-apache-hadoop--apache-hadoop-framework-modules)
-- [Computação em Nuvem / Cloud Computing](#computação-em-nuvem--cloud-computing)
-  - [Arquiteturas Monolíticas / Monolithic Architectures](#arquiteturas-monolíticas--monolithic-architectures)
-  - [Arquitetura de Microsserviços / Microservices Architecture](#arquitetura-de-microserviços--microservices-architecture)
+  - [Módulos do Framework](#módulos-do-framework-do-apache-hadoop)
+- [Computação em Nuvem](#computação-em-nuvem)
+  - [Arquiteturas Monolíticas](#arquiteturas-monolíticas)
+  - [Arquitetura de Microsserviços](#arquitetura-de-microserviços)
 - [Containers](#containers)
-  - [Orquestração de Containers / Container Orchestration](#ferramentas-de-orquestração-de-containers--container-orchestration-tools)
-- [Boas Práticas e Considerações / Best Practices and Considerations](#boas-práticas-e-considerações--best-practices-and-considerations)
+  - [Orquestração de Containers](#ferramentas-de-orquestração-de-containers)
+- [Boas Práticas e Considerações](#boas-práticas-e-considerações)
 
-## Introdução / Introduction
+
+## Introdução
 
 Este documento apresenta um glossário abrangente sobre conceitos fundamentais de arquitetura de dados, abordando desde os princípios básicos até as tecnologias mais recentes utilizadas no mercado. O conteúdo foi estruturado para servir tanto como material de estudo quanto como referência técnica para profissionais da área de dados.
 
 This document presents a comprehensive glossary of fundamental data architecture concepts, covering everything from basic principles to the latest technologies used in the market. The content has been structured to serve both as study material and as a technical reference for data professionals.
 
-## Camadas em Dados / Data Layers
+## Camadas em Dados
 
 As camadas em dados referem-se às diferentes etapas ou níveis de processamento e armazenamento em um sistema. Cada camada desempenha uma função específica no fluxo de dados, formando uma arquitetura coesa e eficiente.
 
@@ -169,9 +170,9 @@ A camada de armazenamento se integra com diversas outras camadas da arquitetura:
 - **Armazenamento Descentralizado**: Blockchain e soluções distribuídas
 - **Automação e IA**: Sistemas auto-otimizáveis e autoadministrados
 
-## Tipos de Bancos de Dados / Database Types
+## Tipos de Bancos de Dados
 
-### Banco de Dados Relacional / Relational Database
+### Banco de Dados Relacional
 
 Bancos de dados relacionais estruturam dados de acordo com o modelo relacional, organizando informações em tabelas (relações) compostas por linhas (registros/tuplas) e colunas (atributos).
 
@@ -210,7 +211,7 @@ CREATE TABLE Clientes (
 );
 ```
 
-### Normalização / Normalization
+### Normalização
 
 Normalização é uma técnica de projeto lógico que reestrutura tabelas e atributos para reduzir redundâncias e permitir o crescimento consistente do banco de dados.
 
@@ -269,7 +270,7 @@ Normalização é uma técnica de projeto lógico que reestrutura tabelas e atri
 
 > **Nota**: Considera-se que um banco de dados está "normalizado" quando atinge a 3FN. As formas posteriores (FNBC, 4FN e 5FN) são refinamentos adicionais para casos específicos.
 
-### Modelos de Dados / Data Models
+### Modelos de Dados
 
 No design de bancos de dados, trabalhamos com três níveis principais de modelos:
 
@@ -297,7 +298,7 @@ Implementação específica do modelo lógico para um SGBD particular, incluindo
 - Inclui índices, partições, configurações de armazenamento
 - Otimizado para desempenho
 
-## Bancos de Dados NoSQL / NoSQL Databases
+## Bancos de Dados NoSQL
 
 NoSQL (Not Only SQL) refere-se a bancos de dados não-relacionais desenvolvidos para superar limitações dos bancos relacionais em aplicações web modernas e big data.
 
@@ -308,7 +309,7 @@ NoSQL (Not Only SQL) refere-se a bancos de dados não-relacionais desenvolvidos 
 - Foco em escalabilidade horizontal e disponibilidade
 - Flexibilidade para dados não estruturados ou semiestruturados
 
-### NoSQL - Características / Characteristics
+### NoSQL - Características
 
 - **Escalabilidade horizontal**: Capacidade de adicionar novos nós facilmente
 - **Esquema flexível ou ausente**: Adaptação rápida a mudanças nos dados
@@ -316,7 +317,7 @@ NoSQL (Not Only SQL) refere-se a bancos de dados não-relacionais desenvolvidos 
 - **APIs simples**: Facilidade de uso e integração
 - **Consistência eventual**: Priorização de disponibilidade sobre consistência imediata
 
-### Modelos de Bancos NoSQL / NoSQL Database Models
+### Modelos de Bancos NoSQL
 
 #### 1. Chave-Valor (Key-Value)
 
@@ -438,7 +439,7 @@ WHERE amigo.cidade = "Rio de Janeiro"
 RETURN amigo.nome, amigo.idade
 ```
 
-### Bancos de Dados NoSQL - Schema / NoSQL Databases - Schema
+### Bancos de Dados NoSQL - Schema
 
 A ausência de esquema rígido (schema-free) ou esquema flexível é uma característica distintiva dos bancos NoSQL, permitindo:
 
@@ -473,7 +474,7 @@ JSON é um formato leve de intercâmbio de dados, amplamente usado em bancos NoS
 }
 ```
 
-## Bancos de Dados NewSQL / NewSQL Databases
+## Bancos de Dados NewSQL
 
 NewSQL representa uma classe de SGBDs relacionais modernos que buscam combinar o melhor dos dois mundos:
 
@@ -523,8 +524,7 @@ O teorema CAP, proposto por Eric Brewer, afirma que um sistema distribuído de d
 - **CP (Consistência + Tolerância a Partição)**: MongoDB, HBase
 - **AP (Disponibilidade + Tolerância a Partição)**: Cassandra, DynamoDB
 
-### Consistência Eventual / Eventual Consistency
-
+### Consistência Eventual
 A consistência eventual é um modelo derivado do teorema CAP onde:
 
 - Prioriza-se disponibilidade e tolerância a partição (AP)
@@ -547,7 +547,7 @@ Bancos que implementam consistência eventual:
 - MongoDB (em configurações específicas)
 - CouchDB
 
-## Escalabilidade / Scalability
+## Escalabilidade
 
 Escalabilidade refere-se à capacidade de um sistema em lidar com crescimento no volume de dados, transações ou usuários.
 
@@ -580,7 +580,7 @@ Exemplo: Aumentar cluster de 3 servidores para 10 servidores
 - **Elasticidade**: Capacidade de escalar dinamicamente conforme demanda
 - **Linearidade**: Manter desempenho proporcional ao aumento de recursos
 
-## Sistemas de Arquivos Distribuídos / Distributed File Systems
+## Sistemas de Arquivos Distribuídos
 
 Sistemas de Arquivos Distribuídos (DFS ou SAD) permitem armazenar e acessar arquivos remotos como se fossem locais, distribuindo os dados entre múltiplos servidores.
 
@@ -603,7 +603,7 @@ Sistemas de Arquivos Distribuídos (DFS ou SAD) permitem armazenar e acessar arq
 - **Segurança**: Controle de acesso e proteção
 - **Eficiência**: Desempenho próximo ao de um sistema local
 
-### Arquitetura do SAD / DFS Architecture
+### Arquitetura do SAD
 
 A arquitetura típica divide responsabilidades entre três módulos principais:
 
@@ -745,7 +745,7 @@ A computação em nuvem oferece recursos computacionais sob demanda através da 
 3. **SaaS (Software as a Service)**: Entrega aplicações completas
    - Exemplos: Microsoft 365, Google Workspace, Salesforce
 
-### Arquiteturas Monolíticas / Monolithic Architectures
+### Arquiteturas Monolíticas
 
 Em arquiteturas monolíticas, todos os componentes da aplicação são desenvolvidos, implantados e escalados como uma única unidade.
 
@@ -774,7 +774,7 @@ Exemplo simplificado de arquitetura monolítica:
 [Banco de Dados Único]
 ```
 
-### Arquitetura de Microsserviços / Microservices Architecture
+### Arquitetura de Microsserviços
 
 Na arquitetura de microsserviços, a aplicação é decomposta em serviços pequenos e independentes, cada um responsável por uma função específica de negócio.
 
@@ -838,7 +838,7 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 ```
 
-### Ferramentas de Orquestração de Containers / Container Orchestration Tools
+### Ferramentas de Orquestração de Containers
 
 Orquestradores de containers gerenciam múltiplos containers em ambientes de produção, automatizando:
 
@@ -897,7 +897,7 @@ spec:
             memory: "256Mi"
 ```
 
-## Boas Práticas e Considerações / Best Practices and Considerations
+## Boas Práticas e Considerações
 
 ### Indicadores de Desempenho (KPIs)
 
