@@ -1,10 +1,9 @@
 # Documentação Python para Pós-Graduação
-# Python Documentation for Post-Graduation
 
-## Sumário / Summary
-- [Introdução / Introduction](#introdução--introduction)
-  - [O que é Python? / What is Python?](#o-que-é-python--what-is-python)
-  - [Por que usar Python? / Why use Python?](#por-que-usar-python--why-use-python)
+## Sumário
+- [Introdução](#introdução--introduction)
+  - [O que é Python??](#o-que-é-python--what-is-python)
+  - [Por que usar Python](#por-que-usar-python--why-use-python)
 - [Variáveis / Variables](#variáveis--variables)
   - [Variáveis String / String Variables](#variáveis-string--string-variables)
   - [Variáveis Numéricas / Numeric Variables](#variáveis-numéricas--numeric-variables)
@@ -33,10 +32,10 @@
 - [Manipulação de Arquivos / File Handling](#manipulação-de-arquivos--file-handling)
 - [Conexões com Bancos de Dados e Arquivos / Database and File Connections](#conexões-com-bancos-de-dados-e-arquivos--database-and-file-connections)
 - [Programação Orientada a Objetos / Object-Oriented Programming](#programação-orientada-a-objetos--object-oriented-programming)
-  - [Motivações / Motivations](#motivações--motivations)
-  - [Características / Characteristics](#características--characteristics)
+  - [Motivações](#motivações--motivations)
+  - [Características](#características--characteristics)
   - [Conceito de Objetos / Object Concept](#conceito-de-objetos--object-concept)
-  - [Definição / Definition](#definição--definition)
+  - [Definição](#definição--definition)
   - [Pilares da POO / OOP Pillars](#pilares-da-poo--oop-pillars)
     - [Abstração / Abstraction](#abstração--abstraction)
     - [Encapsulamento / Encapsulation](#encapsulamento--encapsulation)
@@ -47,13 +46,12 @@
   - [Construtores / Constructors](#construtores--constructors)
   - [Métodos / Methods](#métodos--methods)
     - [Parâmetros / Parameters](#parâmetros--parameters)
-    - [Self / Self](#self--self)
-    - [Modificadores de Acesso / Access Modifiers](#modificadores-de-acesso--access-modifiers)
+    - [Self](#self--self)
+    - [Modificadores de Acesso](#modificadores-de-acesso--access-modifiers)
 
-## Introdução / Introduction
+## Introdução
 
-### O que é Python? / What is Python?
-
+### O que é Python?
 Python é uma linguagem de programação relativamente simples que foi criada por Guido van Rossum em 1991. É uma linguagem de alto nível, interpretada e conhecida por sua alta produtividade.
 
 Python foi desenvolvida com foco na legibilidade de código e na produtividade do programador. O nome da linguagem foi inspirado no grupo de comédia britânico Monty Python, refletindo a intenção do criador de fazer uma linguagem divertida de usar.
@@ -78,7 +76,7 @@ Características principais do Python:
 - **Executa em diversos sistemas**: Windows, Linux, macOS, entre outros
 - **Portabilidade**: O mesmo código funciona em diferentes plataformas
 
-### Por que usar Python? / Why use Python?
+### Por que usar Python?
 
 Python se tornou uma das linguagens mais populares do mundo por diversas razões:
 
@@ -113,7 +111,7 @@ mensagem = saudacao("Estudante")
 print(mensagem)
 ```
 
-## Variáveis / Variables
+## Variáveis
 
 Em Python, as variáveis são utilizadas para armazenar dados na memória do computador. Uma das características mais notáveis do Python é que as variáveis são dinamicamente tipadas, o que significa que você não precisa declarar o tipo de uma variável antes de usá-la. O tipo é determinado automaticamente quando você atribui um valor à variável.
 
@@ -131,7 +129,7 @@ altura = 1.65            # Float
 is_estudante = True      # Boolean
 ```
 
-### Variáveis String / String Variables
+### Variáveis String
 
 Strings são sequências de caracteres e são usadas para representar texto em Python. Podem ser definidas usando aspas simples (`'`) ou duplas (`"`).
 
@@ -179,12 +177,11 @@ preco = 49.99
 mensagem3 = f"O preço do curso é R$ {preco:.2f}"  # R$ 49.99
 ```
 
-### Variáveis Numéricas / Numeric Variables
+### Variáveis Numéricas
 
 Python oferece diversos tipos numéricos para diferentes necessidades.
 
-#### Inteiros (int) / Integers (int)
-
+#### Inteiros (int)
 Representam números inteiros sem parte decimal.
 
 ```python
