@@ -281,8 +281,12 @@ D --> E
 E --> F[Operações Válidas]
 ```
 
+### OBS
 
-### campos float nao tem precisão definida ele armazena o maximo que ele aguentar
+
+- campos float nao tem precisão definida ele armazena o maximo que ele aguentar
+- Caso os dados nao sejam reconhecidos (o tipo deles) nos podemos modificar o tipo do dado atraves de uma atribução , fornecer um schema de dados ou inferir o tipo de dado baseado n uma amostra de seu conteudo
+
 ## Duvidas 
 
 - quando tratar e quando dropar dados , principalmente em relação a faltando  de dados
