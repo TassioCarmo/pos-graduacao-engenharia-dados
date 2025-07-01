@@ -292,3 +292,17 @@ E --> F[Operações Válidas]
 - quando tratar e quando dropar dados , principalmente em relação a faltando  de dados
 
 ![image](https://github.com/user-attachments/assets/ae3ade32-7c08-4442-9342-c38bad240b53)
+
+
+# Normalização de dados
+
+
+- A normalização de dados e o processo de organizacao de dados em que o objetivo e o estabelecimento de vinculos entre tabelas (ou arquivos) de acordo com as regras projetadas para tornar o sistema mais flexivel, integro, eliminar a redundancia e a dependencia indireta das informacoes.
+- Dados redundantes aumentam a utilizacao de disco e criam problemas de manutencao. Se os dados existem em mais de um lugar, eles devem ser alterados exatamente da mesma maneira em todos os locais, dificultando a organizacao.
+- Dependencia indireta pode causar problemas na analise de informacoes quando nao e possivel afirmar, com confianca, a associaqao entre registros ou cruzamento de dados que nao fazem associaqao direta com uma entidade (objeto) conhecida.
+- 1N = Valores atomicos (um campo nao pode ter mais de um significado e cada linha deve ter uma chave primeira unica) ex coluna telefone se o individuo tiver vairios telefones
+- 2N = dependencia completa (os atributos tem que estar depende do TODAS AS CHAVES PRIMARIAS )
+- 3N = Sem dependencia transitiva
+
+
+
