@@ -1,17 +1,3 @@
-# 03-Arquiteturas-e-Servicos-de-Data-Lakes-e-Data-Warehousing-DLW
-
-## Sobre a Disciplina
-Esta disciplina aborda conceitos fundamentais de arquiteturas de dados em nuvem, focando na criação e gestão de Data Lakes e Data Warehousing utilizando Microsoft Azure.
-
-## Objetivos de Aprendizagem
-Ao final da disciplina, o estudante será capaz de:
-- Criar scripts para conexão com diversas fontes de dados
-- Armazenar dados de forma escalável e gerenciável
-- Orquestrar fluxos de dados em batch e streaming
-- Utilizar ferramentas para tratamento e análise de dados
-- Implementar governança de dados
-- Gerar visualizações com dados
-
 ##  Arquitetura de Recursos e Serviços em Nuvem
 
 ### Camadas da Arquitetura
