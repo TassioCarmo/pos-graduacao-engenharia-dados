@@ -74,7 +74,7 @@ Batch + Orquestração ← Streaming
 - **Filas**: Armazenamento de mensagens
 - **Tabelas**: Estrutura NoSQL chave-valor
 
-## 💻 Implementação Prática
+## Implementação Prática
 
 ### Ingestão de Dados com Python
 Utilização das bibliotecas:
