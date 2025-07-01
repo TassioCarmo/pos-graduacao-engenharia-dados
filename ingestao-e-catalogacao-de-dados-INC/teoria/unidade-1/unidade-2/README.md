@@ -290,6 +290,7 @@ E --> F[Operações Válidas]
 ## Duvidas 
 
 - quando tratar e quando dropar dados , principalmente em relação a faltando  de dados
+- Qual as melhores praticas deixar o dado capitalizado e quando deixar tudo minusculo (quando usar um ou outro) 
 
 ![image](https://github.com/user-attachments/assets/ae3ade32-7c08-4442-9342-c38bad240b53)
 
