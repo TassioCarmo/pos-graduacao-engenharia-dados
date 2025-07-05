@@ -93,7 +93,6 @@ O auditor submete parâmetros de teste com dados reais, sem impactar na rotina n
 
 • **Considerar possibilidade de acompanhamento do processo de geração.**
 
-Aqui está o texto extraído:
 
 • **Fórmula da Lei de Newcomb-Benford, onde d é o primeiro dígito significativo.:**
 
@@ -115,7 +114,6 @@ Prob(d₂ = 3) = log₁₀(1 + 1/13) + log₁₀(1 + 1/23) + ... log₁₀(1 + 1
 |----------------|-------|-------|------|-------|------|------|------|-------|------|-------|-------|
 | Porcentagem    | 11,67 | 12,00 | 9,00 | 11,00 | 9,00 | 9,00 | 8,00 | 11,00 | 9,33 | 10,00 | 100   |
 
-Aqui está o texto extraído:
 
 **Lei de Newcomb-Benford na auditoria de dados**
 
