@@ -1,300 +1,75 @@
-# Resumo - Bancos de Dados NoSQL
+## Características dos bancos de dados NoSQL
 
-## O que mudou no mundo dos dados?
 
-Com a Web 2.0, tudo mudou. Antes, os sites eram páginas estáticas onde você só consumia conteúdo. Agora, somos todos produtores de dados - postando, curtindo, comentando, compartilhando. E isso gera uma quantidade absurda de informações.
+- O termo NoSQL (Not Only SQL) tem sido usado com o significado de “Não apenas SQL” como tentativa da comunidade de reconhecer a utilidade dos modelos tradicionais e não divergir as discussões.
+-  NoSQL não define precisamente esses bancos de dados, mas no geral cada um deles apresenta a maioria das seguintes características:
 
-Imagina só: temos mais dispositivos conectados do que pessoas no mundo! Celulares, sensores IoT, câmeras, GPS, jogos online... tudo gerando dados 24/7. Estamos falando de volumes na casa dos zetabytes (isso é muito, muito mesmo).
+✓ Não-relacional
+✓ Distribuído
+✓ Código aberto
+✓ Escalável horizontalmente
+✓ Ausência de esquema ou esquema flexível
+✓ Suporte à replicação nativo
+✓ Acesso via APIs simples
+✓ Diminuição do tempo de recuperação de informações
 
-O problema é que os bancos de dados tradicionais não conseguem mais dar conta. Eles foram feitos para um mundo onde os dados eram estruturados e organizados em tabelas. Mas agora? Temos textos, imagens, vídeos, dados de sensores... uma bagunça organizada que precisa de uma nova abordagem.
+### O que é um banco de dados NoSQL?
 
-## NoSQL: A resposta para o caos
+Sistemas NoSQL não existe uma padronização para as linguagens de manipulação e consulta de dados como no Modelo Relacional, o qual utiliza o padrão SQL.
+Sistemas NoSQL não requerem qualquer padronização mesmo em ferramentas que tratam o mesmo modelo de dados 
 
-### O que é essa tal de NoSQL?
+NoSQL é um conjunto de conceitos que permite o processamento rápido e eficiente de conjuntos de dados com foco em desempenho, confiabilidade e agilidade.
+O surgimento desses SGBDs tem como motivação aplicações cujos requisitos não se ajustam a apenas um modelo de dados
 
-Primeiro, vamos tirar uma confusão: NoSQL não significa "sem SQL". Na verdade, significa "Not Only SQL" (não apenas SQL). É como se fosse um "SQL++", expandindo as possibilidades além do mundo relacional.
 
-O NoSQL surgiu em 1998, mas só ganhou força com a explosão da Web 2.0. A ideia não é jogar o banco relacional no lixo, mas sim ter mais ferramentas na caixa de ferramentas.
+### Persistência poliglota
 
-### Principais características
+• Aplicações com essas características, ou seja, que necessitam acessar dois ou mais SGBDs com modelos de dados diferentes são chamadas de poliglotas, uma vez que realizam persistência de dados em diversos formatos devido à natureza heterogênea dos dados que manipulam.
+• Este conceito de persistência poliglota, pode ser denominado por alguns autores como SGBD NoSQL multimodelo.
 
-Os bancos NoSQL geralmente têm essas características:
+### Consistência eventual
 
-- **Não-relacional**: Sem aquelas tabelas com chaves estrangeiras e relacionamentos complexos
-- **Distribuído**: Roda em várias máquinas ao mesmo tempo
-- **Código aberto**: A maioria é gratuita e de código aberto
-- **Escalável horizontalmente**: Precisa de mais poder? Adiciona mais máquinas
-- **Esquema flexível**: Não precisa definir estrutura rígida antes
-- **Replicação nativa**: Copia dados automaticamente para backup
-- **APIs simples**: Acesso fácil via programação
-- **Recuperação rápida**: Busca informações mais rapidamente
+- Consistência eventual: Essa característica está relacionada ao fato da consistência nem sempre ser mantida entre os vários pontos de distribuição de dados.
+-  Ela tem como princípio o teorema de CAP (Consistency, Availability, Partition and Tolerance) que diz que só é possível garantir duas das três propriedades entre consistência, disponibilidade e tolerância à partição.
+-  No contexto da Web geralmente são privilegiadas a disponibilidade e a tolerância à partição.
+-   NoSQL implementa as propriedades BASE (Basically Avaliable, Softstate, Eventual consistency), que foram propostas para contrapor as propriedades ACID (Atomicity, Consistency, Isolation, Durability) do Modelo Relacional.
+-   A ideia principal é dispensar a consistência (por um intervalo de tempo) em favor da disponibilidade e escalabilidade.
 
-## As grandes diferenças conceituais
+## Propriedades dosbancos de dados NoSQL 
 
-### ACID vs BASE: A batalha dos acrônimos
+### ACID
+- Atomicidade: significa que em uma transação envolvendo duas ou mais partes de informações discretas, ou a transação será executada totalmente ou não será executada, garantindo assim que as transações sejam atômica.
+- Consistência: é quando uma transação cria um novo estado válido dos dados ou, em caso de falha, retorna todos os dados ao seu estado anterior ao início da transação.
+- Isolamento: significa que uma transação em andamento, mas ainda não validada, deve permanecer isolada de qualquer outra operação externa, ou seja, garante-se que a transação não será interferida por nenhuma outra transação concorrente.
+- Durabilidade: indica que dados validados são registados pelo sistema de tal forma que, mesmo no caso de uma falha ou reinício do sistema, os dados estão disponíveis em seu estado correto
 
-**ACID** (mundo relacional):
-- **Atomicidade**: Ou faz tudo ou não faz nada
-- **Consistência**: Dados sempre válidos
-- **Isolamento**: Operações não interferem umas nas outras
-- **Durabilidade**: Uma vez salvo, sempre salvo
+- As propriedades ACID forçam a consistência ao final de cada operação, as propriedades BASE permitem que o banco de dados esteja - de forma eventual em um estado consistente.
+- Em outras palavras, para obtenção do alto desempenho e disponibilidade, não há priorização da consistência dos dados.
+- NoSQL são capazes de processar um grande número de operações simples de leitura e gravação por segundo porém sem garantia de consistência imediata
 
-**BASE** (mundo NoSQL):
-- **Basically Available**: Basicamente disponível
-- **Soft state**: Estado flexível
-- **Eventual consistency**: Consistência... eventualmente
+### Escalabilidade Horizontal
 
-A diferença fundamental é que o ACID garante que tudo esteja sempre certinho, mas isso custa performance. O BASE aceita que, por alguns momentos, os dados podem estar um pouco "bagunçados", mas em troca oferece velocidade e disponibilidade.
+- Escalabilidade horizontal: devido ao volume de dados há a necessidade de escalar e melhorar o desempenho do sistema a escalabilidade horizontal, é o aumento do número de nós (máquinas) disponíveis para o armazenamento e processamento dos dados.
+-  Para que a escalabilidade horizontal seja eficiente, ela requer que diversos processos de uma única tarefa sejam criados e distribuídos
+-   Esta característica torna inviável a utilização de um banco de dados relacional, uma vez que todos estes processos conectados geram grande concorrência, aumentando consequentemente o tempo de acesso às tabelas desejadas.
+- A escalabilidade horizontal somente é permitida nos BDs NoSQL por causa da ausência de bloqueios.
+-  Utiliza-se para alcançar esta escalabilidade é o Sharding, que consiste em dividir os dados em várias tabelas, armazenando-as ao longo de múltiplos nós de uma rede quebrando a lógica de relacionamentos.
 
-### O Teorema CAP: Escolha duas de três
+### schemaless
 
-Este é um conceito crucial: você só pode ter duas das três propriedades:
-- **Consistência**: Todos veem os mesmos dados
-- **Disponibilidade**: Sistema sempre no ar
-- **Tolerância à partição**: Funciona mesmo se a rede falhar
+ - Ausência de esquema ou esquema flexível: a ausência completa ou parcial de esquema que define a estrutura dos dados é uma característica dos bancos NoSQL.
+ -  Essa falta de esquema simplifica escalabilidade do sistema bem como aumenta a sua disponibilidade no entanto, não há garantia da integridade dos dados.
 
-Na web, geralmente escolhemos disponibilidade e tolerância à partição. Afinal, é melhor ter um sistema funcionando com dados um pouco desatualizados do que um sistema fora do ar.
+### Supor te nativo à replicação
 
-## Como funciona na prática?
+- Suporte nativo à replicação: prover escalabilidade realizando a replicação nativa dos dados, pois isso ajuda a diminuir o tempo gasto na recuperação das informações.
+-  Existem basicamente duas abordagens para realizar a replicação:
+✓ Master Slave: permite que um servidor slave copie todas as alterações realizadas em um outro servidor, denominado de master.
+ Multi-Master: para aplicações distribuídas geograficamente, pode-se criar servidores masters próximos às regiões que manipulam os dados, permitindo uma redução no tempo de acesso ao dado através da rede.
+✓ Para isto, é necessário manter todas as regiões sincronizadas, e para isto, utilizamos a topologia de anel, onde define-se vários masters.
 
-### Escalabilidade horizontal
+### API - Application Programming Interface
 
-Imagine que seu banco de dados é como uma mesa. Quando você precisa de mais espaço:
-- **Escalabilidade vertical**: Você compra uma mesa maior (mais RAM, CPU mais potente)
-- **Escalabilidade horizontal**: Você adiciona mais mesas (mais servidores)
-
-O NoSQL foi feito para a segunda opção. Usa uma técnica chamada **sharding**, que é basicamente dividir os dados em pedaços e espalhar por várias máquinas.
-
-### Ausência de esquema
-
-Sabe aquela regra chata dos bancos relacionais onde você precisa definir exatamente como seus dados vão ser estruturados? No NoSQL, você pode ser mais flexível. Quer adicionar um campo novo? Sem problema. Alguns registros têm campos diferentes? Tranquilo.
-
-Isso acelera o desenvolvimento, mas tem um preço: você perde algumas garantias de integridade dos dados.
-
-### Replicação de dados
-
-O NoSQL copia seus dados automaticamente para várias máquinas. Existem duas formas principais:
-
-**Master-Slave**: Um servidor principal (master) e vários servidores cópia (slaves). Tudo que acontece no master é copiado para os slaves.
-
-**Multi-Master**: Vários servidores principais, geralmente espalhados geograficamente. Útil para aplicações globais.
-
-## Persistência poliglota
-
-Esse nome complicado significa uma coisa simples: usar diferentes tipos de banco para diferentes necessidades. É como ter várias ferramentas:
-- MySQL para dados transacionais
-- MongoDB para documentos
-- Redis para cache
-- Neo4j para grafos
-
-# Resumo - Bancos de Dados NoSQL (Unidades 1.1 e 1.2)
-
-## Definição de negócios e motivação
-
-### Por que as empresas estão migrando para NoSQL?
-
-A transformação digital trouxe uma realidade nova para as empresas. Hoje, o foco está em criar **plataformas consolidadas** que simplifiquem o acesso aos dados e permitam descobrir conhecimento rapidamente.
-
-**A revolução da nuvem**
-A computação em nuvem virou o padrão de referência porque oferece uma abordagem mais pragmática para otimizar a infraestrutura. As empresas estão investindo em infraestruturas:
-- Centralizadas/federadas
-- Virtualizadas e automatizadas
-- Compartilhadas e otimizadas (privadas, públicas, híbridas)
-
-**Preparando para o Big Data**
-Os ambientes de TI estão sendo reformulados para a era do Big Data. As redes definidas por software (SDN) viraram o padrão para transmissão e processamento de dados, porque oferecem mais flexibilidade e controle.
-
-**Critério de sucesso**
-O sucesso de qualquer tecnologia se mede pela quantidade de aplicações críticas que ela consegue criar e manter. Como grandes insights estão se tornando obrigatórios para vários setores, há muito espaço para aplicações de Big Data.
-
-**Motivação direta**
-A motivação para NoSQL é bem clara: a quantidade absurda de dados de várias fontes diferentes, complexos e dinâmicos, que precisam de tecnologias específicas para armazenamento, análise e visualização.
-
-Bancos relacionais até conseguem escalar, mas quanto maior o tamanho, mais caro fica - tanto em recursos quanto em dinheiro.
-
-## Tipos e modelos de transações
-
-### Por que isso importa?
-
-Em ambientes distribuídos, o controle de transações é fundamental para garantir desempenho e consistência. Existem basicamente dois modelos: **ACID** (usado nos bancos relacionais) e **BASE** (encontrado em muitos sistemas NoSQL).
-
-**Diferença fundamental**: tanto sistemas relacionais quanto NoSQL podem implementar controles transacionais. A diferença está na **quantidade de esforço** exigida dos desenvolvedores e na **localização** desses controles no sistema.
-
-### ACID - O modelo rigoroso
-
-**Atomicidade**: Ou faz tudo ou não faz nada. Sem meio termo.
-
-**Consistência**: Ou cria um estado válido dos dados ou volta tudo para o estado anterior.
-
-**Isolamento**: Uma transação em andamento não pode ser interferida por outras transações concorrentes.
-
-**Durabilidade**: Dados validados ficam registrados permanentemente, mesmo se o sistema falhar.
-
-**Exemplo clássico**: Transação bancária. Imagina transferir R$ 100 da conta A para a conta B. Ou as duas operações acontecem (débito + crédito) ou nenhuma acontece. Não pode debitar e não creditar.
-
-### BASE - O modelo flexível
-
-**Basic Availability**: Permite que o sistema fique temporariamente inconsistente para que as transações sejam gerenciáveis.
-
-**Soft-state**: Reconhece que alguma imprecisão é temporariamente permitida. Os dados mudam enquanto são usados, reduzindo o consumo de recursos.
-
-**Eventual consistency**: Eventualmente, quando toda a lógica é executada, o sistema fica consistente.
-
-**Exemplo prático**: Carrinho de compras online. É melhor aceitar um pedido mesmo que alguns dados estejam temporariamente inconsistentes do que bloquear a venda. Perder um cliente é pior que ter relatórios inconsistentes por alguns minutos.
-
-O modelo BASE **relaxa as regras** e permite que relatórios sejam executados mesmo que nem todas as partes do banco estejam sincronizadas. A ideia é que, eventualmente, tudo se acerta.
-
-### Teorema CAP - Escolha apenas duas
-
-Este teorema é fundamental para entender NoSQL. Ele diz que é **impossível** ter simultaneamente as três propriedades:
-
-**Consistência**: Todos os nós veem os mesmos dados ao mesmo tempo.
-
-**Disponibilidade**: Garantia de resposta em cada solicitação.
-
-**Tolerância a partições**: O sistema continua operando mesmo com falhas de rede ou partes do sistema.
-
-**Você só pode ter duas das três!**
-
-### Tipos de sistemas baseados no CAP
-
-**Sistemas CA (Consistency + Availability)**
-- Consistência forte e alta disponibilidade
-- Não sabem lidar com falhas de partição
-- Se algo falhar, o sistema inteiro pode ficar indisponível
-- **Exemplo**: Configurações clássicas de bancos relacionais
-
-**Sistemas CP (Consistency + Partition Tolerance)**
-- Consistência forte e tolerância a partições
-- Abrem mão de um pouco da disponibilidade
-- **Exemplos**: BigTable, HBase, MongoDB
-
-**Sistemas AP (Availability + Partition Tolerance)**
-- Jamais podem ficar offline
-- Prejudicam um pouco a consistência
-- Aceitam escritas sempre e sincronizam depois
-- **Exemplos**: Amazon DynamoDB, Cassandra, Riak
-
-### SQL vs NoSQL na prática
-
-**SQL (ACID)**:
-- Esquemas rígidos
-- Dados estruturados (campos, linhas, colunas)
-- Transações complexas com garantias rigorosas
-- Alterar esquema depois que os dados estão inseridos é muito complexo
-
-**NoSQL (BASE)**:
-- Sem esquema ou esquema flexível
-- Dados multiestruturados
-- Permite gravação de documentos e metadados
-- Facilita incorporação rápida de novos tipos de dados
-
-### Quando usar cada um?
-
-**Use bancos relacionais quando:**
-- Aplicações centralizadas
-- Não há requisitos de altíssima disponibilidade
-- Geração de dados em velocidade média
-- Poucas fontes geradoras de dados
-- Dados estruturados
-- Transações complexas
-- Volume médio de dados
-
-**Use NoSQL quando:**
-- Aplicações descentralizadas (Web, IoT, Big Data)
-- Não pode haver interrupção na gravação de dados
-- Geração de dados em alta velocidade (sensores)
-- Muitas fontes geradoras de dados
-- Dados semi ou não-estruturados
-- Transações simples
-- Alto volume de armazenamento
-
-## O que mudou no mundo dos dados?
-
-Com a Web 2.0, tudo mudou. Antes, os sites eram páginas estáticas onde você só consumia conteúdo. Agora, somos todos produtores de dados - postando, curtindo, comentando, compartilhando. E isso gera uma quantidade absurda de informações.
-
-Imagina só: temos mais dispositivos conectados do que pessoas no mundo! Celulares, sensores IoT, câmeras, GPS, jogos online... tudo gerando dados 24/7. Estamos falando de volumes na casa dos zetabytes (isso é muito, muito mesmo).
-
-O problema é que os bancos de dados tradicionais não conseguem mais dar conta. Eles foram feitos para um mundo onde os dados eram estruturados e organizados em tabelas. Mas agora? Temos textos, imagens, vídeos, dados de sensores... uma bagunça organizada que precisa de uma nova abordagem.
-
-## NoSQL: A resposta para o caos
-
-### O que é essa tal de NoSQL?
-
-Primeiro, vamos tirar uma confusão: NoSQL não significa "sem SQL". Na verdade, significa "Not Only SQL" (não apenas SQL). É como se fosse um "SQL++", expandindo as possibilidades além do mundo relacional.
-
-O NoSQL surgiu em 1998, mas só ganhou força com a explosão da Web 2.0. A ideia não é jogar o banco relacional no lixo, mas sim ter mais ferramentas na caixa de ferramentas.
-
-### Principais características
-
-Os bancos NoSQL geralmente têm essas características:
-
-- **Não-relacional**: Sem aquelas tabelas com chaves estrangeiras e relacionamentos complexos
-- **Distribuído**: Roda em várias máquinas ao mesmo tempo
-- **Código aberto**: A maioria é gratuita e de código aberto
-- **Escalável horizontalmente**: Precisa de mais poder? Adiciona mais máquinas
-- **Esquema flexível**: Não precisa definir estrutura rígida antes
-- **Replicação nativa**: Copia dados automaticamente para backup
-- **APIs simples**: Acesso fácil via programação
-- **Recuperação rápida**: Busca informações mais rapidamente
-
-## As grandes diferenças conceituais
-
-### ACID vs BASE: A batalha dos acrônimos
-
-**ACID** (mundo relacional):
-- **Atomicidade**: Ou faz tudo ou não faz nada
-- **Consistência**: Dados sempre válidos
-- **Isolamento**: Operações não interferem umas nas outras
-- **Durabilidade**: Uma vez salvo, sempre salvo
-
-**BASE** (mundo NoSQL):
-- **Basically Available**: Basicamente disponível
-- **Soft state**: Estado flexível
-- **Eventual consistency**: Consistência... eventualmente
-
-A diferença fundamental é que o ACID garante que tudo esteja sempre certinho, mas isso custa performance. O BASE aceita que, por alguns momentos, os dados podem estar um pouco "bagunçados", mas em troca oferece velocidade e disponibilidade.
-
-### O Teorema CAP: Escolha duas de três
-
-Este é um conceito crucial: você só pode ter duas das três propriedades:
-- **Consistência**: Todos veem os mesmos dados
-- **Disponibilidade**: Sistema sempre no ar
-- **Tolerância à partição**: Funciona mesmo se a rede falhar
-
-Na web, geralmente escolhemos disponibilidade e tolerância à partição. Afinal, é melhor ter um sistema funcionando com dados um pouco desatualizados do que um sistema fora do ar.
-
-## Como funciona na prática?
-
-### Escalabilidade horizontal
-
-Imagine que seu banco de dados é como uma mesa. Quando você precisa de mais espaço:
-- **Escalabilidade vertical**: Você compra uma mesa maior (mais RAM, CPU mais potente)
-- **Escalabilidade horizontal**: Você adiciona mais mesas (mais servidores)
-
-O NoSQL foi feito para a segunda opção. Usa uma técnica chamada **sharding**, que é basicamente dividir os dados em pedaços e espalhar por várias máquinas.
-
-### Ausência de esquema
-
-Sabe aquela regra chata dos bancos relacionais onde você precisa definir exatamente como seus dados vão ser estruturados? No NoSQL, você pode ser mais flexível. Quer adicionar um campo novo? Sem problema. Alguns registros têm campos diferentes? Tranquilo.
-
-Isso acelera o desenvolvimento, mas tem um preço: você perde algumas garantias de integridade dos dados.
-
-### Replicação de dados
-
-O NoSQL copia seus dados automaticamente para várias máquinas. Existem duas formas principais:
-
-**Master-Slave**: Um servidor principal (master) e vários servidores cópia (slaves). Tudo que acontece no master é copiado para os slaves.
-
-**Multi-Master**: Vários servidores principais, geralmente espalhados geograficamente. Útil para aplicações globais.
-
-## Persistência poliglota
-
-Esse nome complicado significa uma coisa simples: usar diferentes tipos de banco para diferentes necessidades. É como ter várias ferramentas:
-- MySQL para dados transacionais
-- MongoDB para documentos
-- Redis para cache
-- Neo4j para grafos
-
-
-
+ API : No NoSQL o foco não está na forma em que os dados são acessados, mas sim em como são recuperados.
+• O uso de APIs se torna essencial para tornar simples o acesso a essas informações, permitindo que qualquer aplicação possa fazer uso do banco de forma rápida e eficiente.
+• Tudo vinculado ao conceito de arquitetura de microsserviços MAS (MicroServices Architecture)
