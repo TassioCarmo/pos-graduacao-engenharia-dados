@@ -46,7 +46,6 @@ especialista que cria aas regras
 
 - AO sistema fase esse gráfico, ele é o tira teima que a gente faz para ver se essas essas regras estão certas, OK? Elas estão estão todas em um processo crescente.
 
-<img width="1117" height="582" alt="image" src="https://github.com/user-attachments/assets/f5b567d8-66b7-40a4-a2d0-69af05c67b25" />
 
 <img width="1118" height="579" alt="image" src="https://github.com/user-attachments/assets/50dee26c-c98a-448e-811b-60802dc6d14f" />
 
