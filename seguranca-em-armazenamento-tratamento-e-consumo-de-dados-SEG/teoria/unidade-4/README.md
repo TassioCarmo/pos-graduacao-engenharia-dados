@@ -40,3 +40,6 @@ especialista que cria aas regras
 - dentro da estrutura lógica do do de fase instruções, elas não têm as variáveis, elas não precisam respeitar a mesma escala, está elas pode respeitar escalas completamente diferentes.
 
 ## Operadores Fuzzy
+
+<img width="1186" height="313" alt="image" src="https://github.com/user-attachments/assets/3c57be61-c816-4b9d-9193-8076498926d5" />
+
