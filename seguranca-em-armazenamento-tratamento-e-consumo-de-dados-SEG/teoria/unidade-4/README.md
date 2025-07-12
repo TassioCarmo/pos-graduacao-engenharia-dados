@@ -50,3 +50,4 @@ especialista que cria aas regras
 
 <img width="1118" height="579" alt="image" src="https://github.com/user-attachments/assets/50dee26c-c98a-448e-811b-60802dc6d14f" />
 
+<img width="1108" height="492" alt="image" src="https://github.com/user-attachments/assets/6a28b1b4-b336-44ae-9326-a2ec6d543e0f" />
