@@ -50,3 +50,14 @@ especialista que cria aas regras
 <img width="1118" height="579" alt="image" src="https://github.com/user-attachments/assets/50dee26c-c98a-448e-811b-60802dc6d14f" />
 
 <img width="1102" height="453" alt="image" src="https://github.com/user-attachments/assets/18678b20-2c1f-4406-a410-0a3f2133e3ef" />
+
+
+
+-----------------------
+
+
+classificação em cluster 
+
+<img width="1101" height="741" alt="image" src="https://github.com/user-attachments/assets/19c80c0f-b8ac-4c2c-8dfe-53bada754930" />
+
+atributos em inteligencia artificial é chamado de fetuares
