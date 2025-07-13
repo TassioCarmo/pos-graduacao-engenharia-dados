@@ -60,4 +60,13 @@ classificação em cluster
 
 <img width="1101" height="741" alt="image" src="https://github.com/user-attachments/assets/19c80c0f-b8ac-4c2c-8dfe-53bada754930" />
 
-atributos em inteligencia artificial é chamado de fetuares
+" A rede da a Google gastou. 200000000 de dólares para treinar o seu gemini."
+Isso tudo porque ela teve que pegar um imenso conjunto de dados. 
+Ela teve que ela teve que fazer a engenharia de features , né? Ela teve que determinar por meio de testes, quais eram as fichas necessárias, quais eram os atributos necessários.
+Que a rede deve os atributos que a rede deveria aprender.
+
+
+E aí ela tinha que colocar para treinar uma rede e aí ela pode ter definido milhares de features, milhares para rodar esses milhares de futuros para a rede aprender esses milhares de futuros. Ela deve. Ela tem que ter provavelmente reservado, imenso espaço numa numa rede computacional de al.
+Carlos Murilo da Silva Valadares 2 horas 43 minutos 24 segundos
+Desempenho.
+Para ficar lá, dias ou semanas com a rede aprendendo aquilo, então é onde se gasta dinheiro com a rede, né
