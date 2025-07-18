@@ -1,5 +1,3 @@
-<img width="1177" height="507" alt="image" src="https://github.com/user-attachments/assets/30227556-5c08-4a39-ac17-ae64d7178137" />#  Mascaramento de Dados
-
 O mascaramento de dados é uma técnica de segurança de dados que embaralha os dados para criar uma cópia inautêntica para vários fins de não produção. O mascaramento de dados retém as características e a integridade dos dados de produção originais e ajuda as organizações a minimizar os problemas de segurança de dados ao utilizar os dados em um ambiente de não produção. Esses dados mascarados podem ser usados para análise, treinamento ou teste
 
 ## Por que as organizações devem efetuar mascaramento de dados?
