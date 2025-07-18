@@ -5,19 +5,19 @@ O que é criptografia?
 ● Deriva do grego, ‘KRIPTOS’, que significa escondido e ‘GRAPHO’, que significa escrit
 
 ## Conceitos gerais
-● Texto simples, texto plano, texto claro: mensagem a ser cifrada;
-● Texto cifrado: texto resultante do processo criptográfico;
-● Criptoanálise: técnicas para solucionar mensagens cifradas;
-● Criptografia: técnicas para a criação de mensagens cifradas;
-● Algoritmo Criptográfico: modelo matemático utilizado para criptografar e descriptografar mensagens;
-● Chave: String que seleciona a forma de criptografia que deve ser usada para criptografar e descriptografar mensagens;
-● O sigilo está na chave e no algoritmo, portanto, para que uma mansagem criptografada seja decodificada é necessário descobrir o algoritmo e a chave criptográfica.
+- ● Texto simples, texto plano, texto claro: mensagem a ser cifrada;
+- ● Texto cifrado: texto resultante do processo criptográfico;
+- ● Criptoanálise: técnicas para solucionar mensagens cifradas;
+- ● Criptografia: técnicas para a criação de mensagens cifradas;
+- ● Algoritmo Criptográfico: modelo matemático utilizado para criptografar e descriptografar mensagens;
+- ● Chave: String que seleciona a forma de criptografia que deve ser usada para criptografar e descriptografar mensagens;
+- ● O sigilo está na chave e no algoritmo, portanto, para que uma mansagem criptografada seja decodificada é necessário descobrir o algoritmo e a chave criptográfica.
 
 Entre os objetivos centrais da criptografia, inclue-se:
-● **Confidencialidade** – mantém o conteúdo da informação secreto para todos excepto para as pessoas que tenham acesso à mesma.
-● **Integridade da informação** – assegura que não há alteração, intencional ou não, da informação por pessoas não autorizadas.
-● **Autenticação de informação** – serve para identificar pessoas ou processos com quem se estabelece comunicação.
-● **Não repudiação** – evita que qualquer das partes envolvidas na comunicação negue o envio ou a recepção de uma informação
+- ● **Confidencialidade** – mantém o conteúdo da informação secreto para todos excepto para as pessoas que tenham acesso à mesma.
+- ● **Integridade da informação** – assegura que não há alteração, intencional ou não, da informação por pessoas não autorizadas.
+- ● **Autenticação de informação** – serve para identificar pessoas ou processos com quem se estabelece comunicação.
+- ● **Não repudiação** – evita que qualquer das partes envolvidas na comunicação negue o envio ou a recepção de uma informação
 
 | Característica               | Criptografia Simétrica                                  | Criptografia de Chave Pública                                                               |
 | ---------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
@@ -32,19 +32,19 @@ Entre os objetivos centrais da criptografia, inclue-se:
 
 
 ## Criptografia Simétrica (1)
-● O critério e classificação de métodos criptográficos é o número de chaves, que denomina-se criptografia simétrica e assimétrica;
-● Criptografia SIMÉTRICA a mesma chave é utilizada para criptografar e descriptografar a mensagem;
-● A chave deve ser compartilhada entre o emissor e o receptor da mensagem;
-● A maior complexidade deste tipo de criptografia é manter a chave privada secreta.
+- ● O critério e classificação de métodos criptográficos é o número de chaves, que denomina-se criptografia simétrica e assimétrica;
+- ● Criptografia SIMÉTRICA a mesma chave é utilizada para criptografar e descriptografar a mensagem;
+- ● A chave deve ser compartilhada entre o emissor e o receptor da mensagem;
+- ● A maior complexidade deste tipo de criptografia é manter a chave privada secreta.
 
 ## Uma chave única
 
 m < c(m) > d(c(m))
 
-● Criptografia simétric é utilizada para processo que envolvem grandes volumes de dados;
-● Frequentemente a criptografia simétrica é combinada com a assimétrica, para que se possa alcançar um balanceamento entre segurança e velocidade;
-● Na criptografia simétrica existem cinco componentes: [1] o texto simples, [2] o algoritmo de criptografia, [3] a chave secreta, [4] o texto cifrado e [5] o algoritmo de descriptografia. (SILVA, 2021);
-● É comum os algoritimos de criptografia simétricos seja orientados a bits, e não a caracteres. Isso permite que qualquer arquivo digital como texto, video, musicas ou até mesmo imagens sejam criptografado
+- ● Criptografia simétric é utilizada para processo que envolvem grandes volumes de dados;
+- ● Frequentemente a criptografia simétrica é combinada com a assimétrica, para que se possa alcançar um balanceamento entre segurança e velocidade;
+- ● Na criptografia simétrica existem cinco componentes: [1] o texto simples, [2] o algoritmo de criptografia, [3] a chave secreta, [4] o texto cifrado e [5] o algoritmo de descriptografia. (SILVA, 2021);
+- ● É comum os algoritimos de criptografia simétricos seja orientados a bits, e não a caracteres. Isso permite que qualquer arquivo digital como texto, video, musicas ou até mesmo imagens sejam criptografado
 
 | **Tamanho da Chave**           | **Número de Chaves** | **Tempo Requerido** | **Tempo Requerido** |
 | ------------------------------ | -------------------- | ------------------- | ------------------- |
@@ -54,42 +54,42 @@ m < c(m) > d(c(m))
 | **128 bits**                   | 2¹²⁸ = 3,4 × 10³⁸    | 5,4 × 10²⁴          | 5,4 × 10¹⁸ anos     |
 | **26 caracteres (permutação)** | 26! = 4 × 10²⁶       | 6,4 × 10¹²          | 6,4 × 10⁶           |
 
-● A criptorafia simétrica pode se basear em funções matemáticas que efetuam permutas ou combinações;
-● Seja S um conjunto finito. A Permutação p sobre S é uma bijeção de S sobre ele mesmo, ou seja, p : S → S.
-● Exemplo: Seja S ={1, 2, 3, 4, 5}. Uma permutação p : S → S definida por p(1) = 3 ; p(2) = 5 ; p(3) = 4 ; p(4) = 2 ; p(5) = 1 pode ser representada pela seguinte forma matricia
-● Um dos modelos básicos da criptografia simétrica é o sistema de transformação de bits
-● Uma pessoa A deseja enviar uma mensagem sigilosa para outra pessoa B, que deverá ser cifrada substituindo-se cada letra por um número, que será convertido por meio da aplicação da função f(x) = 3x − 2, obtendo assim a mensagem cifrada. Por exemplo, a letra m corresponde ao número 13, que é transformado pela função em f(13) = 3 × 13 − 2 = 37, ou seja, a letra m é cifrada pelo número 37 (m → 37)
+- ● A criptorafia simétrica pode se basear em funções matemáticas que efetuam permutas ou combinações;
+- ● Seja S um conjunto finito. A Permutação p sobre S é uma bijeção de S sobre ele mesmo, ou seja, p : S → S.
+- ● Exemplo: Seja S ={1, 2, 3, 4, 5}. Uma permutação p : S → S definida por p(1) = 3 ; p(2) = 5 ; p(3) = 4 ; p(4) = 2 ; p(5) = 1 pode ser representada pela seguinte forma matricia
+- ● Um dos modelos básicos da criptografia simétrica é o sistema de transformação de bits
+- ● Uma pessoa A deseja enviar uma mensagem sigilosa para outra pessoa B, que deverá ser cifrada substituindo-se cada letra por um número, que será convertido por meio da aplicação da função f(x) = 3x − 2, obtendo assim a mensagem cifrada. Por exemplo, a letra m corresponde ao número 13, que é transformado pela função em f(13) = 3 × 13 − 2 = 37, ou seja, a letra m é cifrada pelo número 37 (m → 37)
 PARA DECIFRAR:
 
 ## Data Encryption Standart(DES)
 
 ## Criptografia Assimétrica 
-● Neste modelo, são utilizadas duas chaves, uma chave pública e outra privada (que é a chave secreta);
-● A criptografia assimétrica também é conhecida como criptografia de chave pública, mas nos sistemas criptográficos assimétricos, a garantia da confidencialidade está contida na chave privada;
-● O método criptográfico assimétrico foi definido pelos pesquisadores Whitfield Diffie e Martin Hellman no artigo, “New directions in cryptography”, no qual estimaram que a progressão da vlocidade e volume da transmissão de mensagens em rede exigiria processos criptográficos mais eficazes (DIFFIE; HELLMAN, 1976);
-● A criptografia assimétrica é o método padrão atualmente adotado;
-● A maior vantagem da criptografia assimétrica é que a chave pública pode ser distribuída livremente, e apenas o destinatário poderá descritografar a mensagem usando sua chave privada, que é o segredo do processo;
-● Entre os elementos fundamentais de segurança relativos às chaves pública e privada, vale salientar:
-● Deve ser computacionalmente inviável descobrir a chave de descriptografia a partir do simples conhecimento do algoritmo de criptografia utilizado;
-● Deve ser inviável a obtenção da chave privada conhecendo-se a chave pública;
-● Em termos de criptoanálise, um documento cifrado pode ser considerado computacionalmente seguro quando atende e dois critérios:
-● O custo para quebrar o texto cifrado excede ao valor da informação cifrada;
-● O tempo requerido para quebrar o texto cifrado excede o tempo de vida útil da informação.
+- ● Neste modelo, são utilizadas duas chaves, uma chave pública e outra privada (que é a chave secreta);
+- ● A criptografia assimétrica também é conhecida como criptografia de chave pública, mas nos sistemas criptográficos assimétricos, a garantia da confidencialidade está contida na chave privada;
+- ● O método criptográfico assimétrico foi definido pelos pesquisadores Whitfield Diffie e Martin Hellman no artigo, “New directions in cryptography”, no qual estimaram que a progressão da vlocidade e volume da transmissão de mensagens em rede exigiria processos criptográficos mais eficazes (DIFFIE; HELLMAN, 1976);
+- ● A criptografia assimétrica é o método padrão atualmente adotado;
+- ● A maior vantagem da criptografia assimétrica é que a chave pública pode ser distribuída livremente, e apenas o destinatário poderá descritografar a mensagem usando sua chave privada, que é o segredo do processo;
+- ● Entre os elementos fundamentais de segurança relativos às chaves pública e privada, vale salientar:
+- ● Deve ser computacionalmente inviável descobrir a chave de descriptografia a partir do simples conhecimento do algoritmo de criptografia utilizado;
+- ● Deve ser inviável a obtenção da chave privada conhecendo-se a chave pública;
+- ● Em termos de criptoanálise, um documento cifrado pode ser considerado computacionalmente seguro quando atende e dois critérios:
+- ● O custo para quebrar o texto cifrado excede ao valor da informação cifrada;
+- ● O tempo requerido para quebrar o texto cifrado excede o tempo de vida útil da informação.
 Processo de funcionamento da criptografia e descriptografia nos ambientes assimétricos:
 Suponha que um usuário “A” digite uma mensagem em texto claro, em que cada letra do texto claro pode ser presentada em um conjunto X (X = [x1, x2, ..., xn]). Os “n” elementos de X são
 letras em algum alfabeto finito (a, b, c, d, e, f, ... z). A mensagem do usuário A é direcionada para o usuário B.
-1) O computador do cliente e o servidor trocam suas chaves públicas;
-2) O computador do cliente usa a chave pública enviada pelo servidor e efetua a critopgrafia da mensagem;
-3) Depois que o cliente envia a mensagem criptografada ao servidor, o servidor utiliza a sua chave privada e descriptografa a mensagem do cliente;
-4) Logo após descriptografar a mensagem, o servidor faz o devido uso do texto original e novamente efetua a criptografia da mensagem que deve ser devolvida ao cliente, usando a chave pública do cliente;
-5) Para encerrar o processo, o cliente deve descriptografar a mensagem usando sua chave privada.
+- 1) O computador do cliente e o servidor trocam suas chaves públicas;
+- 2) O computador do cliente usa a chave pública enviada pelo servidor e efetua a critopgrafia da mensagem;
+- 3) Depois que o cliente envia a mensagem criptografada ao servidor, o servidor utiliza a sua chave privada e descriptografa a mensagem do cliente;
+- 4) Logo após descriptografar a mensagem, o servidor faz o devido uso do texto original e novamente efetua a criptografia da mensagem que deve ser devolvida ao cliente, usando a chave pública do cliente;
+- 5) Para encerrar o processo, o cliente deve descriptografar a mensagem usando sua chave privada.
 
 ### Algoritmo RSA 
 
-● O Método RSA foi criado por Ron Rivest, Adi Shamir e Leonard Adlema, que hoje é usado na internet;
-● É baseado na Teoria dos Números, nas propriedades dos números primos e na aritmética modular;
-● O algoritmo funciona nos seguintes termos:
-1) O algoritmo se inicia com uma pré-codificação. Para que o RSA codifique uma mensagem, ela deve estar em formato numérico.
+- ● O Método RSA foi criado por Ron Rivest, Adi Shamir e Leonard Adlema, que hoje é usado na internet;
+- ● É baseado na Teoria dos Números, nas propriedades dos números primos e na aritmética modular;
+- ● O algoritmo funciona nos seguintes termos:
+- 1) O algoritmo se inicia com uma pré-codificação. Para que o RSA codifique uma mensagem, ela deve estar em formato numérico.
 Portanto, alguma forma de conversão das mensagens textuais em números inteiros deve ser utilizada. Poderia ser usada, por
 exemplo, uma função como demonstrado anteriormente.
 2) Realizada a pr ́s-codificação, o algoritmo solicita que se escolha dois números primos. Geralmente, são escolhidos números muito
