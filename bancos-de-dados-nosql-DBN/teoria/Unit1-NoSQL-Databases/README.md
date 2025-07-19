@@ -1,11 +1,6 @@
 
-Aqui está o texto de estudo em português, fácil de ler e ideal para consulta rápida, criado com base no conteúdo fornecido e enriquecido com informações adicionais para torná-lo mais completo e didático. Ele foi formatado em Markdown para ser usado em um README.md no GitHub.
-
----
-
 # Bancos de Dados NoSQL: Conceitos e Características
 
-Este documento explica de forma clara e objetiva o que são bancos de dados NoSQL, suas características, modelos e aplicações. Ele foi projetado como uma referência rápida para facilitar o estudo ou a revisão dos conceitos de NoSQL.
 
 ---
 
