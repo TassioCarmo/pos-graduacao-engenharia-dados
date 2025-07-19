@@ -5,8 +5,6 @@ Aqui está o texto de estudo em português, fácil de ler e ideal para consulta 
 
 # Bancos de Dados NoSQL: Conceitos e Características
 
-**Data e Hora:** 01:30 PM -03, Quarta-feira, 09 de Julho de 2025
-
 Este documento explica de forma clara e objetiva o que são bancos de dados NoSQL, suas características, modelos e aplicações. Ele foi projetado como uma referência rápida para facilitar o estudo ou a revisão dos conceitos de NoSQL.
 
 ---
