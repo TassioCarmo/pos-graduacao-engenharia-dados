@@ -1,6 +1,4 @@
-# SQL vs NoSQL: Um Guia de Estudo Rápido
-
-Este texto foi criado para facilitar o estudo e a consulta rápida sobre bancos de dados SQL e NoSQL. Ele organiza as principais diferenças, vantagens e desvantagens de cada tipo, além de explicar por que o NoSQL surgiu como alternativa. O conteúdo é baseado no material fornecido e complementado para torná-lo mais completo e didático.
+# SQL vs NoSQL
 
 ---
 
@@ -673,13 +671,4 @@ db.alunos.find({ "idade": { "$gt": 18 } })
   ```
 
 ---
-
-### 6. Ferramentas e Frameworks
-
-* **MongoDB Compass** (GUI oficial): design de esquemas, índices, explain, agregations.
-* **Mongoose** (Node.js): ODM que define *schemas*, validações e middlewares.
-* **Morphia** (Java): mapeamento objeto–documento, integração com Spring.
-* **PyMongo** (Python): driver oficial, com suporte a sessions e transações.
-* **MongoEngine** (Python): ORM inspirado no Django.
-* **Spring Data MongoDB** (Java/Spring): abstração de repositórios e consulta por métodos.
 
