@@ -162,3 +162,9 @@ O DBA pode atuar em três níveis:
 
 ---
 
+# Dicas
+
+- Nunca mude mais um parâmetro ao mesmo tempo!
+- Verifique se as áreas de paginação e SWAP estão de acordo com a realidade do banco de dados.
+- Fique atento também ao espaço em disco pois ele pode ser utilizado por completo não existindo assim espaço para execução de um processo do banco de dados.
+- ATUALIZE AS ESTATÍSTICAS
