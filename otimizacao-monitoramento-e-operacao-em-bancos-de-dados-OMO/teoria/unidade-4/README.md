@@ -44,3 +44,7 @@ Isso pode envolver a execução de instruções SQL ou a aplicação de transfor
 -  Sharding: envolve o particionamento dos dados em vários servidores para aumentar o desempenho e a escalabilidade.
 - Replicação: replicação envolve a criação de várias cópias dos dados e sua manutenção sincronizada em tempo real
 - Vários Datacenters: envolve a implantação do banco de dados em vários locais geográficos para garantir a redundância e reduzir a latência
+
+## Perda de dados
+
+### o que fazer
